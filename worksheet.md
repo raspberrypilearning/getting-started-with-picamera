@@ -18,7 +18,7 @@ First of all, with the Pi switched off, you'll need to connect the camera module
 
 1. Ensure the camera software is enabled:
 
-    ![Camera software enabled](images/raspi-config-gui-camera.png)
+    ![Camera software enabled](images/raspi-config.png)
 
     If it's not enabled, enable it and reboot your Pi to begin.
 
