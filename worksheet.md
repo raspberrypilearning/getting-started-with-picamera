@@ -47,6 +47,10 @@ Now your camera is connected and the software is enabled, you can get started by
 
 1. Save with **Ctrl + S** and run with **F5**. The camera preview should be shown for 10 seconds, and then close. Move the camera around to preview what the camera sees.
 
+    The live camera preview should fill the screen like so:
+
+    ![Image preview](images/preview.jpg)
+
 1. If your preview was upside-down you can rotate it with:
 
     ```python
@@ -90,7 +94,9 @@ The most basic use for the camera module is taking still pictures - but it's als
 
 1. Run the code and you'll see the camera preview open up for 5 seconds before capturing a still picture. You'll see the preview adjust to a different resolution momentarily as the picture is taken.
 
-1. You'll see your photo on the Desktop - double click the file icon to open it.
+1. You'll see your photo on the Desktop - double click the file icon to open it:
+
+    ![Image on Desktop](images/desktop.png)
 
 1. Now try adding a loop to take 5 pictures in a row:
 
@@ -134,6 +140,8 @@ Now you've used the camera to take still pictures, you can move on to recording 
     omxplayer video.h264
     ```
 
+    ![omxplayer](images/omxplayer.png)
+
 1. The video should play. It may actually play slightly faster than it was recorded due to `omxplayer`'s fast frame rate.
 
 ## Effects
@@ -151,35 +159,15 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-    The minimum resolution allowed is 64 x 64.
+1. The minimum resolution allowed is 64 x 64. Try taking one at that resolution.
 
-1. You can set the auto-white-balance setting to a preset mode to apply a particular effect with `camera.awb_mode`. The options are: `off`, `auto`, `sunlight`, `cloudy`, `shade`, `tungsten`, `fluorescent`, `incandescent`, `flash` and `horizon`. The default is `auto`. Pick one and try:
-
-    ```python
-    camera.start_preview()
-    camera.awb_mode = 'sunlight'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/sunlight.jpg')
-    camera.stop_preview()
-    ```
-
-1. You can set the exposure mode to preset mode to apply a particular effect with `camera.exposure_mode`. The options are: `off`, `auto`, `night`, `nightpreview`, `backlight`, `spotlight`, `sports`, `snow`, `beach`, `verylong`, `fixedfps`, `antishake` and `fireworks`. The default is `auto`. Pick one and try:
+1. You can easily add text to your image with `annotate_text`. Try it:
 
     ```python
     camera.start_preview()
-    camera.exposure_mode = 'beach'
+    camera.annotate_text = "Hello world!"
     sleep(5)
-    camera.capture('/home/pi/Desktop/beach.jpg')
-    camera.stop_preview()
-    ```
-
-1. You can set the image effect to preset mode to apply a particular effect with `camera.image_effect`. The options are: `none`, `negative`, `solarize`, `sketch`, `denoise`, `emboss`, `oilpaint`, `hatch`, `gpen`, `pastel`, `watercolor`, `film`, `blur`, `saturation`, `colorswap`, `washedout`, `posterise`, `colorpoint`, `colorbalance`, `cartoon`, `deinterlace1` and `deinterlace2`. The default is `none`. Pick one and try:
-
-    ```python
-    camera.start_preview()
-    camera.image_effect = 'colorswap'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/beach.jpg')
+    camera.capture('/home/pi/Desktop/text.jpg')
     camera.stop_preview()
     ```
 
@@ -190,16 +178,6 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.brightness = 70
     sleep(5)
     camera.capture('/home/pi/Desktop/bright.jpg')
-    camera.stop_preview()
-    ```
-
-1. You can easily add text to your image with `annotate_text`. Try it:
-
-    ```python
-    camera.start_preview()
-    camera.annotate_text = "Hello world!"
-    sleep(5)
-    camera.capture('/home/pi/Desktop/text.jpg')
     camera.stop_preview()
     ```
 
@@ -245,8 +223,18 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.start_preview()
     camera.annotate_background = Color('blue')
     camera.annotate_foreground = Color('yellow')
-    camera.annotate_text = "Hello world"
+    camera.annotate_text = " Hello world "
     sleep(5)
+    camera.stop_preview()
+    ```
+
+1. You can set the image effect to preset mode to apply a particular effect with `camera.image_effect`. The options are: `none`, `negative`, `solarize`, `sketch`, `denoise`, `emboss`, `oilpaint`, `hatch`, `gpen`, `pastel`, `watercolor`, `film`, `blur`, `saturation`, `colorswap`, `washedout`, `posterise`, `colorpoint`, `colorbalance`, `cartoon`, `deinterlace1` and `deinterlace2`. The default is `none`. Pick one and try:
+
+    ```python
+    camera.start_preview()
+    camera.image_effect = 'colorswap'
+    sleep(5)
+    camera.capture('/home/pi/Desktop/colorswap.jpg')
     camera.stop_preview()
     ```
 
@@ -256,10 +244,36 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.start_preview()
     for effect in camera.IMAGE_EFFECTS:
         camera.image_effect = effect
-        camera.annotate_text = effect
+        camera.annotate_text = "Effect: %s" % effect
         sleep(5)
     camera.stop_preview()
     ```
+
+    ![Effects](images/effects.jpg)
+
+1. You can set the auto-white-balance setting to a preset mode to apply a particular effect with `camera.awb_mode`. The options are: `off`, `auto`, `sunlight`, `cloudy`, `shade`, `tungsten`, `fluorescent`, `incandescent`, `flash` and `horizon`. The default is `auto`. Pick one and try:
+
+    ```python
+    camera.start_preview()
+    camera.awb_mode = 'sunlight'
+    sleep(5)
+    camera.capture('/home/pi/Desktop/sunlight.jpg')
+    camera.stop_preview()
+    ```
+
+    You can loop over the available auto white balance modes with `camera.AWB_MODES`.
+
+1. You can set the exposure mode to preset mode to apply a particular effect with `camera.exposure_mode`. The options are: `off`, `auto`, `night`, `nightpreview`, `backlight`, `spotlight`, `sports`, `snow`, `beach`, `verylong`, `fixedfps`, `antishake` and `fireworks`. The default is `auto`. Pick one and try:
+
+    ```python
+    camera.start_preview()
+    camera.exposure_mode = 'beach'
+    sleep(5)
+    camera.capture('/home/pi/Desktop/beach.jpg')
+    camera.stop_preview()
+    ```
+
+    You can loop over the available exposure modes with `camera.EXPOSURE_MODES`.
 
 ## What next?
 
@@ -269,5 +283,7 @@ Now you've got started with the camera module, what else can you do? You could t
 - [Minecraft Photobooth](https://www.raspberrypi.org/learning/minecraft-photobooth/)
 - [Tweeting Babbage](https://www.raspberrypi.org/learning/tweeting-babbage/)
 - [Parent Detector](https://www.raspberrypi.org/learning/parent-detector/)
+
+There's also an infra-red version of the camera (called Pi NoIR) which gives you everything the regular camera module offers, with one difference: it does not employ an infrared filter. This gives you the ability to see in the dark with infrared lighting. See the [Infrared Bird Box](https://www.raspberrypi.org/learning/infrared-bird-box/) resource for making the most of the Pi NoIR camera.
 
 Also see the extensive [picamera documentation](https://picamera.readthedocs.org/) for more information.
