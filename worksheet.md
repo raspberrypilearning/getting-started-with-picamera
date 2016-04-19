@@ -50,6 +50,8 @@ Now your camera is connected and the software is enabled, you can get started by
     The live camera preview should fill the screen like so:
 
     ![Image preview](images/preview.jpg)
+    
+    **Note that the camera preview only works when a monitor is connected to the Pi, so remote access (such as SSH and VNC) will not allow you to see the camera preview**
 
 1. If your preview was upside-down, you can rotate it with the following code:
 
