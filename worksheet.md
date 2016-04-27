@@ -120,7 +120,7 @@ The most common use for the camera module is taking still pictures.
 
 Now you've used the camera to take still pictures, you can move on to recording video.
 
-1. Amend your code to replace `capture()` with `start_preview()` and `stop_preview()`:
+1. Amend your code to replace `capture()` with `start_recording()` and `stop_recording()`:
 
     ```python
     camera.start_preview()
