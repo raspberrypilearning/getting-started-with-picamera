@@ -1,6 +1,6 @@
 # Getting started with picamera
 
-Get started with the Raspberry Pi camera module, using Python and picamera. You'll take still pictures, record video, and apply image effects.
+Get started with the Raspberry Pi Camera Module, using Python and picamera. You'll take still pictures, record video, and apply image effects.
 
 ![Getting Started with Picamera](cover.png)
 
