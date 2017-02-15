@@ -1,10 +1,10 @@
 # Getting started with picamera
 
-The camera module is a great accessory for the Raspberry Pi, allowing users to take still pictures and record video in full HD.
+The Camera Module is a great accessory for the Raspberry Pi, allowing users to take still pictures and record video in full HD.
 
-## Connect the camera module
+## Connect the Camera Module
 
-First of all, with the Pi switched off, you'll need to connect the camera module to the Raspberry Pi's camera port, then start up the Pi and ensure the software is enabled.
+First of all, with the Pi switched off, you'll need to connect the Camera Module to the Raspberry Pi's camera port, then start up the Pi and ensure the software is enabled.
 
 1. Locate the camera port and connect the camera:
 
@@ -81,7 +81,7 @@ Now your camera is connected and the software is enabled, you can get started by
 
 ## Still pictures
 
-The most common use for the camera module is taking still pictures.
+The most common use for the Camera Module is taking still pictures.
 
 1. Amend your code to reduce the `sleep` and add a `camera.capture()` line:
 
@@ -110,7 +110,7 @@ The most common use for the camera module is taking still pictures.
     camera.stop_preview()
     ```
 
-    The variable `i` contains the current iteration number, from `0` to `4`, so the images will be saved as `image0.jpg`, `image1.jpg` and so on.
+    The variable `i` contains the current iteration number, from `0` to `4`, so the images will be saved as `image0.jpg`, `image1.jpg`, and so on.
 
 1. Run the code again and hold the camera in position. It will take one picture every five seconds.
 
@@ -134,7 +134,7 @@ Now you've used the camera to take still pictures, you can move on to recording 
 
 1. To play the video, you'll need to open a terminal window by clicking the black monitor icon in the taskbar:
 
-    ![Open Terminal](images/open-terminal.png)
+    ![Open terminal](images/open-terminal.png)
 
 1. Type the following command and press **Enter** to play the video:
 
@@ -144,7 +144,7 @@ Now you've used the camera to take still pictures, you can move on to recording 
 
     ![omxplayer](images/omxplayer.png)
 
-1. The video should play. It may actually play slightly faster than it was recorded, due to `omxplayer`'s fast frame rate.
+1. The video should play. It may actually play at a faster speed than what has been recorded, due to `omxplayer`'s fast frame rate.
 
 ## Effects
 
@@ -279,13 +279,13 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
 
 ## What next?
 
-Now you've got started with the camera module, what else can you do? You could try adding GPIO controls using [GPIO Zero](https://gpiozero.readthedocs.org/), integrate with Minecraft Pi, or even post your pictures to Twitter! Try some more camera resources:
+Now you've got started with the Camera Module, you could try adding GPIO controls using [GPIO Zero](https://gpiozero.readthedocs.org/), integrate with Minecraft Pi, or even post your pictures to Twitter! Try some more camera resources:
 
 - [Push button stop-motion](https://www.raspberrypi.org/learning/push-button-stop-motion/)
 - [Minecraft photobooth](https://www.raspberrypi.org/learning/minecraft-photobooth/)
 - [Tweeting Babbage](https://www.raspberrypi.org/learning/tweeting-babbage/)
 - [Parent detector](https://www.raspberrypi.org/learning/parent-detector/)
 
-There's also an infrared version of the camera (called Pi NoIR) which gives you everything the regular camera module offers, with one difference: it doesn't use an infrared filter. This gives you the ability to see in the dark with infrared lighting. See the [Infrared bird box](https://www.raspberrypi.org/learning/infrared-bird-box/) resource for making the most of the Pi NoIR camera.
+There's also an infrared version of the camera (called Pi NoIR) which gives you everything the regular Camera Module offers, with one difference: it doesn't use an infrared filter. This gives you the ability to see in the dark with infrared lighting. See the [Infrared bird box](https://www.raspberrypi.org/learning/infrared-bird-box/) resource for making the most of the Pi NoIR camera.
 
 Also, see the extensive [picamera documentation](https://picamera.readthedocs.org/) for more information.
