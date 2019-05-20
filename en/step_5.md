@@ -2,11 +2,13 @@
 
 Using the Python and `picamera` library allows you to control your camera module and use it create some amazing projects.
 
-- Open a Python 3 editor, such as **Thonny**:
+- Open a Python 3 editor, such as **Thonny Python IDE**:
 
     ![Open Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`. It's important that you **do not** save it as `picamera.py`.
+- Open a new file and save it as `camera.py`. 
+
+    **Note -** it's important that you **do not** save it as `picamera.py`
 
 - Enter the following code:
 
@@ -44,4 +46,4 @@ Using the Python and `picamera` library allows you to control your camera module
 
     `alpha` can be any value between `0` and `255`.
 
-    **Tip -** setting the alpha is a good idea because you will be able to see if any error occur in your program while the preview is on.
+    **Tip -** setting the alpha is a good idea because you will be able to see if any errors occur in your program while the preview is on.

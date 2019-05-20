@@ -11,7 +11,7 @@ Now lets use the camera module and Python to take some pictures.
     camera.stop_preview()
     ```
 
-    It's important to sleep for at least 2 seconds before capturing, to give the sensor time to set its light levels.
+    **Note -** It's important to sleep for at least 2 seconds before capturing, to give the sensor time to set its light levels.
 
 - Run the code and you'll see the camera preview open for 5 seconds before capturing a still picture. You'll see the preview adjust to a different resolution momentarily as the picture is taken.
 

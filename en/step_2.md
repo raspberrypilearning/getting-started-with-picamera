@@ -10,9 +10,10 @@ All current models of Raspberry Pi have a port for connecting the camera module.
 
 ### Raspberry Pi Camera Module
 
+![pi camera module](images/camera-module.png)
+
 There are 2 versions of [Camera module](https://www.raspberrypi.org/products/camera-module-v2/):
     - [standard](https://www.raspberrypi.org/products/camera-module-v2/) which is designed to tak pictures in normal light.
     - [NoIR](https://www.raspberrypi.org/products/pi-noir-camera-v2/) which doesn't use an infrared filter and gives you the ability to see in the dark with infrared lighting.
 
-![pi camera module](images/camera-module.png)
 

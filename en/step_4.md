@@ -12,7 +12,7 @@ Now your camera is connected and the software is enabled, you can get started by
 raspistill -o Desktop/image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.jpg)
+![raspistill command entered into the terminal](images/raspistill-image.png)
 
 - Run the command and you'll see the camera preview open for 5 seconds before capturing a still picture. 
 
@@ -32,6 +32,6 @@ raspistill -o Desktop/image-small.jpg -w 640 -h 480
 raspivid -o Desktop/vid.h264
 ```
 
-- To play the video, double click the video file to open it in VLC Media Player.
+- To play the video, double click the `vid.h264` file on the Desktop to open it in VLC Media Player.
 
 For more information on the command line tools see the documentation for [raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and [raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).
