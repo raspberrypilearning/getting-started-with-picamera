@@ -82,7 +82,11 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-- You can use `camera.image_effect` to apply a particular image effect. The options are: `none`, `negative`, `solarize`, `sketch`, `denoise`, `emboss`, `oilpaint`, `hatch`, `gpen`, `pastel`, `watercolor`, `film`, `blur`, `saturation`, `colorswap`, `washedout`, `posterise`, `colorpoint`, `colorbalance`, `cartoon`, `deinterlace1`, and `deinterlace2`. The default is `none`. Pick one and try it out:
+- You can use `camera.image_effect` to apply a particular image effect. 
+
+    The options are: `none`, `negative`, `solarize`, `sketch`, `denoise`, `emboss`, `oilpaint`, `hatch`, `gpen`, `pastel`, `watercolor`, `film`, `blur`, `saturation`, `colorswap`, `washedout`, `posterise`, `colorpoint`, `colorbalance`, `cartoon`, `deinterlace1`, and `deinterlace2`. The default is `none`. 
+    
+    Pick one and try it out:
 
     ```python
     camera.start_preview()
@@ -105,7 +109,11 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
 
     ![Effects](images/effects.jpg)
 
-- You can use `camera.awb_mode` to set the auto white balance to a preset mode to apply a particular effect. The options are: `off`, `auto`, `sunlight`, `cloudy`, `shade`, `tungsten`, `fluorescent`, `incandescent`, `flash`, and `horizon`. The default is `auto`. Pick one and try it out:
+- You can use `camera.awb_mode` to set the auto white balance to a preset mode to apply a particular effect. 
+
+    The options are: `off`, `auto`, `sunlight`, `cloudy`, `shade`, `tungsten`, `fluorescent`, `incandescent`, `flash`, and `horizon`. The default is `auto`. 
+    
+    Pick one and try it out:
 
     ```python
     camera.start_preview()
@@ -117,7 +125,11 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
 
     You can loop over the available auto white balance modes with `camera.AWB_MODES`.
 
-- You can use `camera.exposure_mode` to set the exposure to a preset mode to apply a particular effect. The options are: `off`, `auto`, `night`, `nightpreview`, `backlight`, `spotlight`, `sports`, `snow`, `beach`, `verylong`, `fixedfps`, `antishake`, and `fireworks`. The default is `auto`. Pick one and try it out:
+- You can use `camera.exposure_mode` to set the exposure to a preset mode to apply a particular effect. 
+
+    The options are: `off`, `auto`, `night`, `nightpreview`, `backlight`, `spotlight`, `sports`, `snow`, `beach`, `verylong`, `fixedfps`, `antishake`, and `fireworks`. The default is `auto`. 
+    
+    Pick one and try it out:
 
     ```python
     camera.start_preview()

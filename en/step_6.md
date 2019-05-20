@@ -1,8 +1,8 @@
 ## Still pictures
 
-The most common use for the Camera Module is taking still pictures.
+Now lets use the camera module and Python to take some pictures.
 
-- Amend your code to reduce the `sleep` and add a `camera.capture()` line:
+- Amend your code to add a `camera.capture()` line:
 
     ```python
     camera.start_preview()
@@ -15,9 +15,7 @@ The most common use for the Camera Module is taking still pictures.
 
 - Run the code and you'll see the camera preview open for 5 seconds before capturing a still picture. You'll see the preview adjust to a different resolution momentarily as the picture is taken.
 
-- You'll see your photo on the Desktop. Double-click the file icon to open it:
-
-    ![Image on Desktop](images/desktop.png)
+- Your new image will be saved to the desktop.
 
 - Now try adding a loop to take five pictures in a row:
 
@@ -33,5 +31,6 @@ The most common use for the Camera Module is taking still pictures.
 
 - Run the code again and hold the camera in position. It will take one picture every five seconds.
 
-- Once the fifth picture is taken, the preview will close. Now look at the images on your Desktop and you'll see five new pictures.
+- Once the fifth picture is taken, the preview will close. 
 
+- Look at your Desktop and you'll see five new pictures.

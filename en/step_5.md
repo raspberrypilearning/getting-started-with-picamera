@@ -1,10 +1,10 @@
-## Camera preview
+## Controlling the camera with Python
 
-Now your camera is connected and the software is enabled, you can get started by trying out the camera preview.
+Using the Python and `picamera` library allows you to control your camera module and use it create some amazing projects.
 
-- Open **Python 3** from the main menu:
+- Open a Python 3 editor, such as **Thonny**:
 
-    ![Open Python 3](images/python3-app-menu.png)
+    ![Open Thonny](images/thonny-app-menu.png)
 
 - Open a new file and save it as `camera.py`. It's important that you **do not** save it as `picamera.py`.
 
@@ -17,41 +17,31 @@ Now your camera is connected and the software is enabled, you can get started by
     camera = PiCamera()
 
     camera.start_preview()
-    sleep(10)
+    sleep(5)
     camera.stop_preview()
     ```
 
-- Save with **Ctrl + S** and run with **F5**. The camera preview should be shown for 10 seconds, and then close. Move the camera around to preview what the camera sees.
-
-    The live camera preview should fill the screen like so:
+- Save and run your prgram. The camera preview should be shown for 5 seconds, and then close. 
 
     ![Image preview](images/preview.jpg)
     
-    **Note that the camera preview only works when a monitor is connected to the Pi, so remote access (such as SSH and VNC) will not allow you to see the camera preview**
+    **Note -** The camera preview only works when a monitor is connected to the Pi, so remote access (such as SSH and VNC) will not allow you to see the camera preview.
 
 - If your preview was upside-down, you can rotate it with the following code:
 
     ```python
+    camera = PiCamera()
     camera.rotation = 180
-    camera.start_preview()
-    sleep(10)
-    camera.stop_preview()
     ```
 
     You can rotate the image by `90`, `180`, or `270` degrees, or you can set it to `0` to reset.
 
-- You can alter the transparency of the camera preview by setting an alpha level:
+- You can alter the transparency of the camera preview by setting an `alpha` level:
 
     ```python
-    from picamera import PiCamera
-    from time import sleep
-
-    camera = PiCamera()
-
     camera.start_preview(alpha=200)
-    sleep(10)
-    camera.stop_preview()
     ```
 
     `alpha` can be any value between `0` and `255`.
 
+    **Tip -** setting the alpha is a good idea because you will be able to see if any error occur in your program while the preview is on.

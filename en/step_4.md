@@ -1,22 +1,37 @@
-## Connect the Camera Module
+## Using the camera
 
-First of all, with the Pi switched off, you'll need to connect the Camera Module to the Raspberry Pi's camera port, then start up the Pi and ensure the software is enabled.
-- Locate the camera port and connect the camera by gently pulling up on the plastic edges, pushing in the camera ribbon and then pushing the plastic connector back into place:
-- Locate the camera port and connect the camera:
-1. Gently pull up on the edges of the plastic clip
-1. Insert the camera ribbon; make sure it is the right way round
-1. Push the plastic clip back into place
+Now your camera is connected and the software is enabled, you can get started by trying out the command line tools for the camera.
 
-    ![Connect the camera](images/connect-camera.jpg)
+- Open a terminal window by clicking the black monitor icon in the taskbar:
 
-- Start up the Pi.
+![Open terminal](images/open-terminal-annotated.png)
 
-- Open the **Raspberry Pi Configuration Tool** from the main menu:
+- Enter the following command to take a still picture using the camera and save it to the desktop:
 
-    ![Raspberry Pi Configuration Tool](images/raspi-config-menu.png)
+```bash
+raspistill -o Desktop/image.jpg
+```
 
-- Ensure the camera software is enabled:
+![raspistill command entered into the terminal](images/raspistill-image.jpg)
 
-    ![Camera software enabled](images/raspi-config.png)
+- Run the command and you'll see the camera preview open for 5 seconds before capturing a still picture. 
 
-    If it's not enabled, enable it and reboot your Pi to begin.
+- You'll see your photo appear on the Desktop. Double-click the file icon to open it:
+
+    ![Image on Desktop](images/desktop-annotated.png)
+
+- The `raspistill` command can accept many different options allowing you to modify the output such as `-h` and `-w` to change the height and width of the image:
+
+```bash
+raspistill -o Desktop/image-small.jpg -w 640 -h 480
+```
+
+- The `raspivid` command can be used to take video with the camera:
+
+```bash
+raspivid -o Desktop/vid.h264
+```
+
+- To play the video, double click the video file to open it in VLC Media Player.
+
+For more information on the command line tools see the documentation for [raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and [raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).

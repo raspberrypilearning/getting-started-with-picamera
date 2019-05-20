@@ -1,27 +1,16 @@
----
-title: Getting started with picamera
+title: Getting started with the camera module
 hero_image: images/banner.png
 description: Get started with the Raspberry Pi camera module, using Python and picamera
-original_url: https://raspberrypi.org/learning/getting-started-with-picamera
-theme: green
-duration: 2
 listed: true
-ingredient: false
 copyedit: true
-curriculum: 1, design-0, programming-1, phys-comp-1, manufacture-0, community-0
-interests: photography
-technologies: electronic-components, python
-site_areas: projects
-hardware: electronic-components
-software: python
-version: 3
-last_tested: 2017-01-01
+version: 4
+last_tested: 2018-05-13
 steps: 
 - title: Introduction
 - title: What you will need
-- title: Getting started with picamera
-- title: Connect the Camera Module
-- title: Camera preview
+- title: Connect the camera module
+- title: Using the camera
+- title: Controlling the camera with Python
 - title: Still pictures
 - title: Recording video
 - title: Effects
