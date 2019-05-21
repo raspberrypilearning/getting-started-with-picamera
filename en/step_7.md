@@ -6,7 +6,7 @@ Now you've used the camera to take still pictures, you can move on to recording 
 
     ```python
     camera.start_preview()
-    camera.start_recording('/home/pi/video.h264')
+    camera.start_recording('/home/pi/Desktop/video.h264')
     sleep(5)
     camera.stop_recording()
     camera.stop_preview()

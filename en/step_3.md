@@ -15,9 +15,7 @@
 
     ![Raspberry Pi Configuration Tool](images/pi-configuration-menu.png)
 
-- Select the **Interfaces** tab.
-
-- Ensure the camera is enabled:
+- Select the **Interfaces** tab and ensure the camera is enabled:
 
     ![Camera enabled](images/pi-configuration-interfaces-annotated.png)
 

@@ -44,6 +44,6 @@ Using the Python and `picamera` library allows you to control your camera module
     camera.start_preview(alpha=200)
     ```
 
-    `alpha` can be any value between `0` and `255`.
+    The `alpha` can be any value between `0` and `255`.
 
     **Tip -** setting the alpha is a good idea because you will be able to see if any errors occur in your program while the preview is on.

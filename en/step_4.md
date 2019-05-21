@@ -1,6 +1,6 @@
 ## Using the camera
 
-Now your camera is connected and the software is enabled, you can get started by trying out the command line tools for the camera.
+Now your camera is connected and the software is enabled, you can get started by trying out the command line tools `raspistill` and `raspivid`.
 
 - Open a terminal window by clicking the black monitor icon in the taskbar:
 
@@ -29,9 +29,9 @@ raspistill -o Desktop/image-small.jpg -w 640 -h 480
 - The `raspivid` command can be used to take video with the camera:
 
 ```bash
-raspivid -o Desktop/vid.h264
+raspivid -o Desktop/video.h264
 ```
 
-- To play the video, double click the `vid.h264` file on the Desktop to open it in VLC Media Player.
+- To play the video, double click the `video.h264` file on the Desktop to open it in VLC Media Player.
 
-For more information on the command line tools see the documentation for [raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and [raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).
+For more information see the documentation for [raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and [raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).
