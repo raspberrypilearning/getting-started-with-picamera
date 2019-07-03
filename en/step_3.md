@@ -2,12 +2,38 @@
 
 - Ensure your Pi is turned off.
 
-- Locate the camera port and connect the camera:
-  1. Gently pull up on the edges of the plastic clip
-  2. Insert the camera ribbon; make sure it is the right way round
-  3. Push the plastic clip back into place
+--- no-print ---
 
-![Connect the camera](images/connect-camera.jpg)
+1. Locate the camera port.
+2. Gently pull up on the edges of the plastic clip
+3. Insert the camera ribbon; make sure it is the right way round
+4. Push the plastic clip back into place
+
+![Connect the camera](images/connect-camera.gif)
+
+--- /no-print ---
+
+--- print-only ---
+
+1. Locate the camera port.
+
+![raspberry pi and camera module](images/connect-camera1.png)
+
+2. Gently pull up on the edges of the plastic clip
+
+![camera module port lifted up](images/connect-camera2.png)
+
+3. Insert the camera ribbon; make sure it is the right way round
+
+![camera module ribbon cable inserted into port](images/connect-camera3.png)
+
+4. Push the plastic clip back into place
+
+![camera module port puished down](images/connect-camera4.png)
+
+![camera module port puished down](images/connect-camera4.png)
+
+--- /print-only ---
 
 - Start up the Pi.
 
