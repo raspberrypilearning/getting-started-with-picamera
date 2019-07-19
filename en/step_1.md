@@ -1,6 +1,6 @@
 ## Introduction
-Get started with the Raspberry Pi Camera Module, connecting it to you Pi and using it to take pictures, record video, and apply image effects.
+Learn how to connect the Raspberry Pi Camera Module to your Raspberry Pi and take pictures, record video, and apply image effects.
 
-![pi camera module](images/pi-camera-attached.jpg)
+![Raspberry Pi with Camera Module attached](images/pi-camera-attached.jpg)
 
-![picture taken with the camera module](images/none.jpg)
+![Picture of the letters R and P, taken with the Raspberry Pi Camera Module](images/none.jpg)

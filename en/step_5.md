@@ -1,6 +1,6 @@
-## Controlling the camera with Python
+## How to control the Camera Module with Python code
 
-Using the Python and `picamera` library allows you to control your camera module and use it create some amazing projects.
+The Python `picamera` library allows you to control your Camera Module and create amazing projects.
 
 - Open a Python 3 editor, such as **Thonny Python IDE**:
 
@@ -8,7 +8,7 @@ Using the Python and `picamera` library allows you to control your camera module
 
 - Open a new file and save it as `camera.py`. 
 
-    **Note -** it's important that you **do not** save it as `picamera.py`
+    **Note:** it's important that you **never save the file as `picamera.py`**.
 
 - Enter the following code:
 
@@ -23,27 +23,27 @@ Using the Python and `picamera` library allows you to control your camera module
     camera.stop_preview()
     ```
 
-- Save and run your prgram. The camera preview should be shown for 5 seconds, and then close. 
+- Save and run your program. The camera preview should be shown for five seconds and then close again. 
 
     ![Image preview](images/preview.jpg)
     
-    **Note -** The camera preview only works when a monitor is connected to the Pi, so remote access (such as SSH and VNC) will not allow you to see the camera preview.
+    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
 
-- If your preview was upside-down, you can rotate it with the following code:
+- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
 
     ```python
     camera = PiCamera()
     camera.rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees, or you can set it to `0` to reset.
+    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
 
-- You can alter the transparency of the camera preview by setting an `alpha` level:
+It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+
+- Make the camera preview see-through by setting an `alpha` level:
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` can be any value between `0` and `255`.
-
-    **Tip -** setting the alpha is a good idea because you will be able to see if any errors occur in your program while the preview is on.
+    The `alpha` value can be any number between `0` and `255`.

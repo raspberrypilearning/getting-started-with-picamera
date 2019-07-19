@@ -1,12 +1,12 @@
-## Using the camera
+## How to control the Camera Module via the command line
 
-Now your camera is connected and the software is enabled, you can get started by trying out the command line tools `raspistill` and `raspivid`.
+Now your Camera Module is connected and the software is enabled, try out the command line tools `raspistill` and `raspivid`.
 
 - Open a terminal window by clicking the black monitor icon in the taskbar:
 
 ![Open terminal](images/open-terminal-annotated.png)
 
-- Enter the following command to take a still picture using the camera and save it to the desktop:
+- Type in the following command to take a still picture and save it to the Desktop:
 
 ```bash
 raspistill -o Desktop/image.jpg
@@ -14,24 +14,28 @@ raspistill -o Desktop/image.jpg
 
 ![raspistill command entered into the terminal](images/raspistill-image.png)
 
-- Run the command and you'll see the camera preview open for 5 seconds before capturing a still picture. 
+- Press <kbd>Enter</kbd> to run the command.
 
-- You'll see your photo appear on the Desktop. Double-click the file icon to open it:
+When the command runs, you can see the camera preview open for five seconds before a still picture is taken. 
+
+- Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
 
     ![Image on Desktop](images/desktop-annotated.png)
 
-- The `raspistill` command can accept many different options allowing you to modify the output such as `-h` and `-w` to change the height and width of the image:
+By adding different options, you can set the size and look of the image the `raspistill` command takes.
+
+- For example, add `-h` and `-w` to change the height and width of the image:
 
 ```bash
 raspistill -o Desktop/image-small.jpg -w 640 -h 480
 ```
 
-- The `raspivid` command can be used to take video with the camera:
+- Now record a video with the Camera Module by using the following `raspivid` command:
 
 ```bash
 raspivid -o Desktop/video.h264
 ```
 
-- To play the video, double click the `video.h264` file on the Desktop to open it in VLC Media Player.
+- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
 
-For more information see the documentation for [raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and [raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).
+For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).

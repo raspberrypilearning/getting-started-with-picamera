@@ -1,8 +1,18 @@
-## Effects
+## How to change the image settings and add image effects
 
-At the beginning, you created a `camera` object with `camera = PiCamera()`. You can manipulate this `camera` object in order to configure its settings. The camera software provides a number of effects and other configurations you can apply. Some only apply to the preview and not the capture, others apply to the capture only, but many affect both.
+The Python `picamera` software provides a number of effects and configurations to change how your images look.
 
-- The resolution of the capture is configurable. By default it's set to the resolution of your monitor, but the maximum resolution is 2592 x 1944 for still photos and 1920 x 1080 for video recording. Try the following example to set the resolution to max. Note that you'll also need to set the frame rate to `15` to enable this maximum resolution:
+**Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
+
+### Set the image resolution
+
+You can change the `resolution` of the image that the Camera Module takes.
+
+By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+
+- Use the following code to set the `resolution` to maximum and take a picture.
+
+**Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
 
     ```python
     camera.resolution = (2592, 1944)
@@ -13,9 +23,15 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-- The minimum resolution allowed is 64 x 64. Try taking one at that resolution.
+The minimum resolution is 64×64.
 
-- You can easily add text to your image with `annotate_text`. Try it:
+- Try taking a picture with the minimum resolution.
+
+### Add text to your image
+
+You can add text to your image using the command `annotate_text`.
+
+- Run this code to try it:
 
     ```python
     camera.start_preview()
@@ -25,53 +41,25 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-- You can alter the brightness setting, which can be set from `0` to `100`. The default is `50`. Try setting it to another value:
+### Change the look of the added text
 
-    ```python
-    camera.start_preview()
-    camera.brightness = 70
-    sleep(5)
-    camera.capture('/home/pi/Desktop/bright.jpg')
-    camera.stop_preview()
-    ```
-
-- Try adjusting the brightness in a loop, and annotating the display with the current brightness level:
-
-    ```python
-    camera.start_preview()
-    for i in range(100):
-        camera.annotate_text = "Brightness: %s" % i
-        camera.brightness = i
-        sleep(0.1)
-    camera.stop_preview()
-    ```
-
-- Similarly, try the same for the contrast:
-
-    ```python
-    camera.start_preview()
-    for i in range(100):
-        camera.annotate_text = "Contrast: %s" % i
-        camera.contrast = i
-        sleep(0.1)
-    camera.stop_preview()
-    ```
-
-- You can set the annotation text size with the following code:
+- Set the text size with the following code:
 
     ```python
     camera.annotate_text_size = 50
     ```
 
-    Valid sizes are `6` to `160`. The default is `32`.
+    You can set the text size to anything between `6` to `160`. The default size is `32`.
 
-- You can also alter the annotation colours. First of all, ensure that `Color` is imported by amending your `import` line at the top:
+It's also possible to change the text colour.
+
+- First of all, add `Color` to your `import` line at the top of the program:
 
     ```python
     from picamera import PiCamera, Color
     ```
 
-    Then amend the rest of your code as follows:
+- Then below the `import` line, amend the rest of your code so it looks like this:
 
     ```python
     camera.start_preview()
@@ -82,11 +70,78 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-- You can use `camera.image_effect` to apply a particular image effect. 
+### Change the brightness of the preview
 
-    The options are: `none`, `negative`, `solarize`, `sketch`, `denoise`, `emboss`, `oilpaint`, `hatch`, `gpen`, `pastel`, `watercolor`, `film`, `blur`, `saturation`, `colorswap`, `washedout`, `posterise`, `colorpoint`, `colorbalance`, `cartoon`, `deinterlace1`, and `deinterlace2`. The default is `none`. 
+You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+
+* Run the following code to try this out:
+
+    ```python
+    camera.start_preview()
+    camera.brightness = 70
+    sleep(5)
+    camera.capture('/home/pi/Desktop/bright.jpg')
+    camera.stop_preview()
+    ```
+
+- The following loop adjusts the brightness and also adds text to display the current brightness level:
+
+    ```python
+    camera.start_preview()
+    for i in range(100):
+        camera.annotate_text = "Brightness: %s" % i
+        camera.brightness = i
+        sleep(0.1)
+    camera.stop_preview()
+    ```
+
+### Change the contrast of the preview
+
+Similarly to the preview brightness, you can change the contrast of the preview.
+
+- Run the following code to try this out:
+
+    ```python
+    camera.start_preview()
+    for i in range(100):
+        camera.annotate_text = "Contrast: %s" % i
+        camera.contrast = i
+        sleep(0.1)
+    camera.stop_preview()
+    ```
+
+### Add cool image effects
+
+You can use `camera.image_effect` to apply a particular image effect. 
+
+The image effect options are:
+
+* `none`
+* `negative`
+* `solarize`
+* `sketch`
+* `denoise`
+* `emboss`
+* `oilpaint`
+* `hatch`
+* `gpen`
+* `pastel`
+* `watercolor`
+* `film`
+* `blur`
+* `saturation`
+* `colorswap`
+* `washedout`
+* `posterise`
+* `colorpoint`
+* `colorbalance`
+* `cartoon`
+* `deinterlace1`
+* `deinterlace2`
+
+The default effect is `none`. 
     
-    Pick one and try it out:
+* Pick an image effect and try it out:
 
     ```python
     camera.start_preview()
@@ -96,7 +151,7 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-- Try looping over the various image effects in a preview to test them out:
+* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
 
     ```python
     camera.start_preview()
@@ -109,27 +164,28 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
 
     ![Effects](images/effects.jpg)
 
-- You can use `camera.awb_mode` to set the auto white balance to a preset mode to apply a particular effect. 
+### Set the image exposure mode
 
-    The options are: `off`, `auto`, `sunlight`, `cloudy`, `shade`, `tungsten`, `fluorescent`, `incandescent`, `flash`, and `horizon`. The default is `auto`. 
+You can use `camera.exposure_mode` to set the exposure to a particular mode. 
+
+The exposure mode options are:
+* `off`
+* `auto`
+* `night`
+* `nightpreview`
+* `backlight`
+* `spotlight`
+* `sports`
+* `snow`
+* `beach`
+* `verylong`
+* `fixedfps`
+* `antishake`
+* `fireworks`
+
+The default mode is `auto`.
     
-    Pick one and try it out:
-
-    ```python
-    camera.start_preview()
-    camera.awb_mode = 'sunlight'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/sunlight.jpg')
-    camera.stop_preview()
-    ```
-
-    You can loop over the available auto white balance modes with `camera.AWB_MODES`.
-
-- You can use `camera.exposure_mode` to set the exposure to a preset mode to apply a particular effect. 
-
-    The options are: `off`, `auto`, `night`, `nightpreview`, `backlight`, `spotlight`, `sports`, `snow`, `beach`, `verylong`, `fixedfps`, `antishake`, and `fireworks`. The default is `auto`. 
-    
-    Pick one and try it out:
+* Pick an exposure mode and try it out:
 
     ```python
     camera.start_preview()
@@ -139,5 +195,34 @@ At the beginning, you created a `camera` object with `camera = PiCamera()`. You 
     camera.stop_preview()
     ```
 
-    You can loop over the available exposure modes with `camera.EXPOSURE_MODES`.
+* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
 
+### Change the image white balance
+
+You can use `camera.awb_mode` to set the auto white balance to a preset mode. 
+
+The available auto white balance modes are:
+* `off`
+* `auto`
+* `sunlight`
+* `cloudy`
+* `shade`
+* `tungsten`
+* `fluorescent`
+* `incandescent`
+* `flash`
+* `horizon`
+
+The default is `auto`. 
+    
+* Pick an auto white balance mode and try it out:
+
+    ```python
+    camera.start_preview()
+    camera.awb_mode = 'sunlight'
+    sleep(5)
+    camera.capture('/home/pi/Desktop/sunlight.jpg')
+    camera.stop_preview()
+    ```
+
+* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.

@@ -1,6 +1,6 @@
-## Still pictures
+## Take still pictures with Python code
 
-Now lets use the camera module and Python to take some pictures.
+Now use the Camera Module and Python to take some still pictures.
 
 - Amend your code to add a `camera.capture()` line:
 
@@ -11,13 +11,15 @@ Now lets use the camera module and Python to take some pictures.
     camera.stop_preview()
     ```
 
-    **Note -** It's important to sleep for at least 2 seconds before capturing, to give the sensor time to set its light levels.
+    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
 
-- Run the code and you'll see the camera preview open for 5 seconds before capturing a still picture. You'll see the preview adjust to a different resolution momentarily as the picture is taken.
+- Run the code.
 
-- Your new image will be saved to the desktop.
+You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
 
-- Now try adding a loop to take five pictures in a row:
+Your new image should be saved to the Desktop.
+
+- Now add a loop to take five pictures in a row:
 
     ```python
     camera.start_preview()
@@ -27,10 +29,10 @@ Now lets use the camera module and Python to take some pictures.
     camera.stop_preview()
     ```
 
-    The variable `i` contains the current iteration number, from `0` to `4`, so the images will be saved as `image0.jpg`, `image1.jpg`, and so on.
+    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
 
-- Run the code again and hold the camera in position. It will take one picture every five seconds.
+- Run the code again and hold the Camera Module in position.
 
-- Once the fifth picture is taken, the preview will close. 
+The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes. 
 
-- Look at your Desktop and you'll see five new pictures.
+- Look at your Desktop to find the five new pictures.
