@@ -4,7 +4,7 @@ Now record a video!
 
 - Amend your code to remove `capture()` and instead add `start_recording()` and `stop_recording()`
 
-Your code should look like this now:
+    Your code should look like this now:
 
     ```python
     camera.start_preview()
