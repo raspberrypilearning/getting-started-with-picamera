@@ -1,8 +1,8 @@
-## Still pictures
+## Take still pictures with Python code
 
-The most common use for the Camera Module is taking still pictures.
+Now use the Camera Module and Python to take some still pictures.
 
-- Amend your code to reduce the `sleep` and add a `camera.capture()` line:
+- Amend your code to add a `camera.capture()` line:
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ The most common use for the Camera Module is taking still pictures.
     camera.stop_preview()
     ```
 
-    It's important to sleep for at least 2 seconds before capturing, to give the sensor time to set its light levels.
+    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
 
-- Run the code and you'll see the camera preview open for 5 seconds before capturing a still picture. You'll see the preview adjust to a different resolution momentarily as the picture is taken.
+- Run the code.
 
-- You'll see your photo on the Desktop. Double-click the file icon to open it:
+You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
 
-    ![Image on Desktop](images/desktop.png)
+Your new image should be saved to the Desktop.
 
-- Now try adding a loop to take five pictures in a row:
+- Now add a loop to take five pictures in a row:
 
     ```python
     camera.start_preview()
@@ -29,9 +29,10 @@ The most common use for the Camera Module is taking still pictures.
     camera.stop_preview()
     ```
 
-    The variable `i` contains the current iteration number, from `0` to `4`, so the images will be saved as `image0.jpg`, `image1.jpg`, and so on.
+    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
 
-- Run the code again and hold the camera in position. It will take one picture every five seconds.
+- Run the code again and hold the Camera Module in position.
 
-- Once the fifth picture is taken, the preview will close. Now look at the images on your Desktop and you'll see five new pictures.
+The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes. 
 
+- Look at your Desktop to find the five new pictures.
