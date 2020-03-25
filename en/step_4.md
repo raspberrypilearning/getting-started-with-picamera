@@ -38,4 +38,4 @@ raspivid -o Desktop/video.h264
 
 - In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid]([path](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md)).
+For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
