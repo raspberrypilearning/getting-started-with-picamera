@@ -10,7 +10,7 @@ Tu peux modifier la `résolution` de l'image prise par le module caméra.
 
 Par défaut, la résolution de l'image est définie sur la résolution de ton moniteur. La résolution maximale est de 2592 × 1944 pour les images fixes et de 1920 × 1080 pour l'enregistrement vidéo.
 
-- Utilise le code suivant pour définir la résolution `` au maximum et capture une image.
+- Utilise le code suivant pour définir la `résolution` au maximum et capture une image.
 
     **Remarque :** tu dois également définir le taux d'images à `15` pour activer cette résolution maximale.
 
