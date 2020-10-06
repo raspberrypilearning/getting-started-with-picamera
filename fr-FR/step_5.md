@@ -1,16 +1,16 @@
-## How to control the Camera Module with Python code
+## Comment contrôler le module caméra avec du code Python
 
-The Python `picamera` library allows you to control your Camera Module and create amazing projects.
+La bibliothèque Python `picamera` te permet de contrôler ton module caméra et de créer des projets incroyables.
 
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- Ouvre un éditeur Python 3, tel que **Thonny Python IDE** :
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![Ouvrir Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`.
+- Ouvre un nouveau fichier et enregistre-le sous `camera.py`.
 
-    **Note:** it's important that you **never save the file as `picamera.py`**.
+    **Remarque :** il est important que tu **ne sauvegardes jamais le fichier en tant que `picamera.py`**.
 
-- Enter the following code:
+- Entre le code suivant :
 
     ```python
     from picamera import PiCamera
@@ -23,27 +23,27 @@ The Python `picamera` library allows you to control your Camera Module and creat
     camera.stop_preview()
     ```
 
-- Save and run your program. The camera preview should be shown for five seconds and then close again.
+- Enregistre et teste ton programme. L'aperçu de la caméra devrait s'afficher pendant cinq secondes, puis se refermer.
 
-    ![Image preview](images/preview.jpg)
+    ![Aperçu de l'image](images/preview.jpg)
 
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
+    **Remarque :** l'aperçu de la caméra ne fonctionne que lorsqu'un moniteur est connecté à ton Raspberry Pi. Si tu utilises un accès à distance (tel que SSH ou VNC), tu ne verras pas l'aperçu de la caméra.
 
-- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
+- Si ton aperçu est à l'envers, tu peux le faire pivoter de 180 degrés avec le code suivant :
 
     ```python
     camera = PiCamera()
     camera.rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
+    Tu peux faire pivoter l'image de `90`, `180` ou `270` degrés. Pour réinitialiser l'image, définis la `rotation` sur `0` degrés.
 
-It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+Il est préférable de rendre l'aperçu légèrement transparent afin de voir si des erreurs se produisent dans ton programme lorsque l'aperçu est activé.
 
-- Make the camera preview see-through by setting an `alpha` level:
+- Rendre l'aperçu de la caméra transparent en définissant un niveau `alpha` :
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` value can be any number between `0` and `255`.
+    La valeur `alpha` peut être n'importe quel nombre compris entre `0` et `255`.
