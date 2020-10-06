@@ -1,10 +1,10 @@
-## Recording video with Python code
+## Video opnemen met Python-code
 
-Now record a video!
+Neem nu een video op!
 
-- Amend your code to remove `capture()` and instead add `start_recording()` and `stop_recording()`
+- Wijzig je code om `capture()` te verwijderen en voeg in plaats daarvan `start_recording()` en `stop_recording()` toe
 
-    Your code should look like this now:
+    Je code zou er als volgt uit moeten zien:
 
     ```python
     camera.start_preview()
@@ -14,7 +14,7 @@ Now record a video!
     camera.stop_preview()
     ```
 
-- Run the code.
+- Voer de code uit.
 
-Your Raspberry Pi should open a preview, record 5 seconds of video, and then close the preview.
+De Raspberry Pi zou een voorbeeld moeten openen, 5 seconden video moeten opnemen en vervolgens het voorbeeld moeten sluiten.
 
