@@ -1,8 +1,8 @@
-## Take still pictures with Python code
+## Maak foto's met Python-code
 
-Now use the Camera Module and Python to take some still pictures.
+Gebruik nu de cameramodule en Python om wat foto's te maken.
 
-- Amend your code to add a `camera.capture()` line:
+- Wijzig je code om een `camera.capture()` regel toe te voegen:
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ Now use the Camera Module and Python to take some still pictures.
     camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    **Opmerking:** het is belangrijk om `te slapen` gedurende ten minste twee seconden voordat een afbeelding wordt gemaakt, omdat dit de sensor van de camera tijd geeft om het lichtniveau te detecteren.
 
-- Run the code.
+- Voer de code uit.
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+Je zou het voorbeeld van de camera vijf seconden open moeten zien staan en dan zou er een foto moeten worden gemaakt. Terwijl de foto wordt gemaakt, kun je zien dat het voorbeeld kort wordt aangepast aan een andere resolutie.
 
-Your new image should be saved to the Desktop.
+Je nieuwe afbeelding moet op het bureaublad worden opgeslagen.
 
-- Now add a loop to take five pictures in a row:
+- Voeg nu een lus toe om vijf foto's achter elkaar te maken:
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    De variabele `i` telt hoe vaak de lus is uitgevoerd, van `0` tot `4`. Daarom worden de afbeeldingen opgeslagen als `image0.jpg`, `image1.jpg`, enzovoort.
 
-- Run the code again and hold the Camera Module in position.
+- Voer de code opnieuw uit en houd de cameramodule op zijn plaats.
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+De camera zou elke vijf seconden een foto moeten maken. Zodra de vijfde foto is gemaakt, wordt het voorbeeld gesloten.
 
-- Look at your Desktop to find the five new pictures.
+- Kijk op je bureaublad om de vijf nieuwe afbeeldingen te vinden.
