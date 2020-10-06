@@ -1,18 +1,18 @@
-## How to change the image settings and add image effects
+## Comment modifier les paramètres d'image et ajouter des effets d'image
 
-The Python `picamera` software provides a number of effects and configurations to change how your images look.
+Le logiciel Python `picamera` fournit un certain nombre d'effets et de configurations pour changer l'apparence de tes images.
 
-**Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
+**Remarque :** certains paramètres n'affectent que l'aperçu et non l'image capturée, certains n'affectent que l'image capturée, et beaucoup d'autres affectent les deux.
 
-### Set the image resolution
+### Définir la résolution de l'image
 
-You can change the `resolution` of the image that the Camera Module takes.
+Tu peux modifier la `résolution` de l'image prise par le module caméra.
 
-By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+Par défaut, la résolution de l'image est définie sur la résolution de ton moniteur. La résolution maximale est de 2592 × 1944 pour les images fixes et de 1920 × 1080 pour l'enregistrement vidéo.
 
-- Use the following code to set the `resolution` to maximum and take a picture.
+- Utilise le code suivant pour définir la résolution `` au maximum et capture une image.
 
-    **Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
+    **Remarque :** tu dois également définir le taux d'images à `15` pour activer cette résolution maximale.
 
     ```python
     camera.resolution = (2592, 1944)
@@ -23,58 +23,58 @@ By default, the image resolution is set to the resolution of your monitor. The m
     camera.stop_preview()
     ```
 
-The minimum resolution is 64×64.
+La résolution minimale est de 64 × 64.
 
-- Try taking a picture with the minimum resolution.
+- Essaie de capturer une image avec la résolution minimale.
 
-### Add text to your image
+### Ajouter du texte à ton image
 
-You can add text to your image using the command `annotate_text`.
+Tu peux ajouter du texte à ton image à l'aide de la commande `annotate_text`.
 
-- Run this code to try it:
+- Exécute ce code pour l'essayer :
 
     ```python
     camera.start_preview()
-    camera.annotate_text = "Hello world!"
+    camera.annotate_text = "Bonjour le monde !"
     sleep(5)
     camera.capture('/home/pi/Desktop/text.jpg')
     camera.stop_preview()
     ```
 
-### Change the look of the added text
+### Modifier l'apparence du texte ajouté
 
-- Set the text size with the following code:
+- Définis la taille du texte avec le code suivant :
 
     ```python
     camera.annotate_text_size = 50
     ```
 
-    You can set the text size to anything between `6` to `160`. The default size is `32`.
+    Tu peux définir la taille du texte sur n'importe quelle valeur comprise entre `6` et `160`. La taille par défaut est `32`.
 
-It's also possible to change the text colour.
+Il est également possible de modifier la couleur du texte.
 
-- First of all, add `Color` to your `import` line at the top of the program:
+- Tout d'abord, ajoute `Color` à ta ligne `import` en haut du programme :
 
     ```python
     from picamera import PiCamera, Color
     ```
 
-- Then below the `import` line, amend the rest of your code so it looks like this:
+- Ensuite, sous la ligne `import` , modifie le reste de ton code pour qu'il ressemble à ceci :
 
     ```python
     camera.start_preview()
     camera.annotate_background = Color('blue')
     camera.annotate_foreground = Color('yellow')
-    camera.annotate_text = " Hello world "
+    camera.annotate_text = " Bonjour le monde "
     sleep(5)
     camera.stop_preview()
     ```
 
-### Change the brightness of the preview
+### Modifier la luminosité de l'aperçu
 
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+Tu peux modifier la luminosité de l'aperçu. La luminosité par défaut est `50` et tu peux la régler sur n'importe quelle valeur comprise entre `0` et `100`.
 
-* Run the following code to try this out:
+* Exécute le code suivant pour essayer ceci :
 
     ```python
     camera.start_preview()
@@ -84,7 +84,7 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
+- La boucle suivante ajuste la luminosité et ajoute également du texte pour afficher le niveau de luminosité actuelle :
 
     ```python
     camera.start_preview()
@@ -95,11 +95,11 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-### Change the contrast of the preview
+### Modifier le contraste de l'aperçu
 
-Similarly to the preview brightness, you can change the contrast of the preview.
+De la même manière que la luminosité de l'aperçu, tu peux modifier le contraste de l'aperçu.
 
-- Run the following code to try this out:
+- Exécute le code suivant pour essayer ceci :
 
     ```python
     camera.start_preview()
@@ -110,38 +110,38 @@ Similarly to the preview brightness, you can change the contrast of the preview.
     camera.stop_preview()
     ```
 
-### Add cool image effects
+### Ajouter des effets d'image sympas
 
-You can use `camera.image_effect` to apply a particular image effect.
+Tu peux utiliser `camera.image_effect` pour appliquer un effet d'image particulier.
 
-The image effect options are:
+Les options d'effet d'image sont :
 
-* `none`
-* `negative`
-* `solarize`
-* `sketch`
-* `denoise`
-* `emboss`
-* `oilpaint`
-* `hatch`
+* `none (aucun)`
+* `negative (négatif)`
+* `solarize (solariser)`
+* `sketch (dessin)`
+* `denoise (antibruit)`
+* `emboss (relief)`
+* `oilpaint (peinture à l'huile)`
+* `hatch (hachurer)`
 * `gpen`
 * `pastel`
-* `watercolor`
+* `watercolor (aquarelle)`
 * `film`
-* `blur`
+* `blur (flou)`
 * `saturation`
-* `colorswap`
-* `washedout`
-* `posterise`
-* `colorpoint`
-* `colorbalance`
-* `cartoon`
-* `deinterlace1`
-* `deinterlace2`
+* `colorswap (permutation de couleur)`
+* `washedout (délavé)`
+* `posterise (postériser)`
+* `colorpoint (point de couleur)`
+* `colorbalance (balance des couleurs)`
+* `cartoon (dessin animé)`
+* `deinterlace1 (désentrelacement1)`
+* `deinterlace2 (désentrelacement2)`
 
-The default effect is `none`.
+L'effet par défaut est `none`.
 
-* Pick an image effect and try it out:
+* Choisis un effet d'image et essaie-le :
 
     ```python
     camera.start_preview()
@@ -151,7 +151,7 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
+* Exécute ce code pour boucler sur **tous** les effets d'image avec `camera.IMAGE_EFFECTS` :
 
     ```python
     camera.start_preview()
@@ -162,30 +162,30 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-    ![Effects](images/effects.jpg)
+    ![Effets](images/effects.jpg)
 
-### Set the image exposure mode
+### Définir le mode d'exposition de l'image
 
-You can use `camera.exposure_mode` to set the exposure to a particular mode.
+Tu peux utiliser `camera.exposure_mode` pour définir l'exposition sur un mode particulier.
 
-The exposure mode options are:
-* `off`
-* `auto`
-* `night`
-* `nightpreview`
-* `backlight`
-* `spotlight`
+Les options de mode d'exposition sont :
+* `off (désactivé)`
+* `auto (automatique)`
+* `night (nuit)`
+* `nightpreview (vision nocturne)`
+* `backlight (éclairage de derrière)`
+* `spotlight (projecteur)`
 * `sports`
-* `snow`
-* `beach`
-* `verylong`
-* `fixedfps`
-* `antishake`
-* `fireworks`
+* `snow (neige)`
+* `beach (plage)`
+* `verylong (très long)`
+* `fixedfps (image fixe par seconde )`
+* `antishake (anti-tremblement)`
+* `fireworks (feux d'artifice)`
 
-The default mode is `auto`.
+Le mode par défaut est `auto`.
 
-* Pick an exposure mode and try it out:
+* Choisis un mode d'exposition et essaie-le :
 
     ```python
     camera.start_preview()
@@ -195,27 +195,27 @@ The default mode is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
+* Tu peux boucler tous les modes d'exposition avec `camera.EXPOSURE_MODES`, comme tu l'as fait pour les effets d'image.
 
-### Change the image white balance
+### Modifier la balance des blancs de l'image
 
-You can use `camera.awb_mode` to set the auto white balance to a preset mode.
+Tu peux utiliser `camera.awb_mode` pour régler la balance des blancs automatique sur un mode prédéfini.
 
-The available auto white balance modes are:
-* `off`
-* `auto`
-* `sunlight`
-* `cloudy`
-* `shade`
-* `tungsten`
+Les modes de balance des blancs disponibles sont :
+* `off (éteint)`
+* `auto (automatique)`
+* `sunlight (lumière du soleil)`
+* `cloudy (nuageux)`
+* `shade (ombre)`
+* `tungsten (tungstène)`
 * `fluorescent`
 * `incandescent`
 * `flash`
 * `horizon`
 
-The default is `auto`.
+La valeur par défaut est `auto`.
 
-* Pick an auto white balance mode and try it out:
+* Choisis un mode de balance des blancs automatique et essaie-le :
 
     ```python
     camera.start_preview()
@@ -225,4 +225,4 @@ The default is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.
+* Tu peux boucler tous les modes de balance des blancs automatique avec `camera.AWB_MODES`, comme tu l'as fait pour les effets d'image.
