@@ -1,17 +1,17 @@
-## What next?
+## Wat kun je verder nog doen?
 
-Now you know how to use your Camera Module, you could for example:
-* Add buttons to control the camera with the help of [GPIO Zero](https://gpiozero.readthedocs.org/) Python code
-* Integrate the camera with Minecraft Pi
-* Post the camera's pictures to Twitter automatically
+Nu je weet hoe je de cameramodule moet gebruiken, kun je bijvoorbeeld:
+* Voeg knoppen toe om de camera te bedienen met behulp van de [GPIO Zero](https://gpiozero.readthedocs.org/) Python-code
+* Integreer de camera met Minecraft Pi
+* Plaats de foto's van de camera automatisch op Twitter
 
-Try these Camera Module projects to learn more:
+Probeer deze cameramodule-projecten voor meer informatie:
 
-- Create a [push button stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) film
-- Make a [Minecraft photobooth](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
-- Get [Babbage bear to tweet pictures](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)
-- Build a [parent detector](https://projects.raspberrypi.org/en/projects/parent-detector/)
-- Use the NoIR Camera Module to create an [infrared bird box](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
+- Maak een [push button stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) film
+- Maak een [Minecraft fotohokje](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
+- Haal [Babbage beer om afbeeldingen te tweeten](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)
+- Bouw een [ouderdetector](https://projects.raspberrypi.org/en/projects/parent-detector/)
+- Gebruik de NoIR-cameramodule om een [infrarood vogelhuisje](https://projects.raspberrypi.org/en/projects/infrared-bird-box/) te maken
 
-For more information about writing Python code to control the Camera Module, see the extensive [picamera documentation](https://picamera.readthedocs.org/).
+Zie de uitgebreide [picamera documentatie](https://picamera.readthedocs.org/) voor meer informatie over het schrijven van Python-code om de cameramodule te besturen.
 
