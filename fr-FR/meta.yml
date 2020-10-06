@@ -1,7 +1,7 @@
 ---
-title: Getting started with the Camera Module
+title: Premiers pas avec le module caméra
 hero_image: images/banner.png
-description: Take pictures and video with the Raspberry Pi Camera Module and Python
+description: Capturer des images et des vidéos avec le module caméra du Raspberry Pi et Python
 listed: true
 copyedit: true
 version: 4
@@ -10,18 +10,18 @@ steps:
   - 
     title: Introduction
   - 
-    title: What you will need
+    title: Ce dont tu auras besoin
   - 
-    title: Connect the Camera Module
+    title: Connecter le module caméra
   - 
-    title: How to control the Camera Module via the command line
+    title: Comment contrôler le module caméra via la ligne de commande
   - 
-    title: How to control the Camera Module with Python code
+    title: Comment contrôler le module caméra avec du code Python
   - 
-    title: Take still pictures with Python code
+    title: Capturer des images fixes avec du code Python
   - 
-    title: Record video with Python code
+    title: Enregistrer des vidéos avec du code Python
   - 
-    title: How to change the image settings and add image effects
+    title: Comment modifier les paramètres d'image et ajouter des effets d'image
   - 
-    title: What next?
+    title: Et ensuite ?
