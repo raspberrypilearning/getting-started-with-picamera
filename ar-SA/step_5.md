@@ -1,16 +1,16 @@
-## How to control the Camera Module with Python code
+## كيفية التحكم في وحدة الكاميرا باستخدام التعليمات البرمجية بلغة Python
 
-The Python `picamera` library allows you to control your Camera Module and create amazing projects.
+تتيح لك مكتبة Python `picamera` التحكم في وحدة الكاميرا الخاصة بك وإنشاء مشاريع مذهلة.
 
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- افتح محرر Python 3 ، مثل **Thonny Python IDE**:
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![افتح Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`.
+- أفتح ملف جديد واحفظه باسم `camera.py`.
 
-    **Note:** it's important that you **never save the file as `picamera.py`**.
+    **ملاحظة:** من المهم أن **لا تحفظ الملف بأسم `picamera.py`**.
 
-- Enter the following code:
+- أدخل الأمر التالي:
 
     ```python
     from picamera import PiCamera
@@ -23,27 +23,27 @@ The Python `picamera` library allows you to control your Camera Module and creat
     camera.stop_preview()
     ```
 
-- Save and run your program. The camera preview should be shown for five seconds and then close again.
+- احفظ برنامجك وقم بتشغيله. من المفترض أن تظهر معاينة الكاميرا لمدة خمس ثوان ثم تغلق مرة أخرى.
 
-    ![Image preview](images/preview.jpg)
+    ![معاينة الصورة](images/preview.jpg)
 
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
+    **ملاحظة:** تعمل معاينة الكاميرا فقط عندما تكون الشاشة متصلة بـ Raspberry Pi. إذا كنت تستخدم الوصول عن بعد (مثل SSH أو VNC) ، فلن ترى معاينة الكاميرا.
 
-- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
+- إذا كانت المعاينة مقلوبة ، فيمكنك تدويرها بمقدار 180 درجة باستخدام التعليمة البرمجية التالية:
 
     ```python
     camera = PiCamera()
     camera.rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
+    يمكنك تدوير الصورة بمقدار `90`، `180`، أو `270` درجة. لإعادة ضبط الصورة ، اضبط `استدارة` إلى `0` درجة.
 
-It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+من الأفضل جعل المعاينة شفافة قليلاً لتتمكن من رؤية فيما إذا كانت هنالك أخطاء تحدث في برنامجك أثناء تشغيل المعاينة.
 
-- Make the camera preview see-through by setting an `alpha` level:
+- اجعل معاينة الكاميرا شفافة من خلال ضبط مستوى `alpha`:
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` value can be any number between `0` and `255`.
+    قيمة `alpha` يمكن أن تكون أي رقم بين `0` و `255`.
