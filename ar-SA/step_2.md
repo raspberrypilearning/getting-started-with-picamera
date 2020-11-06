@@ -1,20 +1,20 @@
-## What you will need
+## ما ستحتاج
 
-### Raspberry Pi computer with a Camera Module port
+### جهاز كمبيوتر Raspberry Pi مع منفذ وحدة الكاميرا
 
-All current models of Raspberry Pi have a port for connecting the Camera Module.
+جميع النماذج الحالية لـ Raspberry Pi لديها منفذ لربط وحدة الكاميرا.
 
-![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
+![جهاز +Raspberry Pi 3B مع منفذ وحده كاميرا مسمى](images/pi4-camera-port.png)
 
-**Note:** If you want to use a Raspberry Pi Zero, you need a Camera Module ribbon cable that fits the Raspberry Pi Zero's smaller Camera Module port.
+**ملاحظة:** إذا كنت ترغب في استخدام Raspberry Pi Zero، تحتاج إلى كابل ذو شريط خاص بوحده الكاميرا يكون حجمه مناسب لمنفذ كاميرا Raspberry Pi Zero صغير الحجم.
 
-### Raspberry Pi Camera Module
+### وحدة كاميرا Raspberry Pi
 
-![Raspberry Pi Camera Module](images/camera-module.png)
+![وحدة كاميرا Raspberry Pi](images/camera-module.png)
 
-There are two versions of the Camera Module:
+هناك نسختان من وحدة الكاميرا:
 
-* [The standard version](https://www.raspberrypi.org/products/camera-module-v2/), which is designed to take pictures in normal light
-* [The NoIR version](https://www.raspberrypi.org/products/pi-noir-camera-v2/), which doesn't have an infrared filter, so you can use it together with an infrared light source to take pictures in the dark
+* [الإصدار القياسي](https://www.raspberrypi.org/products/camera-module-v2/)، الذي صمم لالتقاط الصور في ضوء عادي
+* [إصدار NoIR](https://www.raspberrypi.org/products/pi-noir-camera-v2/)، الذي ليس لديه فلتر بالأشعة تحت الحمراء، لتتمكن من استخدامه مع مصدر ضوء الأشعة تحت الحمراء لالتقاط الصور في الظلام
 
 
