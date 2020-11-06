@@ -1,41 +1,41 @@
-## How to control the Camera Module via the command line
+## كيفية التحكم في وحدة الكاميرا بواسطة سطر الأوامر
 
-Now your Camera Module is connected and the software is enabled, try out the command line tools `raspistill` and `raspivid`.
+الآن وحدة الكاميرا الخاصة بك متصلة والبرمجيات مفعلة، جرب أدوات سطر الأوامر `raspistill` و `raspivid`.
 
-- Open a terminal window by clicking the black monitor icon in the taskbar:
+- افتح نافذة طرفية بالنقر على أيقونة الشاشة السوداء في شريط المهام:
 
-![Open terminal](images/open-terminal-annotated.png)
+![افتح الوحدة الطرفية](images/open-terminal-annotated.png)
 
-- Type in the following command to take a still picture and save it to the Desktop:
+- اكتب الأمر التالي لالتقاط صورة ثابتة وحفظها على سطح المكتب:
 
 ```bash
 raspistill -o Desktop/image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.png)
+![تم إدخال أمر raspistill الى المحطة الطرفية](images/raspistill-image.png)
 
-- Press <kbd>Enter</kbd> to run the command.
+- اضغط على <kbd>Enter</kbd> لتشغيل الأمر.
 
-When the command runs, you can see the camera preview open for five seconds before a still picture is taken.
+عند تشغيل الأمر ، يمكنك مشاهدة معاينة الكاميرا مفتوحة لمدة خمس ثوان قبل التقاط صورة ثابتة.
 
-- Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
+- ابحث عن أيقونة ملف الصورة على سطح المكتب، وانقر مرتين على أيقونة الملف لفتح الصورة.
 
-    ![Image on Desktop](images/desktop-annotated.png)
+    ![الصورة على سطح المكتب](images/desktop-annotated.png)
 
-By adding different options, you can set the size and look of the image the `raspistill` command takes.
+بإضافة خيارات مختلفة ، يمكنك ضبط حجم ومظهر الصورة التي يأخذها الأمر `raspistill`.
 
-- For example, add `-h` and `-w` to change the height and width of the image:
+- على سبيل المثال، أضف `-h` و `-w` لتغيير ارتفاع وعرض الصورة:
 
 ```bash
 raspistill -o Desktop/image-small.jpg -w 640 -h 480
 ```
 
-- Now record a video with the Camera Module by using the following `raspivid` command:
+- الآن قم بتسجيل فيديو باستخدام وحدة الكاميرا باستخدام الأمر التالي `raspivid`:
 
 ```bash
 raspivid -o Desktop/video.h264
 ```
 
-- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
+- لتشغيل ملف الفيديو ، انقر نقرًا مزدوجًا فوق أيقونة الملف `video.h264` على سطح المكتب لفتحه في VLC Media Player.
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
+لمزيد من المعلومات والخيارات الأخرى التي يمكنك استخدامها مع هذه الأوامر ، اقرأ الوثائق التعليمية [لـ raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) و [الوثائق التعليمية raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
