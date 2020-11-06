@@ -1,8 +1,8 @@
-## Take still pictures with Python code
+## التقط صورًا ثابتة باستخدام التعليمات البرمجية بلغة Python
 
-Now use the Camera Module and Python to take some still pictures.
+الآن استخدم وحدة الكاميرا و Python لألتقاط بعض الصور الثابتة.
 
-- Amend your code to add a `camera.capture()` line:
+- قم بتعديل التعليمة البرمجية الخاصة بك بإضافة سطر `()camera.capture`:
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ Now use the Camera Module and Python to take some still pictures.
     camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    **ملاحظة:** من المهم `السكون` لمدة ثانيتين على الأقل قبل التقاط صورة، لأن هذا يمنح مستشعر الكاميرا وقتا لاستشعار مستويات الضوء.
 
-- Run the code.
+- قم بتشغيل التعليمة البرمجية.
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+يجب أن تشاهد معاينة الكاميرا مفتوحة لمدة خمس ثوانٍ، ثم يجب أن تُلتَقَط صورة ثابتة. أثناء التقاط الصورة ، يمكنك رؤية المعاينة وهي تتكيف لفترة وجيزة مع دقة مختلفة.
 
-Your new image should be saved to the Desktop.
+صورتك الجديدة يجب أن تكون قد حُفظت على سطح المكتب.
 
-- Now add a loop to take five pictures in a row:
+- الآن أضف حلقة تكرارية لألتقاط خمس صور متتالية:
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    المتغير `i` يحسب عدد مرات تشغيل الحلقة ، من `0` إلى `4`. لذلك ، يتم حفظ الصور كالتالي `image0.jpg`، `image1.jpg`، وهكذا.
 
-- Run the code again and hold the Camera Module in position.
+- قم بتشغيل التعليمة البرمجية مرة أخرى واحتفظ بوحدة الكاميرا في موضعها.
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+يجب أن تلتقط الكاميرا صورة واحدة كل خمس ثوان. بمجرد التقاط الصورة الخامسة ، تغلق المعاينة.
 
-- Look at your Desktop to find the five new pictures.
+- انظر إلى سطح مكتبك للعثور على الصور الخمس الجديدة.
