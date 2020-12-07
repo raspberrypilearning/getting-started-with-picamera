@@ -1,41 +1,41 @@
-## How to control the Camera Module via the command line
+## Como controlar o Módulo de Câmera através da linha de comando
 
-Now your Camera Module is connected and the software is enabled, try out the command line tools `raspistill` and `raspivid`.
+Agora que seu Módulo de Câmera está conectado e o software está ativado, experimente as ferramentas de linha de comando `raspistill` e `raspivid`.
 
-- Open a terminal window by clicking the black monitor icon in the taskbar:
+- Abra uma janela de terminal clicando no ícone do monitor preto na barra de tarefas:
 
-![Open terminal](images/open-terminal-annotated.png)
+![Terminal aberto](images/open-terminal-annotated.png)
 
-- Type in the following command to take a still picture and save it to the Desktop:
+- Digite o seguinte comando para tirar uma foto e salvá-la na área de trabalho:
 
 ```bash
 raspistill -o Desktop/image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.png)
+![comando raspistill inserido no terminal](images/raspistill-image.png)
 
-- Press <kbd>Enter</kbd> to run the command.
+- Pressione <kbd>Enter</kbd> para executar o comando.
 
-When the command runs, you can see the camera preview open for five seconds before a still picture is taken.
+Quando o comando é executado, você pode ver a pré-visualização da câmera abrir por cinco segundos antes de uma foto ser tirada.
 
-- Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
+- Procure o ícone do arquivo de imagem na área de trabalho e clique duas vezes no ícone do arquivo para abrir a imagem.
 
-    ![Image on Desktop](images/desktop-annotated.png)
+    ![Imagem na Área de Trabalho](images/desktop-annotated.png)
 
-By adding different options, you can set the size and look of the image the `raspistill` command takes.
+Ao adicionar diferentes opções, você pode definir o tamanho e a aparência da imagem que o comando `raspistill` gera.
 
-- For example, add `-h` and `-w` to change the height and width of the image:
+- Por exemplo, adicione `-h` e `-w` para alterar a altura e largura da imagem:
 
 ```bash
 raspistill -o Desktop/image-small.jpg -w 640 -h 480
 ```
 
-- Now record a video with the Camera Module by using the following `raspivid` command:
+- Agora grave um vídeo com o Módulo de Câmera usando o seguinte comando `raspivid`:
 
 ```bash
 raspivid -o Desktop/video.h264
 ```
 
-- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
+- Para reproduzir o arquivo de vídeo, clique duas vezes no ícone do arquivo `video.h264` na área de trabalho para abri-lo no VLC Media Player.
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
+Para mais informações e outras opções que você pode usar com esses comandos, leia a [documentação para raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) e a [documentação para raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
