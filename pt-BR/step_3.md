@@ -1,48 +1,48 @@
-## Connect the Camera Module
+## Conectar o Módulo de Câmera
 
-**Ensure your Raspberry Pi is turned off.**
+**Certifique-se de que o Raspberry Pi esteja desligado.**
 
 --- no-print ---
 
-1. Locate the Camera Module port
-2. Gently pull up on the edges of the port's plastic clip
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round
-4. Push the plastic clip back into place
+1. Localize a porta do Módulo de Câmera
+2. Levante suavemente as bordas do clipe plástico da porta
+3. Insira o cabo flat do Módulo de Câmera; certifique-se de que o cabo esteja do lado correto
+4. Empurre o clipe plástico de volta ao lugar
 
-![Animation of how to connect the Raspberry Pi Camera Module](images/connect-camera.gif)
+![Animação de como conectar o Módulo de Câmera do Raspberry Pi](images/connect-camera.gif)
 
 --- /no-print ---
 
 --- print-only ---
 
-1. Locate the Camera Module port.
+1. Localize a porta do Módulo de Câmara.
 
-![raspberry pi and camera module](images/connect-camera1.png)
+![raspberry pi e módulo de câmera](images/connect-camera1.png)
 
-2. Gently pull up on the edges of the port's plastic clip.
+2. Levante suavemente as bordas do clipe plástico da porta.
 
-![camera module port lifted up](images/connect-camera2.png)
+![porta do módulo da câmera levantada](images/connect-camera2.png)
 
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round.
+3. Insira o cabo flat do Módulo de Câmera; certifique-se de que o cabo esteja do lado correto.
 
-![camera module ribbon cable inserted into port](images/connect-camera3.png)
+![cabo flat do módulo da câmera inserido na porta](images/connect-camera3.png)
 
-4. Push the plastic clip back into place.
+4. Empurre o clipe plástico de volta ao lugar.
 
-![camera module port puished down](images/connect-camera4.png)
+![porta do módulo de câmera empurrada para baixo](images/connect-camera4.png)
 
-![camera module port puished down](images/connect-camera4.png)
+![porta do módulo de câmera empurrada para baixo](images/connect-camera4.png)
 
 --- /print-only ---
 
-- Start up your Raspberry Pi.
+- Inicie o seu Raspberry Pi.
 
-- Go to the main menu and open the **Raspberry Pi Configuration** tool.
+- Vá para o menu principal e abra a ferramenta **Configuração do Raspberry Pi**.
 
-    ![Raspberry Pi Configuration Tool](images/pi-configuration-menu.png)
+    ![Ferramenta de Configuração do Raspberry Pi](images/pi-configuration-menu.png)
 
-- Select the **Interfaces** tab and ensure that the camera is **enabled**:
+- Selecione a guia **Interfaces** e certifique-se de que a câmera esteja **habilitada**:
 
-    ![Camera enabled](images/pi-configuration-interfaces-annotated.png)
+    ![Câmera habilitada](images/pi-configuration-interfaces-annotated.png)
 
-- Reboot your Raspberry Pi.
+- Reinicie o seu Raspberry Pi.
