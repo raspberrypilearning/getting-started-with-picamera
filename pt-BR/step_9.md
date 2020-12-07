@@ -1,17 +1,17 @@
-## What next?
+## E agora?
 
-Now you know how to use your Camera Module, you could for example:
-* Add buttons to control the camera with the help of [GPIO Zero](https://gpiozero.readthedocs.org/) Python code
-* Integrate the camera with Minecraft Pi
-* Post the camera's pictures to Twitter automatically
+Agora que você sabe como usar seu Módulo de Câmera, você pode, por exemplo:
+* Adicionar botões para controlar a câmera com a ajuda do código Python [GPIO Zero](https://gpiozero.readthedocs.org/)
+* Integrar a câmera ao Minecraft Pi
+* Publicar as fotos da câmera automaticamente no Twitter
 
-Try these Camera Module projects to learn more:
+Experimente esses projetos do Módulo de Câmera para saber mais:
 
-- Create a [push button stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) film
-- Make a [Minecraft photobooth](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
-- Get [Babbage bear to tweet pictures](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)
-- Build a [parent detector](https://projects.raspberrypi.org/en/projects/parent-detector/)
-- Use the NoIR Camera Module to create an [infrared bird box](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
+- Crie um filme [stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/)
+- Faça uma [cabine fotográfica no Minecraft](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
+- Faça o [Babbage bear tuitar imagens](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)
+- Construa um sistema de [controle dos pais](https://projects.raspberrypi.org/en/projects/parent-detector/)
+- Use o Módulo de Câmera NoIR para criar uma [caixa infravermelha de pássaros](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
 
-For more information about writing Python code to control the Camera Module, see the extensive [picamera documentation](https://picamera.readthedocs.org/).
+Para obter mais informações sobre como escrever código Python para controlar o Módulo de Câmera, consulte a extensa [documentação picamera](https://picamera.readthedocs.org/).
 
