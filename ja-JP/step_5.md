@@ -1,16 +1,16 @@
-## How to control the Camera Module with Python code
+## Pythonコードでカメラモジュールをコントロールする方法
 
-The Python `picamera` library allows you to control your Camera Module and create amazing projects.
+Python `picamera` ライブラリを使用すると、カメラモジュールをコントロールして素晴らしいプロジェクトを作成できます。
 
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- **Thonny Python IDE** など、Python 3 エディタを開きます。
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![Thonnyを開く](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`.
+- 新しいファイルを開き、 `camera.py` として保存します。
 
-    **Note:** it's important that you **never save the file as `picamera.py`**.
+    **注意:** **ファイルを`picamera.py `として保存しない** ことが重要です。
 
-- Enter the following code:
+- 次のコードを入力します。
 
     ```python
     from picamera import PiCamera
@@ -23,27 +23,27 @@ The Python `picamera` library allows you to control your Camera Module and creat
     camera.stop_preview()
     ```
 
-- Save and run your program. The camera preview should be shown for five seconds and then close again.
+- プログラムを保存して実行します。 カメラのプレビューが5秒間表示され、再び閉じます。
 
-    ![Image preview](images/preview.jpg)
+    ![画像プレビュー](images/preview.jpg)
 
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
+    **注意:** カメラのプレビューは、モニターがRaspberry Piに接続されている場合にのみ機能します。 リモートアクセス（SSHやVNCなど）を使用している場合、カメラのプレビューは表示されません。
 
-- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
+- プレビューが上下逆になっている場合は、次のコードを使用してプレビューを180度回転させることができます。
 
     ```python
     camera = PiCamera()
     camera.rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
+    画像を `90`、 `180`、または `270` 度回転させることができます。 画像をリセットするには、 `rotation` (回転)を `0` 度に設定します。
 
-It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+プレビューがオンのときにプログラムでエラーが発生するかどうかを確認できるように、プレビューを少し透（す）けて見えるようにすることをお勧（すす）めします。
 
-- Make the camera preview see-through by setting an `alpha` level:
+- `alpha` レベルを設定して、カメラプレビューを透かします。
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` value can be any number between `0` and `255`.
+    `alpha` の値は `0` から `255` の間の任意の数値にできます。
