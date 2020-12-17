@@ -1,17 +1,17 @@
-## What next?
+## 次は何をしましょうか？
 
-Now you know how to use your Camera Module, you could for example:
-* Add buttons to control the camera with the help of [GPIO Zero](https://gpiozero.readthedocs.org/) Python code
-* Integrate the camera with Minecraft Pi
-* Post the camera's pictures to Twitter automatically
+これで、カメラモジュールの使い方がわかりました。たとえば、次のようなことができます。
+* [GPIO Zero](https://gpiozero.readthedocs.org/) Pythonコードの助けを借りてカメラを制御するボタンを追加
+* Minecraft Piとカメラを統合
+* カメラの写真をTwitterに自動的に投稿
 
-Try these Camera Module projects to learn more:
+更に学ぶために、次のカメラモジュールプロジェクトをお試しください。
 
-- Create a [push button stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) film
-- Make a [Minecraft photobooth](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
-- Get [Babbage bear to tweet pictures](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)
-- Build a [parent detector](https://projects.raspberrypi.org/en/projects/parent-detector/)
-- Use the NoIR Camera Module to create an [infrared bird box](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
+- [プッシュボタンストップモーション](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) フィルムを作成
+- [マインクラフトフォトブース](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)を作成
+- [写真をツイートするためにバベッジベア](https://projects.raspberrypi.org/en/projects/tweeting-babbage/)を取得
+- [親探知機](https://projects.raspberrypi.org/en/projects/parent-detector/)を作成
+- NoIRカメラモジュールを使用して、 [赤外線バードボックス](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)を作成
 
-For more information about writing Python code to control the Camera Module, see the extensive [picamera documentation](https://picamera.readthedocs.org/).
+Camera Moduleを制御するためのPythonコードの書き方についての詳細は、 [picamera ドキュメント](https://picamera.readthedocs.org/) を参照してください。
 
