@@ -1,41 +1,41 @@
-## How to control the Camera Module via the command line
+## コマンドラインでカメラモジュールをコントロールする方法
 
-Now your Camera Module is connected and the software is enabled, try out the command line tools `raspistill` and `raspivid`.
+カメラモジュールが接続され、ソフトウェアが有効になりました。コマンドラインツールである `raspistill` と `raspivid` を試してみてください。
 
-- Open a terminal window by clicking the black monitor icon in the taskbar:
+- タスクバーの黒いモニターアイコンをクリックして、ターミナルウィンドウを開きます。
 
-![Open terminal](images/open-terminal-annotated.png)
+![ターミナルを開く](images/open-terminal-annotated.png)
 
-- Type in the following command to take a still picture and save it to the Desktop:
+- 静止画を撮影し、デスクトップに保存するには、次のコマンドを入力します。
 
 ```bash
-raspistill -o Desktop/image.jpg
+raspistill -o Desktop / image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.png)
+![raspistillコマンドがターミナルに入力される](images/raspistill-image.png)
 
-- Press <kbd>Enter</kbd> to run the command.
+- <kbd>Enter</kbd> を押してコマンドを実行します。
 
-When the command runs, you can see the camera preview open for five seconds before a still picture is taken.
+コマンドが実行されると、静止画が撮影される5秒前からカメラのプレビューが開きます。
 
-- Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
+- デスクトップの画像ファイルアイコンを探し、ファイルアイコンをダブルクリックして画像を開きます。
 
-    ![Image on Desktop](images/desktop-annotated.png)
+    ![デスクトップ上の画像](images/desktop-annotated.png)
 
-By adding different options, you can set the size and look of the image the `raspistill` command takes.
+さまざまなオプションを追加することで、`raspistill` コマンドが受け取る画像サイズと見え方を設定することができます。
 
-- For example, add `-h` and `-w` to change the height and width of the image:
+- たとえば、画像の高さと幅を変更するには、 `-h` と `-w` を追加します。
 
 ```bash
 raspistill -o Desktop/image-small.jpg -w 640 -h 480
 ```
 
-- Now record a video with the Camera Module by using the following `raspivid` command:
+- 続いて、次の `raspivid` コマンドを使用して、カメラモジュールでビデオを録画します。
 
 ```bash
 raspivid -o Desktop/video.h264
 ```
 
-- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
+- ビデオファイルを再生するには、デスクトップの `video.h264` ファイルアイコンをダブルクリックして、VLC MediaPlayerで開きます。
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
+より詳しい情報やこれらのコマンドで使用できるその他のオプションについては、[raspistill のドキュメント](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) および [raspividのドキュメント](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md) を読んでください。
