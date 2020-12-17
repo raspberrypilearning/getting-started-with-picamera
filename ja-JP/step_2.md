@@ -1,20 +1,20 @@
-## What you will need
+## 必要なもの
 
-### Raspberry Pi computer with a Camera Module port
+### カメラモジュールポート付きRaspberry Piコンピューター
 
-All current models of Raspberry Pi have a port for connecting the Camera Module.
+現在のRaspberry Piのすべてのモデルには、カメラモジュールを接続するためのポートがあります。
 
-![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
+![カメラモジュールポートのラベルが取り付けられたRaspberry Pi 3B +](images/pi4-camera-port.png)
 
-**Note:** If you want to use a Raspberry Pi Zero, you need a Camera Module ribbon cable that fits the Raspberry Pi Zero's smaller Camera Module port.
+**注意：** Raspberry Pi Zeroを使用する場合は、Raspberry Pi Zeroの小さいカメラモジュールポートに合うカメラモジュールリボンケーブルが必要です。
 
-### Raspberry Pi Camera Module
+### Raspberry Piカメラモジュール
 
-![Raspberry Pi Camera Module](images/camera-module.png)
+![Raspberry Piカメラモジュール](images/camera-module.png)
 
-There are two versions of the Camera Module:
+カメラモジュールには2つのバージョンがあります。
 
-* [The standard version](https://www.raspberrypi.org/products/camera-module-v2/), which is designed to take pictures in normal light
-* [The NoIR version](https://www.raspberrypi.org/products/pi-noir-camera-v2/), which doesn't have an infrared filter, so you can use it together with an infrared light source to take pictures in the dark
+* [標準バージョン](https://www.raspberrypi.org/products/camera-module-v2/)は、通常の光の中で写真を撮るように設計されています
+* [NoIR バージョン](https://www.raspberrypi.org/products/pi-noir-camera-v2/)は、赤外線フィルタを持たないので、赤外線の光源と一緒に暗闇の中で写真を撮ることができます
 
 
