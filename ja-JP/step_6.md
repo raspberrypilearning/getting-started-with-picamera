@@ -1,8 +1,8 @@
-## Take still pictures with Python code
+## Pythonコードで静止画を撮る
 
-Now use the Camera Module and Python to take some still pictures.
+次に、カメラモジュールとPythonを使って静止画を撮りましょう。
 
-- Amend your code to add a `camera.capture()` line:
+- コードを修正して、 `camera.capture()` 行を追加します。
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ Now use the Camera Module and Python to take some still pictures.
     camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    **注意:** 画像をキャプチャする前に、少なくとも2秒間 `スリープ` することが重要です。 これにより、カメラのセンサーに光のレベルを感知する時間を与えられます。
 
-- Run the code.
+- コードを実行します。
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+カメラのプレビューが5秒間開いてから、静止画が撮影されます。 写真が撮影されている間、プレビューが別の解像度（かいぞうど）にささっと調整されているのを見ることができます。
 
-Your new image should be saved to the Desktop.
+新しい画像はデスクトップに保存されているはずです。
 
-- Now add a loop to take five pictures in a row:
+- 次に、5枚の写真を連続で撮るためのループを追加します。
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    変数 `i` は、ループの実行回数を `0` から `4` まで数えます。 そのため、画像は `image0.jpg`、 `image1.jpg`、などとして保存されます。
 
-- Run the code again and hold the Camera Module in position.
+- もう一度コードを実行し、カメラモジュールを適当な位置に保持します。
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+カメラは５秒ごとに１枚の写真を撮ります。 5枚目の写真を撮ると、プレビューは終了します。
 
-- Look at your Desktop to find the five new pictures.
+- デスクトップを見ると５枚の新しい写真があります。
