@@ -1,18 +1,18 @@
-## How to change the image settings and add image effects
+## 画像設定を変更して、画像効果を追加する方法
 
-The Python `picamera` software provides a number of effects and configurations to change how your images look.
+Pythonの `picamera` ソフトウェアは、画像の見た目を変更するための多くの効果と設定を提供します。
 
-**Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
+**注意:** 一部の設定は、プレビューにのみ反映され、撮影された画像には反映されません。また、一部の設定は撮影された画像にのみ反映されます。多くの設定は両方に反映されます。
 
-### Set the image resolution
+### 画像の解像度を設定する
 
-You can change the `resolution` of the image that the Camera Module takes.
+カメラモジュールが撮影する画像の `resolution`(解像度)を変更できます。
 
-By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+デフォルト（初期設定）では、画像の解像度はモニターの解像度に設定されています。 最大解像度は、静止画の場合は2592×1944、ビデオ録画の場合は1920×1080です。
 
-- Use the following code to set the `resolution` to maximum and take a picture.
+- 次のコードを使用して、 `resolution` を最大に設定し、写真を撮ります。
 
-    **Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
+    **注意:** この最大解像度を有効にするには、フレームレートを `15` に設定する必要があります。
 
     ```python
     camera.resolution = (2592, 1944)
@@ -23,15 +23,15 @@ By default, the image resolution is set to the resolution of your monitor. The m
     camera.stop_preview()
     ```
 
-The minimum resolution is 64×64.
+最小解像度は64×64です。
 
-- Try taking a picture with the minimum resolution.
+- 最小解像度で写真を撮ってみてください。
 
-### Add text to your image
+### 画像にテキストを追加する
 
-You can add text to your image using the command `annotate_text`.
+コマンド `annotate_text` (注釈を付ける)を使用して画像にテキストを追加することができます。
 
-- Run this code to try it:
+- このコードを実行してみましょう。
 
     ```python
     camera.start_preview()
@@ -41,25 +41,25 @@ You can add text to your image using the command `annotate_text`.
     camera.stop_preview()
     ```
 
-### Change the look of the added text
+### 追加したテキストの見かけを変更する
 
-- Set the text size with the following code:
+- 次のコードでテキストサイズを設定します。
 
     ```python
     camera.annotate_text_size = 50
     ```
 
-    You can set the text size to anything between `6` to `160`. The default size is `32`.
+    `6` から `160` までの任意の文字サイズに設定できます。 デフォルトのサイズは `32` です。
 
-It's also possible to change the text colour.
+テキストの色を変更することもできます。
 
-- First of all, add `Color` to your `import` line at the top of the program:
+- まず、`Color` を、プログラムの上部にある `import` 行に追加します。
 
     ```python
     from picamera import PiCamera, Color
     ```
 
-- Then below the `import` line, amend the rest of your code so it looks like this:
+- 次に、 `import` 行の下で、残りのコードを次のように修正します。
 
     ```python
     camera.start_preview()
@@ -70,11 +70,11 @@ It's also possible to change the text colour.
     camera.stop_preview()
     ```
 
-### Change the brightness of the preview
+### プレビューの明るさを変更する
 
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+プレビューの明るさを変更できます。 デフォルトの明るさは `50`で、 `0` から `100` の間の任意の値に設定できます。
 
-* Run the following code to try this out:
+* これを試すには、次のコードを実行します。
 
     ```python
     camera.start_preview()
@@ -84,7 +84,7 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
+- 次のループは、明るさを調整し、現在の明るさのレベルを表示するテキストを追加します。
 
     ```python
     camera.start_preview()
@@ -95,11 +95,11 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-### Change the contrast of the preview
+### プレビューのコントラストを変更する
 
-Similarly to the preview brightness, you can change the contrast of the preview.
+プレビューの明るさと同様に、プレビューのコントラストを変更できます。
 
-- Run the following code to try this out:
+- これを試すには、次のコードを実行します。
 
     ```python
     camera.start_preview()
@@ -110,11 +110,11 @@ Similarly to the preview brightness, you can change the contrast of the preview.
     camera.stop_preview()
     ```
 
-### Add cool image effects
+### かっこいい画像効果を追加する
 
-You can use `camera.image_effect` to apply a particular image effect.
+`camera.image_effect` を使用して、特定の画像効果を適用できます。
 
-The image effect options are:
+画像効果のオプションは次のとおりです。
 
 * `none`
 * `negative`
@@ -139,9 +139,9 @@ The image effect options are:
 * `deinterlace1`
 * `deinterlace2`
 
-The default effect is `none`.
+デフォルトの効果は `none` です。
 
-* Pick an image effect and try it out:
+* 画像効果を選んで試してみてください。
 
     ```python
     camera.start_preview()
@@ -151,7 +151,7 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
+* **すべて** の画像効果を`camera.IMAGE_EFFECTS`を使ってループさせるためにこのコードを実行してください。
 
     ```python
     camera.start_preview()
@@ -162,13 +162,13 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-    ![Effects](images/effects.jpg)
+    ![効果](images/effects.jpg)
 
-### Set the image exposure mode
+### 画像露出モード（光の量、明るさ）を設定する
 
-You can use `camera.exposure_mode` to set the exposure to a particular mode.
+`camera.exposure_mode` を使用して、露出を特定のモードに設定できます。
 
-The exposure mode options are:
+露出モードのオプションは次のとおりです。
 * `off`
 * `auto`
 * `night`
@@ -183,9 +183,9 @@ The exposure mode options are:
 * `antishake`
 * `fireworks`
 
-The default mode is `auto`.
+デフォルトのモードは `auto` です。
 
-* Pick an exposure mode and try it out:
+* 露出モードを選択して試してみてください。
 
     ```python
     camera.start_preview()
@@ -195,13 +195,13 @@ The default mode is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
+* 画像効果で行ったように、`camera.EXPOSURE_MODES`を使ってすべての露出モードをループさせることができます。
 
-### Change the image white balance
+### 画像のホワイトバランスを変更する
 
-You can use `camera.awb_mode` to set the auto white balance to a preset mode.
+`camera.awb_mode` を使用して、オート(自動)ホワイトバランスをプリセットモードに設定できます。
 
-The available auto white balance modes are:
+利用できるオートホワイトバランスモードは次のとおりです。
 * `off`
 * `auto`
 * `sunlight`
@@ -213,9 +213,9 @@ The available auto white balance modes are:
 * `flash`
 * `horizon`
 
-The default is `auto`.
+デフォルトは `auto` です。
 
-* Pick an auto white balance mode and try it out:
+* オートホワイトバランスモードを選択して試してみてください。
 
     ```python
     camera.start_preview()
@@ -225,4 +225,4 @@ The default is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.
+* 画像効果で行ったように、`camera.AWB_MODES`を使ってすべてのオートホワイトバランスモードをループさせることができます。
