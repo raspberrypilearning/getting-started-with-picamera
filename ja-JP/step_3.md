@@ -1,48 +1,48 @@
-## Connect the Camera Module
+## カメラモジュールを接続する
 
-**Ensure your Raspberry Pi is turned off.**
+**Raspberry Piがオフになっていることを確認してください。**
 
 --- no-print ---
 
-1. Locate the Camera Module port
-2. Gently pull up on the edges of the port's plastic clip
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round
-4. Push the plastic clip back into place
+1. カメラモジュールポートを見つけます
+2. ポートのプラスチッククリップの端（はし）をそっと引き上げます
+3. カメラモジュールのリボンケーブルを差しこみます。ケーブルが正しい方向にあることを確認してください
+4. プラスチッククリップを元の位置にもどします
 
-![Animation of how to connect the Raspberry Pi Camera Module](images/connect-camera.gif)
+![Raspberry Piカメラモジュールの接続方法のアニメーション](images/connect-camera.gif)
 
 --- /no-print ---
 
 --- print-only ---
 
-1. Locate the Camera Module port.
+1. カメラモジュールポートを見つけます。
 
-![raspberry pi and camera module](images/connect-camera1.png)
+![Raspberry Piとカメラモジュール](images/connect-camera1.png)
 
-2. Gently pull up on the edges of the port's plastic clip.
+2. ポートのプラスチッククリップの端（はし）をそっと引き上げます。
 
-![camera module port lifted up](images/connect-camera2.png)
+![持ち上げられたカメラモジュールポート](images/connect-camera2.png)
 
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round.
+3. カメラモジュールのリボンケーブルを差しこみます。ケーブルが正しい方向にあることを確認してください。
 
-![camera module ribbon cable inserted into port](images/connect-camera3.png)
+![ポートに差しこまれたカメラモジュールリボンケーブル](images/connect-camera3.png)
 
-4. Push the plastic clip back into place.
+4. プラスチッククリップを元の位置にもどします。
 
-![camera module port puished down](images/connect-camera4.png)
+![押し（おし）下げられたカメラモジュールポート](images/connect-camera4.png)
 
-![camera module port puished down](images/connect-camera4.png)
+![押し（おし）下げられたカメラモジュールポート](images/connect-camera4.png)
 
 --- /print-only ---
 
-- Start up your Raspberry Pi.
+- Raspberry Piを起動します。
 
-- Go to the main menu and open the **Raspberry Pi Configuration** tool.
+- メインメニューに移動し、 **Raspberry Pi Configuration** (設定)ツールを開きます。
 
-    ![Raspberry Pi Configuration Tool](images/pi-configuration-menu.png)
+    ![Raspberry Pi 設定ツール](images/pi-configuration-menu.png)
 
-- Select the **Interfaces** tab and ensure that the camera is **enabled**:
+- **Interfaces** (インターフェイス)タブを選択し、カメラが**enabled**(有効)になっていることを確認します
 
-    ![Camera enabled](images/pi-configuration-interfaces-annotated.png)
+    ![カメラが有効](images/pi-configuration-interfaces-annotated.png)
 
-- Reboot your Raspberry Pi.
+- Raspberry Piを再起動します。
