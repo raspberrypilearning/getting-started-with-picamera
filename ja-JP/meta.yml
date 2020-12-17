@@ -1,0 +1,18 @@
+---
+title: カメラモジュールを始めよう
+hero_image: images/banner.png
+description: RaspberryPiカメラモジュールとPythonで写真とビデオを撮る
+listed: true
+copyedit: true
+version: 4
+last_tested: 2018-05-13
+steps:
+  - title: はじめに
+  - title: 必要なもの
+  - title: カメラモジュールを接続する
+  - title: コマンドラインでカメラモジュールをコントロールする方法
+  - title: Pythonコードでカメラモジュールをコントロールする方法
+  - title: Pythonコードで静止画を撮る
+  - title: Pythonコードでビデオを録画する
+  - title: 画像設定を変更して、画像効果を追加する方法
+  - title: 次は何をしましょうか？
