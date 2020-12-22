@@ -1,20 +1,20 @@
-## What you will need
+## Lo que necesitarás
 
-### Raspberry Pi computer with a Camera Module port
+### Computadora Raspberry Pi con un puerto para el Módulo de Cámara
 
-All current models of Raspberry Pi have a port for connecting the Camera Module.
+Todos los modelos actuales de Raspberry Pi tienen un puerto para conectar el Módulo de Cámara.
 
 ![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
 
-**Note:** If you want to use a Raspberry Pi Zero, you need a Camera Module ribbon cable that fits the Raspberry Pi Zero's smaller Camera Module port.
+**Nota:** Si quieres utilizar un Raspberry Pi Zero, necesitas un cable plano para Módulo de Cámara que encaje en el puerto más pequeño del Módulo de Cámara de Raspberry Pi Zero.
 
-### Raspberry Pi Camera Module
+### Módulo de Cámara de Raspberry Pi
 
 ![Raspberry Pi Camera Module](images/camera-module.png)
 
-There are two versions of the Camera Module:
+Hay dos versiones del Módulo de Cámara:
 
-* [The standard version](https://www.raspberrypi.org/products/camera-module-v2/), which is designed to take pictures in normal light
-* [The NoIR version](https://www.raspberrypi.org/products/pi-noir-camera-v2/), which doesn't have an infrared filter, so you can use it together with an infrared light source to take pictures in the dark
+* [La versión estándar](https://www.raspberrypi.org/products/camera-module-v2/), que está diseñada para tomar fotos con luz normal
+* [La versión NoIR](https://www.raspberrypi.org/products/pi-noir-camera-v2/), que no tiene un filtro infrarrojo, por lo que puedes utilizarlo junto con una fuente de luz infrarroja para tomar fotos en la oscuridad
 
 
