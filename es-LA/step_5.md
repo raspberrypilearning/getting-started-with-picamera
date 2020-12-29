@@ -27,23 +27,23 @@ La biblioteca Python `picamera` te permite controlar tu Módulo de Cámara y cre
 
     ![Image preview](images/preview.jpg)
 
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
+    **Nota:** la vista previa de la cámara solo funciona cuando el monitor está conectado a tu Raspberry Pi. Si estás usando acceso remoto (como SSH o VNC) no verás la vista previa de la cámara.
 
-- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
+- Si tu vista previa está al revés, puedes girarla 180 grados con el siguiente código:
 
     ```python
     camera = PiCamera()
     camera.rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
+    Puedes girar la imagen `90`, `180`, o `270` grados. Para restablecer la imagen, configura la `rotación` a `0` grados.
 
-It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+Es mejor hacer que la vista previa sea un poco transparente para que puedas ver si ocurren errores en tu programa mientras la vista previa esté activa.
 
-- Make the camera preview see-through by setting an `alpha` level:
+- Haz que la vista previa de la cámara sea transparente configurando un nivel `alpha`:
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` value can be any number between `0` and `255`.
+    El valor `alpha` puede ser cualquier número entre `0` y `255`.
