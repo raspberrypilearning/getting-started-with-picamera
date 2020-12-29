@@ -1,8 +1,8 @@
 ## Take still pictures with Python code
 
-Now use the Camera Module and Python to take some still pictures.
+Ahora usa el Módulo de Cámara y Python para capturar imágenes fijas.
 
-- Amend your code to add a `camera.capture()` line:
+- Modifica tu código para agregar una línea `camera.capture()`:
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ Now use the Camera Module and Python to take some still pictures.
     camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    **Nota:** es importante configurar `sleep` durante al menos dos segundos antes de capturar una imagen, ya que esto le da tiempo al sensor de la cámara para detectar los niveles de luz.
 
-- Run the code.
+- Ejecuta el código.
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+Deberías ver la vista previa de la cámara abierta durante cinco segundos y luego debería capturarse una imagen fija. Mientras se está tomando la foto, puedes ver la vista previa ajustarse brevemente a una resolución diferente.
 
-Your new image should be saved to the Desktop.
+Tu nueva imagen se guardará en el Escritorio.
 
-- Now add a loop to take five pictures in a row:
+- Ahora agrega un ciclo para tomar cinco fotos seguidas:
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    La variable `i` cuenta cuántas veces se ejecutó el ciclo, de `0` a `4`. Por lo tanto, las fotos se guardan como `image0.jpg`, `image1.jpg` y así sucesivamente.
 
-- Run the code again and hold the Camera Module in position.
+- Ejecuta el código otra vez y mantén el Módulo de Cámara en su posición.
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+La cámara debería tomar una foto cada cinco segundos. Una vez que se toma la quinta foto, se cierra la vista previa.
 
-- Look at your Desktop to find the five new pictures.
+- Mira el Escritorio para encontrar las cinco fotos nuevas.
