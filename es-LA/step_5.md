@@ -1,16 +1,16 @@
-## How to control the Camera Module with Python code
+## Cómo controlar el Módulo de Cámara con código Python
 
-The Python `picamera` library allows you to control your Camera Module and create amazing projects.
+La biblioteca Python `picamera` te permite controlar tu Módulo de Cámara y crear proyectos increíbles.
 
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- Abre un editor Python 3, como **Thonny Python IDE**:
 
     ![Open Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`.
+- Abre un nuevo archivo y guárdalo como `camera.py`.
 
-    **Note:** it's important that you **never save the file as `picamera.py`**.
+    **Nota:** es importante que **nunca guardes el archivo como `picamera.py`**.
 
-- Enter the following code:
+- Escribe el siguiente código:
 
     ```python
     from picamera import PiCamera
@@ -23,7 +23,7 @@ The Python `picamera` library allows you to control your Camera Module and creat
     camera.stop_preview()
     ```
 
-- Save and run your program. The camera preview should be shown for five seconds and then close again.
+- Guarda y ejecuta tu programa. La vista previa de la cámara debería mostrarse durante cinco segundos y luego cerrarse nuevamente.
 
     ![Image preview](images/preview.jpg)
 
