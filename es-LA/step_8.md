@@ -1,18 +1,18 @@
-## How to change the image settings and add image effects
+## Cómo cambiar las configuraciones de la imagen y agregarle efectos
 
-The Python `picamera` software provides a number of effects and configurations to change how your images look.
+El software Python `picamera` proporciona un número de efectos y configuraciones para cambiar la apariencia de tus imágenes.
 
-**Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
+**Nota:** algunas configuraciones solo afectan la vista previa y no la imagen capturada, algunos afectan solo la imagen capturada y muchos otros afectan a ambas.
 
-### Set the image resolution
+### Define la resolución de la imagen
 
-You can change the `resolution` of the image that the Camera Module takes.
+Puedes cambiar la `resolución` de la imagen que el Módulo de Cámara produce.
 
-By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+Por defecto, la resolución de la imagen está configurada segun la resolución de tu monitor. La resolución máxima es 2592×1944 para imágenes fijas, y 1920×1080 para grabaciones de video.
 
-- Use the following code to set the `resolution` to maximum and take a picture.
+- Utiliza el siguiente código para establecer la `resolución` al máximo y tomar una foto.
 
-    **Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
+    **Nota:** también tienes que establecer la velocidad de los fotogramas por segundo a `15` para permitir esta resolución máxima.
 
     ```python
     camera.resolution = (2592, 1944)
@@ -23,15 +23,15 @@ By default, the image resolution is set to the resolution of your monitor. The m
     camera.stop_preview()
     ```
 
-The minimum resolution is 64×64.
+La resolución mínima es 64x64.
 
-- Try taking a picture with the minimum resolution.
+- Intenta tomar una foto con la resolución mínima.
 
-### Add text to your image
+### Agrega texto a tu imagen
 
-You can add text to your image using the command `annotate_text`.
+Puedes agregar texto a tu imagen usando el comando `annotate_text`.
 
-- Run this code to try it:
+- Ejecuta este código para probarlo:
 
     ```python
     camera.start_preview()
@@ -41,25 +41,25 @@ You can add text to your image using the command `annotate_text`.
     camera.stop_preview()
     ```
 
-### Change the look of the added text
+### Cambia el aspecto del texto agregado
 
-- Set the text size with the following code:
+- Establece el tamaño del texto con el siguiente código:
 
     ```python
     camera.annotate_text_size = 50
     ```
 
-    You can set the text size to anything between `6` to `160`. The default size is `32`.
+    Puedes establecer el tamaño del texto en cualquier valor entre `6` y `160`. El tamaño predeterminado es `32`.
 
-It's also possible to change the text colour.
+También es posible cambiar el color del texto.
 
-- First of all, add `Color` to your `import` line at the top of the program:
+- En primer lugar, agrega `Color` a tu línea `import` en la parte superior del programa:
 
     ```python
     from picamera import PiCamera, Color
     ```
 
-- Then below the `import` line, amend the rest of your code so it looks like this:
+- Luego, debajo de la línea `import`, modifica el resto de tu código para que se vea así:
 
     ```python
     camera.start_preview()
@@ -70,11 +70,11 @@ It's also possible to change the text colour.
     camera.stop_preview()
     ```
 
-### Change the brightness of the preview
+### Cambia el brillo de la vista previa
 
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+Puedes cambiar el brillo de la vista previa. El brillo predeterminado es `50` y puedes establecerlo en cualquier valor entre `0` y `100`.
 
-* Run the following code to try this out:
+* Ejecuta el siguiente código para probarlo:
 
     ```python
     camera.start_preview()
@@ -84,7 +84,7 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
+- El siguiente ciclo ajusta el brillo y también agrega texto para mostrar el nivel de brillo actual:
 
     ```python
     camera.start_preview()
@@ -95,11 +95,11 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-### Change the contrast of the preview
+### Cambia el contraste de la vista previa
 
-Similarly to the preview brightness, you can change the contrast of the preview.
+De manera similar al brillo de la vista previa, puedes cambiar el contraste de la vista previa.
 
-- Run the following code to try this out:
+- Ejecuta el siguiente código para probarlo:
 
     ```python
     camera.start_preview()
@@ -110,13 +110,13 @@ Similarly to the preview brightness, you can change the contrast of the preview.
     camera.stop_preview()
     ```
 
-### Add cool image effects
+### Agrega efectos de imagen geniales
 
-You can use `camera.image_effect` to apply a particular image effect.
+Puedes usar `camera.image_effect` para utilizar un efecto de imagen particular.
 
-The image effect options are:
+Las opciones de efecto de imagen son las siguientes:
 
-* `none`
+* `ninguno`
 * `negative`
 * `solarize`
 * `sketch`
