@@ -21,7 +21,7 @@ Camera Moduleを制御するためのPythonコードの書き方についての�
 
 UMEHARA Reiko
 
-Yurie Seijas
+森 友里恵
 
 ボランティアのおかげで、世界中の人々に母国語で学ぶ機会を与えることができます。翻訳を引き受けていただくことで、より多くの人々に手を差し伸べることができます。詳しくは [rpf.io/translate](https://rpf.io/translate) をご覧ください。
 
