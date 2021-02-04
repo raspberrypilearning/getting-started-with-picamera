@@ -1,4 +1,4 @@
-## Take still pictures with Python code
+## Captura imágenes fijas con código Python
 
 Ahora usa el Módulo de Cámara y Python para capturar imágenes fijas.
 
