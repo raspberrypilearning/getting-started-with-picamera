@@ -29,9 +29,9 @@
 
 4. Remets le clip en plastique en place.
 
-![port du module caméra poussé](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![port du module caméra poussé](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
