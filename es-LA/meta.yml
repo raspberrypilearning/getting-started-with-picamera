@@ -12,9 +12,9 @@ steps:
   - 
     title: Lo que necesitarás
   - 
-    title: Connect the Camera Module
+    title: Conecta el Módulo de la Cámara
   - 
-    title: How to control the Camera Module via the command line
+    title: Cómo controlar el Módulo de Cámara a través de la línea de comandos
   - 
     title: Cómo controlar el Módulo de Cámara con código Python
   - 
