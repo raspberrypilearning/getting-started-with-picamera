@@ -29,9 +29,9 @@
 
 4. प्लास्टिक क्लिप को वापस उसकी जगह पर लगा दें
 
-![कैमरा मॉड्यूल पोर्ट नीचे दबाया हुआ](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![कैमरा मॉड्यूल पोर्ट नीचे दबाया हुआ](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
