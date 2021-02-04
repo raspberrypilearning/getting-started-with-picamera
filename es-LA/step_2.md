@@ -4,7 +4,7 @@
 
 Todos los modelos actuales de Raspberry Pi tienen un puerto para conectar el Módulo de Cámara.
 
-![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
+![Raspberry Pi 3B+ con el puerto del Módulo de Cámara etiquetado](images/pi4-camera-port.png)
 
 **Nota:** Si quieres utilizar un Raspberry Pi Zero, necesitas un cable plano para Módulo de Cámara que encaje en el puerto más pequeño del Módulo de Cámara de Raspberry Pi Zero.
 
