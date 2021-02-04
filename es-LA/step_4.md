@@ -4,7 +4,7 @@ Ahora que el Módulo de Cámara está conectado y el software está habilitado, 
 
 - Abre una ventana de terminal haciendo clic en el ícono del monitor negro en la barra de tareas:
 
-![Open terminal](images/open-terminal-annotated.png)
+![Abrir terminal](images/open-terminal-annotated.png)
 
 - Escribe el siguiente comando para tomar una imagen fija y guardarla en el Escritorio:
 
@@ -12,7 +12,7 @@ Ahora que el Módulo de Cámara está conectado y el software está habilitado, 
 raspistill -o Desktop/image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.png)
+![comando raspistill introducido en el terminal](images/raspistill-image.png)
 
 - Presiona <kbd>Enter</kbd> para ejecutar el comando.
 
@@ -20,7 +20,7 @@ Cuando se ejecute el comando, puedes ver la vista previa de la cámara abierta d
 
 - Busca el ícono del archivo de imagen en el Escritorio y haz doble clic en el ícono de archivo para abrir la foto.
 
-    ![Image on Desktop](images/desktop-annotated.png)
+    ![Imagen en el escritorio](images/desktop-annotated.png)
 
 Al agregar diferentes opciones, puedes establecer el tamaño y la apariencia de la imagen que genera el comando `raspistill`.
 
@@ -36,6 +36,6 @@ raspistill -o Desktop/image-small.jpg -w 640 -h 480
 raspivid -o Desktop/video.h264
 ```
 
-- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
+- Para reproducir el archivo de video, haz doble clic en el ícono del archivo `video.h264` en el Escritorio para abrirlo en el VLC Media Player.
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
+Para más información y otras opciones de cómo usar estos comandos, lee la [documentación para raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) y la [documentación para raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
