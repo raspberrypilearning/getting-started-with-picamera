@@ -29,9 +29,9 @@
 
 4. Druk de plastic klem terug op zijn plaats.
 
-![de poort van de cameramodule is naar beneden gedrukt](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![de poort van de cameramodule is naar beneden gedrukt](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
