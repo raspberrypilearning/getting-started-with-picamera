@@ -29,9 +29,9 @@
 
 4. Push the plastic clip back into place.
 
-![camera module port puished down](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![camera module port puished down](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
