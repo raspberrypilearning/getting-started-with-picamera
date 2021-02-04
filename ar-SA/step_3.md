@@ -29,9 +29,9 @@
 
 4. اضغط المشبك البلاستيكي و ارجعه لمكانه القديم.
 
-![منفذ وحدة الكاميرا و هو مدفوع للأسفل](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![منفذ وحدة الكاميرا و هو مدفوع للأسفل](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
