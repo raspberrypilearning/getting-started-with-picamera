@@ -4,7 +4,7 @@ La biblioteca Python `picamera` te permite controlar tu Módulo de Cámara y cre
 
 - Abre un editor Python 3, como **Thonny Python IDE**:
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![Abrir Thonny](images/thonny-app-menu.png)
 
 - Abre un nuevo archivo y guárdalo como `camera.py`.
 
@@ -25,7 +25,7 @@ La biblioteca Python `picamera` te permite controlar tu Módulo de Cámara y cre
 
 - Guarda y ejecuta tu programa. La vista previa de la cámara debería mostrarse durante cinco segundos y luego cerrarse nuevamente.
 
-    ![Image preview](images/preview.jpg)
+    ![Vista previa de imagen](images/preview.jpg)
 
     **Nota:** la vista previa de la cámara solo funciona cuando el monitor está conectado a tu Raspberry Pi. Si estás usando acceso remoto (como SSH o VNC) no verás la vista previa de la cámara.
 
