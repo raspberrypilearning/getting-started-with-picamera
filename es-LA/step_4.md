@@ -1,4 +1,4 @@
-## Cómo controlar la Cámara de Módulo a través de la línea de comandos
+## Cómo controlar el Módulo de Cámara a través de la línea de comandos
 
 Ahora que el Módulo de Cámara está conectado y el software está habilitado, prueba las herramientas de líneas de comando `raspistill` y `raspivid`.
 
