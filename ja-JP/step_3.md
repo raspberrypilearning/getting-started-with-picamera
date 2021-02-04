@@ -29,9 +29,9 @@
 
 4. プラスチッククリップを元の位置にもどします。
 
-![押し（おし）下げられたカメラモジュールポート](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![押し（おし）下げられたカメラモジュールポート](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
