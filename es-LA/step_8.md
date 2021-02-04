@@ -117,31 +117,31 @@ Puedes usar `camera.image_effect` para utilizar un efecto de imagen particular.
 Las opciones de efecto de imagen son las siguientes:
 
 * `ninguno`
-* `negative`
-* `solarize`
-* `sketch`
-* `denoise`
-* `emboss`
-* `oilpaint`
-* `hatch`
-* `gpen`
+* `negativo`
+* `sobreexposición`
+* `bosquejo`
+* `eliminar el ruido de color`
+* `relieve`
+* `pintura al óleo`
+* `eclosión`
+* `dibujo a lápiz`
 * `pastel`
-* `watercolor`
-* `film`
-* `blur`
-* `saturation`
-* `colorswap`
-* `washedout`
-* `posterise`
-* `colorpoint`
-* `colorbalance`
-* `cartoon`
-* `deinterlace1`
-* `deinterlace2`
+* `acuarela`
+* `película`
+* `desenfoque`
+* `saturación`
+* `cambio de color`
+* `desteñido`
+* `estilo póster`
+* `punto de color`
+* `balance de color`
+* `caricatura`
+* `desentrelazado1`
+* `desentrelazado2`
 
-The default effect is `none`.
+El efecto predeterminado es `ninguno`.
 
-* Pick an image effect and try it out:
+* Elige un efecto de imagen y pruébalo:
 
     ```python
     camera.start_preview()
@@ -151,7 +151,7 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
+* Ejecuta este código para probar **todos** los efectos de imágenes con `camera.IMAGE_EFFECTS`:
 
     ```python
     camera.start_preview()
@@ -162,30 +162,30 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-    ![Effects](images/effects.jpg)
+    ![Efectos](images/effects.jpg)
 
-### Set the image exposure mode
+### Establece el modo de exposición de la imagen
 
-You can use `camera.exposure_mode` to set the exposure to a particular mode.
+Puedes usar `camera.exposure_mode` para establecer la exposición en un modo particular.
 
-The exposure mode options are:
-* `off`
+Las opciones del modo de exposición son las siguientes:
+* `apagado`
 * `auto`
-* `night`
-* `nightpreview`
-* `backlight`
-* `spotlight`
-* `sports`
-* `snow`
-* `beach`
-* `verylong`
-* `fixedfps`
-* `antishake`
-* `fireworks`
+* `noche`
+* `vista previa nocturna`
+* `luz de fondo`
+* `foco`
+* `deportes`
+* `nieve`
+* `playa`
+* `prolongada`
+* `fps fijos`
+* `estabilización de imagen`
+* `fuegos artificiales`
 
-The default mode is `auto`.
+El modo predeterminado es `auto`.
 
-* Pick an exposure mode and try it out:
+* Elige un modo de exposición y pruébalo:
 
     ```python
     camera.start_preview()
@@ -195,27 +195,27 @@ The default mode is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
+* Puedes repetir todos los modos de exposición con `camera.EXPOSURE_MODES`, así como lo hiciste con efectos de imagen.
 
-### Change the image white balance
+### Cambiar el balance de blancos de la imagen
 
-You can use `camera.awb_mode` to set the auto white balance to a preset mode.
+Puedes utilizar `camera.awb_mode` para establecer el balance de blancos automático en un modo predeterminado.
 
-The available auto white balance modes are:
-* `off`
+Los modos de balance de blancos disponibles son los siguientes:
+* `apagado`
 * `auto`
-* `sunlight`
-* `cloudy`
-* `shade`
-* `tungsten`
-* `fluorescent`
-* `incandescent`
-* `flash`
-* `horizon`
+* `iluminación`
+* `nublado`
+* `sombra`
+* `tungsteno`
+* `fluorescente`
+* `incandescente`
+* `destello de luz`
+* `horizonte`
 
-The default is `auto`.
+El modo predeterminado es `auto`.
 
-* Pick an auto white balance mode and try it out:
+* Escoge un modo de balance de blancos automático y pruébalo:
 
     ```python
     camera.start_preview()
@@ -225,4 +225,4 @@ The default is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.
+* Puedes repetir el modo de balance de blancos automático `camera.AWB_MODES`, así como hiciste con efectos de imagen.
