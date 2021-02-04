@@ -29,9 +29,9 @@
 
 4. Empurre o clipe plástico de volta ao lugar.
 
-![porta do módulo de câmera empurrada para baixo](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
-![porta do módulo de câmera empurrada para baixo](images/connect-camera4.png)
+![camera module port pushed down](images/connect-camera4.png)
 
 --- /print-only ---
 
