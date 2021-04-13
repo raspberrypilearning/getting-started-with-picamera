@@ -1,20 +1,20 @@
-## What you will need
+## तुम्हाला काय लागेल
 
-### Raspberry Pi computer with a Camera Module port
+### कॅमेरा मॉड्यूल पोर्टसह रास्पबेरी पाई संगणक
 
-All current models of Raspberry Pi have a port for connecting the Camera Module.
+रास्पबेरी पाईच्या सर्व चालू मॉडेल्समध्ये कॅमेरा मॉड्यूल कनेक्ट करण्यासाठी एक पोर्ट आहे.
 
-![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
+![कॅमेरा मॉड्यूलसह रास्पबेरी पाई 3B+ जोडणे](images/pi4-camera-port.png)
 
-**Note:** If you want to use a Raspberry Pi Zero, you need a Camera Module ribbon cable that fits the Raspberry Pi Zero's smaller Camera Module port.
+**टीप:** जर आपल्याला रास्पबेरी पाई झिरो वापरायचा असेल तर आपल्यास कॅमेरा मॉड्यूल रिबन केबलची आवश्यकता आहे जी रास्पबेरी पी झिरोच्या लहान कॅमेरा मॉड्यूल पोर्टला बसेल.
 
-### Raspberry Pi Camera Module
+### रास्पबेरी पाई कॅमेरा मॉड्यूल
 
-![Raspberry Pi Camera Module](images/camera-module.png)
+![रास्पबेरी पाई कॅमेरा मॉड्यूल](images/camera-module.png)
 
-There are two versions of the Camera Module:
+कॅमेरा मॉड्यूलचे दोन प्रकार आहेत:
 
-* [The standard version](https://www.raspberrypi.org/products/camera-module-v2/), which is designed to take pictures in normal light
-* [The NoIR version](https://www.raspberrypi.org/products/pi-noir-camera-v2/), which doesn't have an infrared filter, so you can use it together with an infrared light source to take pictures in the dark
+* [मानक आवृत्ती](https://www.raspberrypi.org/products/camera-module-v2/) जी सामान्य प्रकाशात चित्रे काढण्यासाठी डिझाइन केलेली आहे
+* [NoIR प्रकार](https://www.raspberrypi.org/products/pi-noir-camera-v2/) ज्यामध्ये इन्फ्रारेड फिल्टर नाही, म्हणून आपण अंधारामध्ये चित्रे काढण्यासाठी इन्फ्रारेड प्रकाशाच्या मार्गाने एकत्र वापरु शकता
 
 
