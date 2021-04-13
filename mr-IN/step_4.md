@@ -1,41 +1,42 @@
-## How to control the Camera Module via the command line
+## कमांड लाइनद्वारे कॅमेरा मॉड्यूल कसे नियंत्रित करावे
 
-Now your Camera Module is connected and the software is enabled, try out the command line tools `raspistill` and `raspivid`.
+आता आपले कॅमेरा मॉड्यूल कनेक्ट झाले आहे आणि सॉफ्टवेअरला परवानगी दिली आहे, ह्या कमांड लाइन टूल्सचा वापरून पहा ` रासपिस्टील ` आणि ` रासपीव्हीड`.
 
-- Open a terminal window by clicking the black monitor icon in the taskbar:
+- टास्कबारमधील ब्लॅक मॉनिटर चिन्हावर क्लिक करून टर्मिनल विंडो उघडा:
 
-![Open terminal](images/open-terminal-annotated.png)
+![टर्मिनल उघडा](images/open-terminal-annotated.png)
 
-- Type in the following command to take a still picture and save it to the Desktop:
+- स्थिर चित्र घेण्यासाठी आणि डेस्कटॉपवर सेव्ह करण्यासाठी खालील आदेश टाइप करा:
 
 ```bash
 raspistill -o Desktop/image.jpg
 ```
 
-![raspistill command entered into the terminal](images/raspistill-image.png)
+![रासपिस्टील कमांड टर्मिनलमध्ये दाखल झाली](images/raspistill-image.png)
 
-- Press <kbd>Enter</kbd> to run the command.
+- कमांड चालविण्यासाठी <kbd>Enter</kbd> दाबा.
 
-When the command runs, you can see the camera preview open for five seconds before a still picture is taken.
+जेव्हा कमांड चालू होते, तेव्हा स्थिर चित्र घेण्यापूर्वी आपण कॅमेरा प्रिव्यू पाच सेकंदांसाठी पाहू शकता.
 
-- Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
+- डेस्कटॉपवर चित्र फाइल आयकॉन पहा आणि चित्र उघडण्यासाठी फाइल आयकॉनवर डबल-क्लिक करा.
 
-    ![Image on Desktop](images/desktop-annotated.png)
+    ![डेस्कटॉपवरील चित्र](images/desktop-annotated.png)
 
-By adding different options, you can set the size and look of the image the `raspistill` command takes.
+वेगवेगळे पर्याय जोडून आपण ` raspistill ` आदेश घेत असलेल्या चित्राचे आकार आणि स्वरूप सेट करू शकता.
 
-- For example, add `-h` and `-w` to change the height and width of the image:
+- उदाहरणार्थ, चित्राची उंची आणि रुंदी बदलण्यासाठी ` -h 
+` आणि ` -w ` जोडा:
 
 ```bash
 raspistill -o Desktop/image-small.jpg -w 640 -h 480
 ```
 
-- Now record a video with the Camera Module by using the following `raspivid` command:
+- आता खालील ` raspivid ` कमांडचा वापर करून कॅमेरा मॉड्यूलसह व्हिडिओ रेकॉर्ड करा:
 
 ```bash
 raspivid -o Desktop/video.h264
 ```
 
-- In order to play the video file, double-click the `video.h264` file icon on the Desktop to open it in VLC Media Player.
+- व्हिडिओ फाइल प्ले करण्यासाठी, डेस्कटॉपवरील ` video.h264 ` फाइल VLC मीडिया प्लेयरमध्ये उघडण्यासाठी त्यावरील आयकॉनवर डबल-क्लिक करा.
 
-For more information and other options you can use with these commands, read the [documentation for raspistill](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) and the [documentation for raspivid](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md).
+अधिक माहितीसाठी आणि इतर पर्यायांसाठी आपण या आदेशांसह वापरू शकता [डॉक्युमेंटेशन फॉर रासपिस्टील](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) आणि [ डॉक्युमेंटेशन फॉर रासपीव्हीड ](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md) हे कमांड वाचा.
