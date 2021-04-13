@@ -1,27 +1,27 @@
 ---
-title: Getting started with the Camera Module
+title: कॅमेरा मॉड्यूलसह सुरु करणे
 hero_image: images/banner.png
-description: Take pictures and video with the Raspberry Pi Camera Module and Python
+description: रास्पबेरी पाई कॅमेरा मॉड्यूल आणि पायथनसह चित्रे आणि व्हिडिओ काढा
 listed: true
 copyedit: true
 version: 4
 last_tested: 2018-05-13
 steps:
   - 
-    title: Introduction
+    title: परिचय
   - 
-    title: What you will need
+    title: तुम्हाला काय लागेल
   - 
-    title: Connect the Camera Module
+    title: कॅमेरा मॉड्यूल कनेक्ट करा
   - 
-    title: How to control the Camera Module via the command line
+    title: कमांड लाइनद्वारे कॅमेरा मॉड्यूल कसे नियंत्रित करावे
   - 
-    title: How to control the Camera Module with Python code
+    title: पायथन कोडसह कॅमेरा मॉड्यूल कसे नियंत्रित करावे
   - 
-    title: Take still pictures with Python code
+    title: पायथन कोडसह स्थिर चित्रे काढा
   - 
-    title: Record video with Python code
+    title: पायथन कोडसह व्हिडिओ रेकॉर्ड करा
   - 
-    title: How to change the image settings and add image effects
+    title: चित्र सेटिंग्ज कशी बदलायची आणि चित्र परिणाम कसा जोडावा
   - 
-    title: What next?
+    title: पुढे काय?
