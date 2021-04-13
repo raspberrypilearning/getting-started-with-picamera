@@ -1,49 +1,49 @@
-## How to control the Camera Module with Python code
+## पायथन कोडसह कॅमेरा मॉड्यूल कसे नियंत्रित करावे
 
-The Python `picamera` library allows you to control your Camera Module and create amazing projects.
+पायथन `पाईकॅमेरा ` लायब्ररी आपल्याला आपला कॅमेरा मॉड्यूल नियंत्रित करण्यास आणि आश्चर्यकारक प्रोजेक्ट्स तयार करण्यास परवानगी देते.
 
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- पायथन 3 एडिटर उघडा, जसे ** Thonny Python IDE**:
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![ओपन Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`.
+- एक नवीन फाईल उघडा आणि त्यास ` camera.py ` म्हणून सेव्ह करा.
 
-    **Note:** it's important that you **never save the file as `picamera.py`**.
+    ** टीप: ** हे महत्वाचे आहे की आपण ** कधीही ` picamera.py <` ** म्हणून फाइल सेव्ह करू नका.
 
-- Enter the following code:
+- खालील कोड एंटर करा:
 
     ```python
-    from picamera import PiCamera
+    from picamera import Picamera
     from time import sleep
 
-    camera = PiCamera()
+    camera = Picamera ()
 
-    camera.start_preview()
-    sleep(5)
-    camera.stop_preview()
+     camera.start_preview()
+     sleep (5)
+     camera.stop_preview()
     ```
 
-- Save and run your program. The camera preview should be shown for five seconds and then close again.
+- आपला प्रोग्राम सेव्ह करा आणि चालवा. कॅमेरा प्रिव्यू पाच सेकंदासाठी दाखवावा आणि नंतर पुन्हा बंद करावा.
 
-    ![Image preview](images/preview.jpg)
+    ![चित्र प्रिव्यू](images/preview.jpg)
 
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi. If you are using remote access (such as SSH or VNC), you won't' see the camera preview.
+    ** टीप: ** जेव्हा मॉनिटर आपल्या रास्पबेरी पाईला कनेक्ट केलेला असेल तेव्हाच कॅमेरा प्रिव्यू काम करते. आपण रिमोट ऍक्सेस वापरत असल्यास(जसे की SSH किंवा VNC), आपण 'कॅमेरा प्रिव्यू पाहू शकणार नाही.
 
-- If your preview is upside-down, you can rotate it by 180 degrees with the following code:
+- जर आपले प्रिव्यू उलट असेल तर आपण खालील कोडसह 180 डिग्री तो फिरवू शकता:
 
     ```python
     camera = PiCamera()
-    camera.rotation = 180
+     camera. rotation = 180
     ```
 
-    You can rotate the image by `90`, `180`, or `270` degrees. To reset the image, set `rotation` to `0` degrees.
+    आपण चित्र ` 90 `, ` 180 `, किंवा ` 270 ` डिग्रीमध्ये फिरवू शकता. चित्र रीसेट करण्यासाठी ` rotation ` ` 0 ` डिग्रीमध्ये सेट करा.
 
-It's best to make the preview slightly see-through so you can see whether errors occur in your program while the preview is on.
+प्रिव्यू किंचित पाहणे चांगले आहे जेणेकरून प्रिव्यू चालू असताना आपल्या प्रोग्राममध्ये चुका आढळतात की नाही ते आपण पाहू शकता.
 
-- Make the camera preview see-through by setting an `alpha` level:
+- ` alpha` पातळी सेट करुन कॅमेरा प्रिव्यू बनवा:
 
     ```python
     camera.start_preview(alpha=200)
     ```
 
-    The `alpha` value can be any number between `0` and `255`.
+    ` अल्फा </ 0> मूल्य <code> 0 ` आणि ` 255 ` दरम्यान कोणतीही संख्या असू शकते.
