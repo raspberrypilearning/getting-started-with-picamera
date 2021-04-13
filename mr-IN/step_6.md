@@ -1,25 +1,25 @@
-## Take still pictures with Python code
+## पायथन कोडसह स्थीर चित्रे घ्या
 
-Now use the Camera Module and Python to take some still pictures.
+काही स्थिर चित्रे घेण्यासाठी आता कॅमेरा मॉड्यूल आणि पायथन वापरा.
 
-- Amend your code to add a `camera.capture()` line:
+- ` camera.capture () ` ओळ जोडण्यासाठी आपल्या कोडमध्ये सुधारणा करा:
 
     ```python
-    camera.start_preview()
-    sleep(5)
-    camera.capture('/home/pi/Desktop/image.jpg')
-    camera.stop_preview()
+    cameta.start_preview()
+          sleep(5)
+          camera.capture('/home/pi/Desktop/image.jpg')
+          camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    ** टीप: ** चित्र कॅप्चर करण्यापूर्वी ` स्लीप` कमीतकमी दोन सेकंदांकरिता हे महत्वाचे आहे कारण यामुळे कॅमेरा सेन्सरला प्रकाश पातळी समजण्यास वेळ देते.
 
-- Run the code.
+- कोड चालवा.
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+आपण कॅमेरा प्रिव्यू पाच सेकंदांसाठी पाहिले पाहिजे आणि नंतर स्थिर चित्र कॅप्चर केले पाहिजे. चित्र घेतल्यामुळे आपण प्रिव्यू थोडक्यात वेगवेगळे निराकरणासह पाहू शकता.
 
-Your new image should be saved to the Desktop.
+आपली नवीन चित्र डेस्कटॉपवर सेव्ह केली जावी.
 
-- Now add a loop to take five pictures in a row:
+- सलग पाच चित्रे घेण्यासाठी आता एक लूप जोडा:
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    ` i ` व्हेरिएबल ` 0 ` पासून ` 4 ` पर्यंत किती वेळा लूप चालू आहे याची गणना करते. म्हणूनच, चित्र ` image0.jpg `, ` image1.jpg ` म्हणून सेव्ह केल्या जातात.
 
-- Run the code again and hold the Camera Module in position.
+- कोड पुन्हा चालवा आणि एका ठिकाणी कॅमेरा मॉड्यूल दाबून ठेवा.
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+कॅमेर्‍याने दर पाच सेकंदात एक चित्र घ्यावे. एकदा पाचवे चित्र घेतल्यानंतर प्रिव्यू बंद होते.
 
-- Look at your Desktop to find the five new pictures.
+- पाच नवीन चित्रे शोधण्यासाठी आपल्या डेस्कटॉपवर पहा.
