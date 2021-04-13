@@ -1,18 +1,18 @@
-## How to change the image settings and add image effects
+## चित्र सेटिंग्ज कशी बदलायची आणि चित्र प्रभाव कसा वाढवावा
 
-The Python `picamera` software provides a number of effects and configurations to change how your images look.
+पायथन ` पाईकॅमेरा ` सॉफ्टवेअर आपले चित्र कशे दिसतात हे बदलण्यासाठी बरेच प्रभाव आणि कॉन्फिगरेशन प्रदान करते.
 
-**Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
+**टीप:** काही सेटिंग्ज केवळ प्रिव्यूवर परिणाम करतात आणि कॅप्चर केलेल्या चित्रावर नाहीत तर काही केवळ कॅप्चर केलेल्या चित्रावर परिणाम करतात आणि बर्‍याचदा इतरांवर दोन्ही प्रभाव करतात.
 
-### Set the image resolution
+### चित्र ठराव सेट करा
 
-You can change the `resolution` of the image that the Camera Module takes.
+आपण कॅमेरा मॉड्यूलने घेतलेल्या चित्राचे ` रिझोल्यूशन ` बदलू शकता.
 
-By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+डीफॉल्टनुसार, चित्राचे रेझोल्यूशन आपल्या मॉनिटरच्या रेजोल्यूशनवर सेट केले जाते. स्थिर फोटोंसाठी अधिकतम रिझोल्यूशन 2592 × 1944 आणि व्हिडिओ रेकॉर्डिंगसाठी 1920 × 1080 आहे.
 
-- Use the following code to set the `resolution` to maximum and take a picture.
+- जास्तीत जास्त ` रिझोल्यूशन ` सेट करण्यासाठी आणि चित्र काढण्यासाठी खालील कोड वापरा.
 
-    **Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
+    ** टीप: ** हे जास्तीत जास्त रिजोल्यूशन सक्षम करण्यासाठी आपल्याला ` 15 ` वर फ्रेम रेट देखील सेट करणे आवश्यक आहे.
 
     ```python
     camera.resolution = (2592, 1944)
@@ -23,15 +23,15 @@ By default, the image resolution is set to the resolution of your monitor. The m
     camera.stop_preview()
     ```
 
-The minimum resolution is 64×64.
+कमीतकमी रिझोल्यूशन 64 × 64 हे आहे.
 
-- Try taking a picture with the minimum resolution.
+- कमीतकमी रिझोल्यूशनसह फोटो काढण्याचा प्रयत्न करा.
 
-### Add text to your image
+### आपल्या चित्राला टेक्स्ट जोडा
 
-You can add text to your image using the command `annotate_text`.
+` annotate_text` आदेश वापरून आपण आपल्या चित्रावर टेक्स्ट जोडू शकता.
 
-- Run this code to try it:
+- प्रयत्न करण्यासाठी हा कोड चालवा:
 
     ```python
     camera.start_preview()
@@ -41,25 +41,25 @@ You can add text to your image using the command `annotate_text`.
     camera.stop_preview()
     ```
 
-### Change the look of the added text
+### ऍड केलेल्या टेक्स्ट मधे बदल करा
 
-- Set the text size with the following code:
+- खालील कोडसह टेक्स्टचा आकार सेट करा:
 
     ```python
     camera.annotate_text_size = 50
     ```
 
-    You can set the text size to anything between `6` to `160`. The default size is `32`.
+    `6` ते `160`दरम्यान कोणत्याही टेक्स्टचा आकार सेट करू शकता. डीफॉल्ट आकार `32` हा आहे.
 
-It's also possible to change the text colour.
+टेक्स्टचा रंग बदलणे देखील शक्य आहे.
 
-- First of all, add `Color` to your `import` line at the top of the program:
+- सर्वप्रथम, ऍड ` color` प्रोग्रामच्या सगळ्यात वरच्या ओळीवर ` इम्पोर्ट ` करा:
 
     ```python
-    from picamera import PiCamera, Color
+    पाईकॅमेरामधून इम्पोर्ट पाईकॅमेरा, रंग
     ```
 
-- Then below the `import` line, amend the rest of your code so it looks like this:
+- नंतर ` इम्पोर्ट ` रेषा खाली आपल्या उर्वरित कोडमध्ये सुधारणा करा जेणेकरुन हे दिसते:
 
     ```python
     camera.start_preview()
@@ -70,11 +70,11 @@ It's also possible to change the text colour.
     camera.stop_preview()
     ```
 
-### Change the brightness of the preview
+### प्रिव्यूची चमक बदला
 
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+प्रिव्यू किती चमकदार आहे ते आपण बदलू शकता. डीफॉल्ट ब्राइटनेस `50` `0` आणि `100`दरम्यान कोणत्याही मूल्यावर सेट करू शकता.
 
-* Run the following code to try this out:
+* हे वापरून पहाण्यासाठी खालील कोड चालवा:
 
     ```python
     camera.start_preview()
@@ -84,7 +84,7 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
+- खालील लूप चमक समायोजित करते आणि सद्य ब्राइटनेस पातळी दर्शविण्यासाठी टेक्स्ट ऍड करते:
 
     ```python
     camera.start_preview()
@@ -95,11 +95,11 @@ You can change how bright the preview appears. The default brightness is `50`, a
     camera.stop_preview()
     ```
 
-### Change the contrast of the preview
+### प्रिव्यूची चमक बदला
 
-Similarly to the preview brightness, you can change the contrast of the preview.
+प्रीव्यू ब्राइटनेस प्रमाणेच तुम्ही प्रीव्यूचा कॉन्ट्रास्ट बदलू शकता.
 
-- Run the following code to try this out:
+- हे वापरून पहाण्यासाठी खालील कोड चालवा:
 
     ```python
     camera.start_preview()
@@ -110,38 +110,38 @@ Similarly to the preview brightness, you can change the contrast of the preview.
     camera.stop_preview()
     ```
 
-### Add cool image effects
+### मस्त चित्रावर प्रभाव ऍड करा
 
-You can use `camera.image_effect` to apply a particular image effect.
+विशिष्ट चित्रावर प्रभाव लागू करण्यासाठी आपण ` camera.image_effect ` वापरू शकता.
 
-The image effect options are:
+चित्र प्रभाव पर्याय असे आहेत:
 
-* `none`
-* `negative`
-* `solarize`
-* `sketch`
-* `denoise`
+* `एकही नाही`
+* `नकारात्मक`
+* `सोलराईज`
+* `स्केच`
+* `डीनॉईज`
 * `emboss`
-* `oilpaint`
+* `ऑईल पेंट`
 * `hatch`
 * `gpen`
-* `pastel`
-* `watercolor`
-* `film`
-* `blur`
-* `saturation`
-* `colorswap`
-* `washedout`
-* `posterise`
-* `colorpoint`
-* `colorbalance`
-* `cartoon`
-* `deinterlace1`
-* `deinterlace2`
+* `रंगीत खडू`
+* `वॉटर कलर`
+* `चित्रपट`
+* `अस्पष्ट`
+* `सॅच्युरेशन`
+* `कलर्सवॅप`
+* `वॉशआउट`
+* `पोस्टरिझ`
+* `कलरपॉईंट`
+* `कलर बॅलेन्स`
+* `कार्टून`
+* `डीइंटरलेस1`
+* `डीइंटरलेस2`
 
-The default effect is `none`.
+डीफॉल्ट आकार `none` हा आहे.
 
-* Pick an image effect and try it out:
+* एक चित्राचा प्रभाव निवडा आणि प्रयत्न करा:
 
     ```python
     camera.start_preview()
@@ -151,7 +151,7 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
+* **all** सगळ्या चित्रांच्या प्रभावावर लूप करण्यासाठी ह्या कोडचा वापर करा `camera.IMAGE_EFFECTS`:
 
     ```python
     camera.start_preview()
@@ -162,30 +162,30 @@ The default effect is `none`.
     camera.stop_preview()
     ```
 
-    ![Effects](images/effects.jpg)
+    ![इफेक्ट](images/effects.jpg)
 
-### Set the image exposure mode
+### चित्रांचे एक्सपोजर मोड सेट करा
 
-You can use `camera.exposure_mode` to set the exposure to a particular mode.
+विशिष्ट मोडमध्ये एक्सपोजर सेट करण्यासाठी `camera.exposure_mode` वापरू शकता.
 
-The exposure mode options are:
-* `off`
-* `auto`
-* `night`
-* `nightpreview`
-* `backlight`
-* `spotlight`
-* `sports`
-* `snow`
-* `beach`
-* `verylong`
-* `fixedfps`
-* `antishake`
-* `fireworks`
+एक्सपोजर मोडचे पर्याय असे आहेत:
+* `ऑफ`
+* `ऑटो`
+* `नाईट`
+* `नाईटप्रिव्यू`
+* `बॅकलाईट`
+* `स्पॉटलाईट`
+* `खेळ`
+* `बर्फ`
+* `बिच`
+* `खूप लांब`
+* `फिक्स्ड एफपीएस`
+* `अँटीशेक`
+* `फटाके`
 
-The default mode is `auto`.
+डीफॉल्ट मोड`auto` हा आहे.
 
-* Pick an exposure mode and try it out:
+* एक्सपोजर मोड निवडा आणि प्रयत्न करा:
 
     ```python
     camera.start_preview()
@@ -195,27 +195,27 @@ The default mode is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
+* आपण चित्रांच्या प्रभावांसाठी केले त्याप्रमाणे ` camera.EXPOSURE_MODES ` ह्याच्या साह्याने सर्व एक्सपोजर मोडमध्ये लूप करू शकता.
 
-### Change the image white balance
+### चित्राची व्हाईट बॅलन्स बदला
 
-You can use `camera.awb_mode` to set the auto white balance to a preset mode.
+ऑटो व्हाईट बॅलन्सला प्रीसेट मोडमध्ये सेट करण्यासाठी आपण `camera.awb_mode` वापरा.
 
-The available auto white balance modes are:
-* `off`
-* `auto`
-* `sunlight`
-* `cloudy`
-* `shade`
-* `tungsten`
-* `fluorescent`
-* `incandescent`
-* `flash`
-* `horizon`
+उपलब्ध ऑटो व्हाईट बॅलन्स मोड आहेत:
+* `बंद`
+* `ऑटो`
+* `सूर्यप्रकाश`
+* `ढगाळ`
+* `सावली`
+* `टंगस्टन`
+* `फ्लुरोसंट`
+* `चमकणारा`
+* `फ्लॅश`
+* `हॉरीझॉन`
 
-The default is `auto`.
+डीफॉल्ट`auto` हा आहे.
 
-* Pick an auto white balance mode and try it out:
+* एक ऑटो व्हाइट बॅलन्स मोड निवडा आणि प्रयत्न करा:
 
     ```python
     camera.start_preview()
@@ -225,4 +225,4 @@ The default is `auto`.
     camera.stop_preview()
     ```
 
-* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.
+* ऑटो व्हाईट बॅलन्सला प्रीसेट मोडमध्ये सेट करण्यासाठी आपण `camera.awb_mode` वापरा जसे आपण चित्रांच्या प्रभावांसाठी केले त्याप्रमाणे.
