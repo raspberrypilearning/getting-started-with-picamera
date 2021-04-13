@@ -1,48 +1,48 @@
-## Connect the Camera Module
+## कॅमेरा मॉड्यूल कनेक्ट करा
 
-**Ensure your Raspberry Pi is turned off.**
+**तुमचा रास्पबेरी पाई बंद असल्याचे खात्री करा.**
 
 --- no-print ---
 
-1. Locate the Camera Module port
-2. Gently pull up on the edges of the port's plastic clip
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round
-4. Push the plastic clip back into place
+1. कॅमेरा मॉड्यूल पोर्ट शोधा
+2. पोर्टवरचे प्लास्टिक क्लिप काठेवरुन हळूवारपणे वर खेचा
+3. कॅमेरा मॉड्यूल रिबन केबल घाला; केबल बरोबर आत घालत आहात याची खात्री करा
+4. प्लॅस्टिक क्लिप पुन्हा त्याच ठिकाणी ढकला
 
-![Animation of how to connect the Raspberry Pi Camera Module](images/connect-camera.gif)
+![रास्पबेरी पाई कॅमेरा मॉड्यूल कसे कनेक्ट करावे त्याचे अ‍ॅनिमेशन](images/connect-camera.gif)
 
 --- /no-print ---
 
 --- print-only ---
 
-1. Locate the Camera Module port.
+1. कॅमेरा मॉड्यूल पोर्ट शोधा.
 
-![raspberry pi and camera module](images/connect-camera1.png)
+![रास्पबेरी पाई आणि कॅमेरा मॉड्यूल](images/connect-camera1.png)
 
-2. Gently pull up on the edges of the port's plastic clip.
+2. पोर्टवरचे प्लास्टिक क्लिप काठेवरुन हळूवारपणे वर खेचा.
 
-![camera module port lifted up](images/connect-camera2.png)
+![कॅमेरा मॉड्यूल पोर्ट वर उचला](images/connect-camera2.png)
 
-3. Insert the Camera Module ribbon cable; make sure the cable is the right way round.
+3. कॅमेरा मॉड्यूल रिबन केबल घाला; केबल बरोबर आत घालत आहात याची खात्री करा.
 
-![camera module ribbon cable inserted into port](images/connect-camera3.png)
+![कॅमेरा मॉड्यूल रिबन केबल पोर्टमध्ये घाला](images/connect-camera3.png)
 
-4. Push the plastic clip back into place.
+4. प्लॅस्टिक क्लिप पुन्हा त्याच ठिकाणी ढकला.
 
-![camera module port pushed down](images/connect-camera4.png)
+![कॅमेरा मॉड्यूल पोर्ट खाली ढकला](images/connect-camera4.png)
 
-![camera module port pushed down](images/connect-camera4.png)
+![कॅमेरा मॉड्यूल पोर्ट खाली ढकला](images/connect-camera4.png)
 
 --- /print-only ---
 
-- Start up your Raspberry Pi.
+- आपला रास्पबेरी पाई सुरु करा.
 
-- Go to the main menu and open the **Raspberry Pi Configuration** tool.
+- मुख्य मेनूवर जा आणि **Raspberry Pi Configuration** टूल उघडा.
 
-    ![Raspberry Pi Configuration Tool](images/pi-configuration-menu.png)
+    ![रास्पबेरी पाई कॉन्फिगरेशन टूल](images/pi-configuration-menu.png)
 
-- Select the **Interfaces** tab and ensure that the camera is **enabled**:
+- **इंटरफेस** टॅब निवडा आणि कॅमेरा सुरु होयण्यासाठी परवानगी असल्याचे खात्री करा:
 
-    ![Camera enabled](images/pi-configuration-interfaces-annotated.png)
+    ![कॅमेरा सुरु करणे](images/pi-configuration-interfaces-annotated.png)
 
-- Reboot your Raspberry Pi.
+- आपला रास्पबेरी पाई रीबूट करा.
