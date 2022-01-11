@@ -1,18 +1,21 @@
 ---
 title: Introducción al Módulo de Cámara
 hero_image: images/banner.png
-description: Toma fotos y graba videos con Python y el Módulo de Cámara de Raspberry Pi
+description: Toma fotos y graba videos con Python y el Módulo de Cámara de Raspberry
+  Pi
 listed: true
 copyedit: true
 version: 4
 last_tested: 2018-05-13
 steps:
-  - title: Introducción
-  - title: Lo que necesitarás
-  - title: Conecta el Módulo de la Cámara
-  - title: Cómo controlar el Módulo de Cámara a través de la línea de comandos
-  - title: Cómo controlar el Módulo de Cámara con código Python
-  - title: Captura imágenes fijas con código Python
-  - title: Graba videos con código Python
-  - title: Cómo cambiar las configuraciones en la imagen y agregarle efectos
-  - title: '¿Qué sigue?'
+- title: Introducción
+- title: Lo que necesitarás
+  completion: engaged
+- title: Conecta el Módulo de la Cámara
+- title: Cómo controlar el Módulo de Cámara a través de la línea de comandos
+- title: Cómo controlar el Módulo de Cámara con código Python
+- title: Captura imágenes fijas con código Python
+- title: Graba videos con código Python
+  completion: internal
+- title: Cómo cambiar las configuraciones en la imagen y agregarle efectos
+- title: "¿Qué sigue?"
