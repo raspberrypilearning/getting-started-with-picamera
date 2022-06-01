@@ -7,12 +7,16 @@ copyedit: true
 version: 4
 last_tested: 2018-05-13
 steps:
-  - title: Inleiding
-  - title: Wat heb je nodig
-  - title: Sluit de cameramodule aan
-  - title: De cameramodule bedienen via de opdrachtregel
-  - title: De cameramodule bedienen met Python-code
-  - title: Maak foto's met Python-code
-  - title: Neem video op met Python-code
-  - title: Hoe je de beeldinstellingen kunt wijzigen en beeldeffecten kunt toevoegen
-  - title: Wat kun je verder nog doen?
+- title: Inleiding
+- title: Wat heb je nodig
+- title: Sluit de cameramodule aan
+- title: De cameramodule bedienen via de opdrachtregel
+  completion:
+  - engaged
+- title: De cameramodule bedienen met Python-code
+- title: Maak foto's met Python-code
+- title: Neem video op met Python-code
+- title: Hoe je de beeldinstellingen kunt wijzigen en beeldeffecten kunt toevoegen
+  completion:
+  - internal
+- title: Wat kun je verder nog doen?
