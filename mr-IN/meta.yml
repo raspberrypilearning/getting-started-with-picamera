@@ -9,12 +9,14 @@ last_tested: 2018-05-13
 steps:
 - title: परिचय
 - title: आपल्याला कशाची गरज असेल
-  completion: engaged
 - title: कॅमेरा मॉड्यूल कनेक्ट करा
 - title: कमांड लाइनद्वारे कॅमेरा मॉड्यूल कसे नियंत्रित करावे
+  completion:
+  - engaged
 - title: पायथन कोडसह कॅमेरा मॉड्यूल कसे नियंत्रित करावे
 - title: पायथन कोडसह स्थिर चित्रे काढा
 - title: पायथन कोडसह व्हिडिओ रेकॉर्ड करा
-  completion: internal
 - title: चित्र सेटिंग्ज कशी बदलायची आणि चित्र परिणाम कसा जोडावा
+  completion:
+  - internal
 - title: पुढे काय?

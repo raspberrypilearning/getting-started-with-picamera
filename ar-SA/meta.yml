@@ -9,12 +9,14 @@ last_tested: 2018-05-13
 steps:
 - title: المقدمة
 - title: ماذا ستحتاج
-  completion: engaged
 - title: قم بتوصيل وحدة الكاميرا
 - title: كيفية التحكم في وحدة الكاميرا بواسطة سطر الأوامر
+  completion:
+  - engaged
 - title: كيفية التحكم في وحدة الكاميرا باستخدام التعليمات البرمجية بلغة Python
 - title: التقط صورًا ثابتة باستخدام التعليمات البرمجية بلغة Python
 - title: تسجيل فيديو باستخدام التعليمات البرمجية بلغة Python
-  completion: internal
 - title: كيفية تغيير إعدادات الصورة وإضافة تأثيرات الى الصورة
+  completion:
+  - internal
 - title: ما التالي؟

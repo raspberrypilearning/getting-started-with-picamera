@@ -9,12 +9,14 @@ last_tested: 2018-05-13
 steps:
 - title: Introdução
 - title: O que você vai precisar
-  completion: engaged
 - title: Conectar o Módulo de Câmera
 - title: Como controlar o Módulo de Câmera através da linha de comando
+  completion:
+  - engaged
 - title: Como controlar o Módulo de Câmera com código Python
 - title: Tirar fotos com o código Python
 - title: Gravar vídeo com código Python
-  completion: internal
 - title: Como alterar as configurações da imagem e adicionar efeitos de imagem
+  completion:
+  - internal
 - title: E agora?

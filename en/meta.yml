@@ -9,12 +9,14 @@ last_tested: 2018-05-13
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Connect the Camera Module
 - title: How to control the Camera Module via the command line
+  completion:
+  - engaged
 - title: How to control the Camera Module with Python code
 - title: Take still pictures with Python code
 - title: Record video with Python code
-  completion: internal
 - title: How to change the image settings and add image effects
+  completion:
+  - internal
 - title: What next?

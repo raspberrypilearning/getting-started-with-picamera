@@ -9,12 +9,14 @@ last_tested: 2018-05-13
 steps:
 - title: はじめに
 - title: 必要なもの
-  completion: engaged
 - title: カメラモジュールを接続する
 - title: コマンドラインでカメラモジュールをコントロールする方法
+  completion:
+  - engaged
 - title: Pythonコードでカメラモジュールをコントロールする方法
 - title: Pythonコードで静止画を撮る
 - title: Pythonコードでビデオを録画する
-  completion: internal
 - title: 画像設定を変更して、画像効果を追加する方法
+  completion:
+  - internal
 - title: 次は何をしましょうか？
