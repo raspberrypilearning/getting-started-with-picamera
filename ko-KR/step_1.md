@@ -1,4 +1,7 @@
-## Introduction
+## 들어가며
+
+[[[camera-bullseye]]]
+
 Learn how to connect the Raspberry Pi Camera Module to your Raspberry Pi and take pictures, record video, and apply image effects.
 
 ![Raspberry Pi with Camera Module attached](images/pi-camera-attached.jpg)
