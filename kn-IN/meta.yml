@@ -15,6 +15,8 @@ steps:
     title: Connect the Camera Module
   - 
     title: How to control the Camera Module via the command line
+    completion:
+      - engaged
   - 
     title: How to control the Camera Module with Python code
   - 
@@ -23,5 +25,7 @@ steps:
     title: Record video with Python code
   - 
     title: How to change the image settings and add image effects
+    completion:
+      - internal
   - 
     title: What next?
