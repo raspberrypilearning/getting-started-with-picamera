@@ -39,10 +39,10 @@
 
 - मुख्य मेनूवर जा आणि **Raspberry Pi Configuration** टूल उघडा.
 
-    ![रास्पबेरी पाई कॉन्फिगरेशन टूल](images/pi-configuration-menu.png)
+    ![प्राधान्ये मेनूच्या आत रास्पबेरी पाई कॉन्फिगरेशन टूल](images/pi-configuration-menu.png)
 
 - **इंटरफेस** टॅब निवडा आणि कॅमेरा सुरु होयण्यासाठी परवानगी असल्याचे खात्री करा:
 
-    ![कॅमेरा सुरु करणे](images/pi-configuration-interfaces-annotated.png)
+    ![इंटरफेस मेनूसह रास्पबेरी पाई कॉन्फिगरेशन टूल उघडले आणि कॅमेरा सक्षम केला](images/pi-configuration-interfaces-annotated.png)
 
 - आपला रास्पबेरी पाई रीबूट करा.
