@@ -15,6 +15,8 @@ steps:
     title: Conecta el Módulo de la Cámara
   - 
     title: Cómo controlar el Módulo de Cámara a través de la línea de comandos
+    completion:
+      - engaged
   - 
     title: Cómo controlar el Módulo de Cámara con código Python
   - 
@@ -23,5 +25,7 @@ steps:
     title: Graba videos con código Python
   - 
     title: Cómo cambiar las configuraciones en la imagen y agregarle efectos
+    completion:
+      - internal
   - 
     title: '¿Qué sigue?'
