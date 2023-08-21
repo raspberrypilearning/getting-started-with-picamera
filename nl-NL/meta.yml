@@ -15,6 +15,8 @@ steps:
     title: Sluit de cameramodule aan
   - 
     title: De cameramodule bedienen via de opdrachtregel
+    completion:
+      - engaged
   - 
     title: De cameramodule bedienen met Python-code
   - 
@@ -23,5 +25,7 @@ steps:
     title: Neem video op met Python-code
   - 
     title: Hoe je de beeldinstellingen kunt wijzigen en beeldeffecten kunt toevoegen
+    completion:
+      - internal
   - 
     title: Wat kun je verder nog doen?
