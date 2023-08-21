@@ -1,8 +1,8 @@
-## Take still pictures with Python code
+## Python 코드로 스틸 사진 찍기
 
-Now use the Camera Module and Python to take some still pictures.
+이제 스틸 사진을 찍기 위해 카메라 모듈과 Python을 사용합니다.
 
-- Amend your code to add a `camera.capture()` line:
+- `camera.capture()` 줄을 추가하도록 코드를 수정합니다:
 
     ```python
     camera.start_preview()
@@ -11,15 +11,15 @@ Now use the Camera Module and Python to take some still pictures.
     camera.stop_preview()
     ```
 
-    **Note:** it's important to `sleep` for at least two seconds before capturing an image, because this gives the camera's sensor time to sense the light levels.
+    **주의:** 이미지를 찍기 적어도 2초 전에 `sleep`하는 것은 중요합니다. 왜냐하면 이는 카메라 센서가 조도를 감지할 시간을 주기 때문입니다.
 
-- Run the code.
+- 코드를 실행하세요.
 
-You should see the camera preview open for five seconds, and then a still picture should be captured. As the picture is being taken, you can see the preview briefly adjust to a different resolution.
+카메라 미리보기가 5 초 동안 열린 다음 스틸 사진이 찍혀야합니다. 사진이 찍히는 동안 미리보기가 다른 해상도로 잠시 조정되는 것을 볼 수 있습니다.
 
-Your new image should be saved to the Desktop.
+새 이미지는 컴퓨터에 저장되어야 합니다.
 
-- Now add a loop to take five pictures in a row:
+- 이제 연속으로 5 장의 사진을 찍는 루프를 추가합니다.
 
     ```python
     camera.start_preview()
@@ -29,10 +29,10 @@ Your new image should be saved to the Desktop.
     camera.stop_preview()
     ```
 
-    The variable `i` counts how many times the loop has run, from `0` to `4`. Therefore, the images get saved as `image0.jpg`, `image1.jpg`, and so on.
+    변수 `i`는 `0`에서 `4`까지 루프가 몇 번 실행되었는지 셉니다. 따라서 이미지는 `image0.jpg`, `image1.jpg`등으로 저장됩니다.
 
-- Run the code again and hold the Camera Module in position.
+- 코드를 다시 실행하고 카메라 모듈을 제자리에 고정합니다.
 
-The camera should take one picture every five seconds. Once the fifth picture is taken, the preview closes.
+카메라는 5 초마다 한 장의 사진을 찍어야합니다. 일단 다섯 번째 사진이 촬영되면 미리보기가 닫힙니다.
 
-- Look at your Desktop to find the five new pictures.
+- 5개의 새로운 사진을 컴퓨터에서 찾습니다.
