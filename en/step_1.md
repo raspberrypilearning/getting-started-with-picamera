@@ -1,8 +1,6 @@
 ## Introduction
 
---- collapse---
 This guide is written for systems running either Raspberry Pi OS or Raspberry Pi OS Lite, using a Bullseye or later image. The Picamera2 library is pre-installed in current images obtained using the Raspberry Pi Imager tool.
----/collapse---
 
 Learn how to connect the Raspberry Pi Camera Module to your Raspberry Pi and take pictures, record video, and apply image effects.
 
