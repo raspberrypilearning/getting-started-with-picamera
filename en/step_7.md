@@ -2,19 +2,16 @@
 
 Now record a video!
 
-- Amend your code to remove `capture()` and instead add `start_recording()` and `stop_recording()`
+- Amend your code
 
-    Your code should look like this now:
+     ```python
+    from picamera2 import Picamera2
 
-    ```python
-    camera.start_preview()
-    camera.start_recording('/home/pi/Desktop/video.h264')
-    sleep(5)
-    camera.stop_recording()
-    camera.stop_preview()
+    picam2 = Picamera2()
+    picam2.start_and_record_video("new_video.mp4", duration=5)
+    picam2.stop_preview()
     ```
 
-- Run the code.
+- Run the code
 
 Your Raspberry Pi should open a preview, record 5 seconds of video, and then close the preview.
-

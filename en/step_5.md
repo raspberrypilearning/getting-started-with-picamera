@@ -6,7 +6,7 @@ The Python `picamera2` library allows you to control your Camera Module and crea
 
     ![Open Thonny](images/thonny-app-menu.png)
 
-- Open a new file and save it as `camera.py`. 
+- Open a new file and save it to your Desktop as `camera.py`. 
 
     **Note:** it's important that you **never save the file as `picamera2.py`**.
 
