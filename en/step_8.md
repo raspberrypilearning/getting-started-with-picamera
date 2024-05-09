@@ -20,10 +20,10 @@ The V1 Module has a maximum resolution of `2592×1944` so we will try that!
     from time import sleep
 
     picam2.preview_configuration.size = (2592, 1944)
-
     picam2.start(show_preview=True)
 
     sleep(2)
+
     picam2.capture_file("max.jpg")
     picam2.stop_preview()
     ```
@@ -32,7 +32,28 @@ The minimum resolution is `64×64`.
 
 - Try taking a picture with the minimum resolution.
 
-**TODO** UP TO HERE
+### Set different preview and capture resolutions
+
+- Use the following code to set the preview resolution at a lower resolution to the capture image.
+
+    ```python
+    from picamera2 import Picamera2
+    picam2 = Picamera2()
+    from time import sleep
+
+    picam2.preview_configuration.sensor.output_size = (2592, 1944)
+    picam2.preview_configuration.main.size = (800,600)
+    picam2.configure("preview")
+    picam2.start(show_preview=True)
+
+    sleep(2)
+
+    picam2.capture_file("max.jpg")
+    picam2.stop_preview()
+    ```
+
+**TODO - LAURA, I'M UP TO HERE**
+
 ### Add text to your image
 
 You can add text to your image using the command `annotate_text`.

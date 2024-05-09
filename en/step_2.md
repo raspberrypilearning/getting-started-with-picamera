@@ -4,7 +4,7 @@
 
 All current models of Raspberry Pi have a port for connecting the Camera Module. (The Raspberry Pi 5 has two ports.)
 
-![Raspberry Pi 3B+ with Camera Module port labelled](images/pi4-camera-port.png)
+![Raspberry Pi 4 with Camera Module port labelled](images/pi4-camera-port.png)
 
 **Note:** If you want to use a Raspberry Pi Zero or Raspberry Pi 5, you need a Camera Module ribbon cable that fits their smaller Camera Module ports.
 
