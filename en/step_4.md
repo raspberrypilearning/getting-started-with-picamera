@@ -33,7 +33,6 @@ rpicam-still -o Desktop/image-small.jpg --width 640 --height 480
 ```bash
 rpicam-vid -o Desktop/video.mp4
 ```
-
 - In order to play the video file, use the following command:
 
 ```bash  
