@@ -8,7 +8,7 @@ Now record a video!
     from picamera2 import Picamera2
 
     picam2 = Picamera2()
-    picam2.start_and_record_video("new_video.mp4", duration=5)
+    picam2.start_and_record_video("Desktop/new_video.mp4", duration=5)
     picam2.stop_preview()
     ```
 

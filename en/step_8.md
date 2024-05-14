@@ -294,7 +294,6 @@ cv2.imwrite("negativeImage.jpg", 255 - greyscale)
 
 --- /collapse ---
 
-**TODO** THIS ONE DOES NOT WORK!?
 --- collapse ---
 
 ---
@@ -328,7 +327,7 @@ picam2.stop_preview()
 # Convert to sketch
 greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 inverted = 255 - greyscale
-blur_inverted = cv2.GaussianBlur(inverted, (126, 126), 0)
+blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
 inverted_blur = 255 - blur_inverted
 sketch = cv2.divide(greyscale, inverted_blur, scale=256)
 cv2.imwrite("sketchImage.jpg", sketch)

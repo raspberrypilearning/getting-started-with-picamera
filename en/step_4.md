@@ -33,6 +33,23 @@ rpicam-still -o Desktop/image-small.jpg --width 640 --height 480
 ```bash
 rpicam-vid -o Desktop/video.mp4
 ```
+
+--- collapse ---
+
+---
+title: I'm not using a Raspberry Pi 5
+---
+
+You will need to use `libav`
+
+```bash
+rpicam-vid -t 10000 --codec libav --libav-format mp4 -o Desktop/video.mp4
+```
+
+**Tip:** The `10000` is the number of milliseconds to record
+
+--- /collapse ---
+
 - In order to play the video file, use the following command:
 
 ```bash  

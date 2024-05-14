@@ -8,7 +8,7 @@ Picamera2 has a very convenient function (`start_and_capture_file`) for capturin
     from picamera2 import Picamera2
 
     picam2 = Picamera2()
-    picam2.start_and_capture_file("newimage.jpg")
+    picam2.start_and_capture_file("Desktop/newimage.jpg")
     picam2.stop_preview()
     ```
 
@@ -22,10 +22,10 @@ You can also use `start_and_capture_files` to capture multiple images.
 
 This code captures three images and uses a 0.5 second delay between each image. 
 
-- Amend your code:
+- Amend line 4 in your code:
 
     ```python
-    picam2.start_and_capture_files("sequence{:d}.jpg", num_files=3, delay=0.5)
+    picam2.start_and_capture_files("Desktop/sequence{:d}.jpg", num_files=3, delay=0.5)
     ```
 
 - Run the code again
