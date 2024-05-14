@@ -4,13 +4,20 @@ Now record a video!
 
 - Amend line four in your code
 
-```python
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 4
+---
 from picamera2 import Picamera2
 
 picam2 = Picamera2()
 picam2.start_and_record_video("Desktop/new_video.mp4", duration=5)
 picam2.stop_preview()
-```
+
+--- /code ---
 
 --- collapse ---
 
@@ -20,7 +27,13 @@ title: I'm not using a Raspberry Pi 5
 
 You need to specify the encoder and output to use.
 
-```python
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights:
+---
 from picamera2 import Picamera2
 from picamera2.encoders import H264Encoder
 from picamera2.outputs import FfmpegOutput
@@ -38,7 +51,8 @@ picam2.start_recording(encoder, output)
 sleep(5)
 picam2.stop_recording()
 picam2.stop_preview()
-```
+
+--- /code ---
 
 **Tip:** The `10000000` is the bitrate.
 

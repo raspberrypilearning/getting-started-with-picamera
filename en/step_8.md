@@ -14,20 +14,27 @@ The V1 Module has a maximum resolution of `2592×1944` so we will try that!
 
 - Use the following code to set the resolution to maximum and take a picture.
 
-    ```python
-    from picamera2 import Picamera2
-    from time import sleep
-    
-    picam2 = Picamera2()
-    
-    picam2.preview_configuration.size = (2592, 1944)
-    picam2.start(show_preview=True)
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights:
+---
+from picamera2 import Picamera2
+from time import sleep
 
-    sleep(2)
+picam2 = Picamera2()
 
-    picam2.capture_file("max.jpg")
-    picam2.stop_preview()
-    ```
+picam2.preview_configuration.size = (2592, 1944)
+picam2.start(show_preview=True)
+
+sleep(2)
+
+picam2.capture_file("max.jpg")
+picam2.stop_preview()
+
+--- /code ---
 
 The minimum resolution is `64×64`.
 
@@ -37,22 +44,29 @@ The minimum resolution is `64×64`.
 
 - Use the following code to set the preview resolution at a lower resolution to the capture image.
 
-    ```python
-    from picamera2 import Picamera2
-    from time import sleep
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 6-8
+---
+from picamera2 import Picamera2
+from time import sleep
 
-    picam2 = Picamera2()
+picam2 = Picamera2()
 
-    picam2.preview_configuration.sensor.output_size = (2592, 1944)
-    picam2.preview_configuration.main.size = (800,600)
-    picam2.configure("preview")
-    picam2.start(show_preview=True)
+picam2.preview_configuration.sensor.output_size = (2592, 1944)
+picam2.preview_configuration.main.size = (800,600)
+picam2.configure("preview")
+picam2.start(show_preview=True)
 
-    sleep(2)
+sleep(2)
 
-    picam2.capture_file("max.jpg")
-    picam2.stop_preview()
-    ```
+picam2.capture_file("max.jpg")
+picam2.stop_preview()
+
+--- /code ---
 
 ### Add text to your image
 
@@ -175,46 +189,6 @@ picam2.close()
 --- /code ---
 
 --- /collapse ---
-
-### Change the brightness of the preview
-
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
-
-* Run the following code to try this out:
-
-    ```python
-    picam2.start_preview()
-    picam2.brightness = 70
-    sleep(5)
-    picam2.capture('/home/pi/Desktop/bright.jpg')
-    picam2.stop_preview()
-    ```
-
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
-
-    ```python
-    picam2.start_preview()
-    for i in range(100):
-        picam2.annotate_text = "Brightness: %s" % i
-        picam2.brightness = i
-        sleep(0.1)
-    picam2.stop_preview()
-    ```
-
-### Change the contrast of the preview
-
-Similarly to the preview brightness, you can change the contrast of the preview.
-
-- Run the following code to try this out:
-
-    ```python
-    picam2.start_preview()
-    for i in range(100):
-        picam2.annotate_text = "Contrast: %s" % i
-        picam2.contrast = i
-        sleep(0.1)
-    picam2.stop_preview()
-    ```
 
 ### Add cool image effects
 
