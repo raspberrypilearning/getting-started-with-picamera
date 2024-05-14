@@ -4,7 +4,11 @@ The Python `picamera2` library provides a number of effects and configurations t
 
 **Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
 
-### Set the image resolution
+--- collapse ---
+
+---
+title: Set the image resolution
+---
 
 You can change the resolution of the image that the Camera Module takes.
 
@@ -40,7 +44,13 @@ The minimum resolution is `64×64`.
 
 - Try taking a picture with the minimum resolution.
 
-### Set different preview and capture resolutions
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Set different preview and capture resolutions
+---
 
 - Use the following code to set the preview resolution at a lower resolution to the capture image.
 
@@ -68,7 +78,13 @@ picam2.stop_preview()
 
 --- /code ---
 
-### Add text to your image
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Add text to your image
+---
 
 The text on line 13 is added to the photo at the origin location set on line 9.
 
@@ -77,7 +93,7 @@ The text on line 13 is added to the photo at the origin location set on line 9.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 13, 37
+line_highlights: 13, 36
 ---
 
 from picamera2 import Picamera2, MappedArray
@@ -129,11 +145,7 @@ You can also experiment with:
 - photo resolution (line 4)
 - text options (lines 8-12)
 
---- collapse ---
-
----
-title: I want to add a timestamp
----
+### I want to add a timestamp
 
 Look at the highlighted lines to see the changes.
 
@@ -203,7 +215,7 @@ title: Make the image greyscale
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 11, 12, 17, 18
+line_highlights: 12, 13, 18, 19
 ---
 
 from picamera2 import Picamera2
@@ -241,7 +253,7 @@ title: Create a negative effect
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 18
+line_highlights: 19
 ---
 
 from picamera2 import Picamera2
@@ -279,7 +291,7 @@ title: Create a sketch effect
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 18-22
+line_highlights: 19-23
 ---
 
 from picamera2 import Picamera2
@@ -310,7 +322,11 @@ cv2.imwrite("sketchImage.jpg", sketch)
 
 --- /collapse ---
 
-### Set the image exposure, gain and contrast levels
+--- collapse ---
+
+---
+title: Set the image exposure, gain and contrast levels
+---
 
 This code demonstrates how to set the camera controls (line 13).
 
@@ -346,3 +362,5 @@ picam2.stop_preview()
 --- /code ---
 
 Experiment with different exposure times, gain levels and contrast values.
+
+--- /collapse ---
