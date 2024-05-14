@@ -336,65 +336,39 @@ cv2.imwrite("sketchImage.jpg", sketch)
 
 --- /collapse ---
 
-### Set the image exposure mode
+### Set the image exposure, gain and contrast levels
 
-You can use `picam2.exposure_mode` to set the exposure to a particular mode. 
+This code demonstrates how to set the camera controls (line 13).
 
-The exposure mode options are:
-* `off`
-* `auto`
-* `night`
-* `nightpreview`
-* `backlight`
-* `spotlight`
-* `sports`
-* `snow`
-* `beach`
-* `verylong`
-* `fixedfps`
-* `antishake`
-* `fireworks`
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 13
+---
 
-The default mode is `auto`.
-    
-* Pick an exposure mode and try it out:
+from picamera2 import Picamera2
+from time import sleep
 
-    ```python
-    picam2.start_preview()
-    picam2.exposure_mode = 'beach'
-    sleep(5)
-    picam2.capture('/home/pi/Desktop/beach.jpg')
-    picam2.stop_preview()
-    ```
+picam2 = Picamera2()
 
-* You can loop over all the exposure modes with `picam2.EXPOSURE_MODES`, like you did for the image effects.
+# Show unaltered image
+picam2.start(show_preview=True)
+sleep(2)
+picam2.stop_preview()
+picam2.stop()
 
-### Change the image white balance
+# Alter the image levels
+controls = {"ExposureTime": 10000, "AnalogueGain": 1.0, "Contrast": 2}
+preview_config = picam2.create_preview_configuration(controls=controls)
+picam2.configure(preview_config)
 
-You can use `picam2.awb_mode` to set the auto white balance to a preset mode. 
+# Show altered image
+picam2.start(show_preview=True)
+sleep(2)
+picam2.stop_preview()
 
-The available auto white balance modes are:
-* `off`
-* `auto`
-* `sunlight`
-* `cloudy`
-* `shade`
-* `tungsten`
-* `fluorescent`
-* `incandescent`
-* `flash`
-* `horizon`
+--- /code ---
 
-The default is `auto`. 
-    
-* Pick an auto white balance mode and try it out:
-
-    ```python
-    picam2.start_preview()
-    picam2.awb_mode = 'sunlight'
-    sleep(5)
-    picam2.capture('/home/pi/Desktop/sunlight.jpg')
-    picam2.stop_preview()
-    ```
-
-* You can loop over all the auto white balance modes with `picam2.AWB_MODES`, like you did for the image effects.
+Experiment with different exposure times, gain levels and contrast values.

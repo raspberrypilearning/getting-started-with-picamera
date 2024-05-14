@@ -8,7 +8,7 @@ Picamera2 has a very convenient function (`start_and_capture_file`) for capturin
 from picamera2 import Picamera2
 
 picam2 = Picamera2()
-picam2.start_and_capture_file("Desktop/newimage.jpg")
+picam2.start_and_capture_file("Desktop/new_image.jpg")
 picam2.stop_preview()
 ```
 

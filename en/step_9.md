@@ -12,4 +12,3 @@ Try these Camera Module projects to learn more:
 - Use the NoIR Camera Module to create an [infrared bird box](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
 
 For more information about writing Python code to control the Camera Module, see the extensive [documentation](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf).
-
