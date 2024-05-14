@@ -5,11 +5,13 @@ Now use the Camera Module and Python to take some still pictures.
 Picamera2 has a very convenient function (`start_and_capture_file`) for capturing images. 
 
     ```python
+    
     from picamera2 import Picamera2
 
     picam2 = Picamera2()
     picam2.start_and_capture_file("Desktop/newimage.jpg")
     picam2.stop_preview()
+    
     ```
 
 - Run the code
