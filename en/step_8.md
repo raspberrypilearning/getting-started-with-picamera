@@ -36,7 +36,7 @@ picam2.start(show_preview=True)
 sleep(2)
 
 picam2.capture_file("max.jpg")
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 
@@ -74,7 +74,7 @@ picam2.start(show_preview=True)
 sleep(2)
 
 picam2.capture_file("max.jpg")
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 
@@ -230,9 +230,9 @@ picam2.start(show_preview=True)
 sleep(2)
 
 picam2.capture_file("toProcess.jpg")
-img = cv2.imread("toProcess.jpg")
+picam2.close()
 
-picam2.stop_preview()
+img = cv2.imread("toProcess.jpg")
 
 # Convert to greyscale
 greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -268,9 +268,9 @@ picam2.start(show_preview=True)
 sleep(2)
 
 picam2.capture_file("toProcess.jpg")
-img = cv2.imread("toProcess.jpg")
+picam2.close()
 
-picam2.stop_preview()
+img = cv2.imread("toProcess.jpg")
 
 # Convert to negative
 greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -306,9 +306,9 @@ picam2.start(show_preview=True)
 sleep(2)
 
 picam2.capture_file("toProcess.jpg")
-img = cv2.imread("toProcess.jpg")
+picam2.close()
 
-picam2.stop_preview()
+img = cv2.imread("toProcess.jpg")
 
 # Convert to sketch
 greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -357,7 +357,7 @@ picam2.configure(preview_config)
 # Show altered image
 picam2.start(show_preview=True)
 sleep(2)
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 

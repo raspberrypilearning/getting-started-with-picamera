@@ -16,7 +16,7 @@ from picamera2 import Picamera2
 
 picam2 = Picamera2()
 picam2.start_and_capture_file("Desktop/new_image.jpg")
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 
@@ -43,7 +43,7 @@ from picamera2 import Picamera2
 
 picam2 = Picamera2()
 picam2.start_and_capture_files("Desktop/sequence{:d}.jpg", num_files=3, delay=0.5)
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 

@@ -25,8 +25,8 @@ from time import sleep
 picam2 = Picamera2()
 picam2.start_preview(Preview.QTGL)
 picam2.start()
-sleep(2)
-picam2.stop_preview()
+sleep(5)
+picam2.close()
 
 --- /code ---
 
@@ -52,12 +52,12 @@ picam2 = Picamera2()
 picam2.start_preview(Preview.QTGL, transform=Transform(hflip=True))
 picam2.start()
 sleep(2)
-picam2.stop_preview()
+picam2.close()
 
 --- /code ---
 
-**Tip:** You can use combine `vflip` and `hflip` to achieve a 180 degree rotation.
+**Tip:** You can combine `hflip` and `vflip` to achieve a 180 degree rotation.
 
 ```python
-   Transform(hflip=True, vflip=True))
+   transform=Transform(hflip=True, vflip=True))
 ``` 
