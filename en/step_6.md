@@ -49,6 +49,6 @@ picam2.close()
 
 - Run the code again
 
-The camera should take one picture every five seconds. Once the third picture is taken, the preview closes. 
+The camera should take one picture every half second. Once the third picture is taken, the preview closes. 
 
 - Look at your Desktop to find the three new pictures.
