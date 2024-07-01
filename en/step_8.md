@@ -1,228 +1,366 @@
 ## How to change the image settings and add image effects
 
-The Python `picamera` software provides a number of effects and configurations to change how your images look.
+The Python `picamera2` library provides a number of effects and configurations to change how your images look.
 
 **Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
 
-### Set the image resolution
+--- collapse ---
 
-You can change the `resolution` of the image that the Camera Module takes.
+---
+title: Set the image resolution
+---
 
-By default, the image resolution is set to the resolution of your monitor. The maximum resolution is 2592×1944 for still photos, and 1920×1080 for video recording.
+You can change the resolution of the image that the Camera Module takes.
 
-- Use the following code to set the `resolution` to maximum and take a picture.
+Each Camera Module has different resolution capabilities.
 
-    **Note:** you also need to set the frame rate to `15` to enable this maximum resolution.
+The V1 Module has a maximum resolution of `2592×1944` so we will try that!
 
-    ```python
-    camera.resolution = (2592, 1944)
-    camera.framerate = 15
-    camera.start_preview()
-    sleep(5)
-    camera.capture('/home/pi/Desktop/max.jpg')
-    camera.stop_preview()
-    ```
+- Use the following code to set the resolution to maximum and take a picture.
 
-The minimum resolution is 64×64.
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights:
+---
+from picamera2 import Picamera2
+from time import sleep
+
+picam2 = Picamera2()
+
+picam2.preview_configuration.size = (2592, 1944)
+picam2.start(show_preview=True)
+
+sleep(2)
+
+picam2.capture_file("max.jpg")
+picam2.close()
+
+--- /code ---
+
+The minimum resolution is `64×64`.
 
 - Try taking a picture with the minimum resolution.
 
-### Add text to your image
+--- /collapse ---
 
-You can add text to your image using the command `annotate_text`.
+--- collapse ---
 
-- Run this code to try it:
+---
+title: Set different preview and capture resolutions
+---
 
-    ```python
-    camera.start_preview()
-    camera.annotate_text = "Hello world!"
-    sleep(5)
-    camera.capture('/home/pi/Desktop/text.jpg')
-    camera.stop_preview()
-    ```
+- Use the following code to set the preview resolution at a lower resolution to the capture image.
 
-### Change the look of the added text
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 6-8
+---
+from picamera2 import Picamera2
+from time import sleep
 
-- Set the text size with the following code:
+picam2 = Picamera2()
 
-    ```python
-    camera.annotate_text_size = 50
-    ```
+picam2.preview_configuration.sensor.output_size = (2592, 1944)
+picam2.preview_configuration.main.size = (800,600)
+picam2.configure("preview")
+picam2.start(show_preview=True)
 
-    You can set the text size to anything between `6` to `160`. The default size is `32`.
+sleep(2)
 
-It's also possible to change the text colour.
+picam2.capture_file("max.jpg")
+picam2.close()
 
-- First of all, add `Color` to your `import` line at the top of the program:
+--- /code ---
 
-    ```python
-    from picamera import PiCamera, Color
-    ```
+--- /collapse ---
 
-- Then below the `import` line, amend the rest of your code so it looks like this:
+--- collapse ---
 
-    ```python
-    camera.start_preview()
-    camera.annotate_background = Color('blue')
-    camera.annotate_foreground = Color('yellow')
-    camera.annotate_text = " Hello world "
-    sleep(5)
-    camera.stop_preview()
-    ```
+---
+title: Add text to your image
+---
 
-### Change the brightness of the preview
+The text on line 13 is added to the photo at the origin location set on line 9.
 
-You can change how bright the preview appears. The default brightness is `50`, and you can set it to any value between `0` and `100`.
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 13, 36
+---
 
-* Run the following code to try this out:
+from picamera2 import Picamera2, MappedArray
+import cv2, time
 
-    ```python
-    camera.start_preview()
-    camera.brightness = 70
-    sleep(5)
-    camera.capture('/home/pi/Desktop/bright.jpg')
-    camera.stop_preview()
-    ```
+resolution = (2592, 1944)
 
-- The following loop adjusts the brightness and also adds text to display the current brightness level:
+def apply_text(request):
+    # Text options
+    colour = (255, 255, 255)
+    origin = (0, 60)
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    scale = 2
+    thickness = 2
+    text = "Looking good!"
+    with MappedArray(request, "main") as m:
+        cv2.putText(m.array, text, origin, font, scale, colour, thickness)
 
-    ```python
-    camera.start_preview()
-    for i in range(100):
-        camera.annotate_text = "Brightness: %s" % i
-        camera.brightness = i
-        sleep(0.1)
-    camera.stop_preview()
-    ```
+# Create camera object
+picam2 = Picamera2()
 
-### Change the contrast of the preview
+# Create two separate configs - one for preview and one for capture.
+# Make sure the preview is the same resolution as the capture, to make
+# sure the overlay stays the same size 
+capture_config = picam2.create_still_configuration({"size": resolution})
+preview_config = picam2.create_preview_configuration({"size": resolution})
 
-Similarly to the preview brightness, you can change the contrast of the preview.
+# Set the current config as the preview config
+picam2.configure(preview_config)
 
-- Run the following code to try this out:
+# Add the timestamp
+picam2.pre_callback = apply_text
+# Start the camera
+picam2.start(show_preview=True)
+time.sleep(2)
 
-    ```python
-    camera.start_preview()
-    for i in range(100):
-        camera.annotate_text = "Contrast: %s" % i
-        camera.contrast = i
-        sleep(0.1)
-    camera.stop_preview()
-    ```
+# Switch to the capture config and then take a picture 
+image = picam2.switch_mode_and_capture_file(capture_config, "textOnPhoto.jpg")
+
+# Close the camera
+picam2.close()
+
+--- /code ---
+
+Try changing the text and origin location.
+
+You can also experiment with: 
+
+- photo resolution (line 4)
+- text options (lines 8-12)
+
+### I want to add a timestamp
+
+Look at the highlighted lines to see the changes.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 13, 37
+---
+
+from picamera2 import Picamera2, MappedArray
+import cv2, time
+
+resolution = (2592, 1944)
+
+def apply_text(request):
+    # Text options
+    colour = (255, 255, 255)
+    origin = (0, 60)
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    scale = 2
+    thickness = 2
+    text = time.strftime("%Y-%m-%d %X")
+    with MappedArray(request, "main") as m:
+        cv2.putText(m.array, text, origin, font, scale, colour, thickness)
+
+# Create camera object
+picam2 = Picamera2()
+
+# Create two separate configs - one for preview and one for capture.
+# Make sure the preview is the same resolution as the capture, to make
+# sure the overlay stays the same size 
+capture_config = picam2.create_still_configuration({"size": resolution})
+preview_config = picam2.create_preview_configuration({"size": resolution})
+
+# Set the current config as the preview config
+picam2.configure(preview_config)
+
+# Add the timestamp
+picam2.pre_callback = apply_text
+
+# Start the camera
+picam2.start(show_preview=True)
+time.sleep(2)
+
+# Switch to the capture config and then take a picture 
+image = picam2.switch_mode_and_capture_file(capture_config, "timestampedPhoto.jpg")
+
+# Close the camera
+picam2.close()
+
+--- /code ---
+
+--- /collapse ---
 
 ### Add cool image effects
 
-You can use `camera.image_effect` to apply a particular image effect. 
+--- collapse ---
 
-The image effect options are:
+---
+title: Make the image greyscale
+---
 
-* `none`
-* `negative`
-* `solarize`
-* `sketch`
-* `denoise`
-* `emboss`
-* `oilpaint`
-* `hatch`
-* `gpen`
-* `pastel`
-* `watercolor`
-* `film`
-* `blur`
-* `saturation`
-* `colorswap`
-* `washedout`
-* `posterise`
-* `colorpoint`
-* `colorbalance`
-* `cartoon`
-* `deinterlace1`
-* `deinterlace2`
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 12, 13, 18, 19
+---
 
-The default effect is `none`. 
-    
-* Pick an image effect and try it out:
+from picamera2 import Picamera2
+from time import sleep
+import cv2
 
-    ```python
-    camera.start_preview()
-    camera.image_effect = 'colorswap'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/colorswap.jpg')
-    camera.stop_preview()
-    ```
+picam2 = Picamera2()
 
-* Run this code to loop over **all** the image effects with `camera.IMAGE_EFFECTS`:
+picam2.preview_configuration.size = (2592, 1944)
+picam2.start(show_preview=True)
 
-    ```python
-    camera.start_preview()
-    for effect in camera.IMAGE_EFFECTS:
-        camera.image_effect = effect
-        camera.annotate_text = "Effect: %s" % effect
-        sleep(5)
-    camera.stop_preview()
-    ```
+sleep(2)
 
-    ![Effects](images/effects.jpg)
+picam2.capture_file("toProcess.jpg")
+picam2.close()
 
-### Set the image exposure mode
+img = cv2.imread("toProcess.jpg")
 
-You can use `camera.exposure_mode` to set the exposure to a particular mode. 
+# Convert to greyscale
+greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imwrite("greyscaleImage.jpg", greyscale)
 
-The exposure mode options are:
-* `off`
-* `auto`
-* `night`
-* `nightpreview`
-* `backlight`
-* `spotlight`
-* `sports`
-* `snow`
-* `beach`
-* `verylong`
-* `fixedfps`
-* `antishake`
-* `fireworks`
+--- /code ---
 
-The default mode is `auto`.
-    
-* Pick an exposure mode and try it out:
+--- /collapse ---
 
-    ```python
-    camera.start_preview()
-    camera.exposure_mode = 'beach'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/beach.jpg')
-    camera.stop_preview()
-    ```
+--- collapse ---
 
-* You can loop over all the exposure modes with `camera.EXPOSURE_MODES`, like you did for the image effects.
+---
+title: Create a negative effect
+---
 
-### Change the image white balance
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 19
+---
 
-You can use `camera.awb_mode` to set the auto white balance to a preset mode. 
+from picamera2 import Picamera2
+from time import sleep
+import cv2
 
-The available auto white balance modes are:
-* `off`
-* `auto`
-* `sunlight`
-* `cloudy`
-* `shade`
-* `tungsten`
-* `fluorescent`
-* `incandescent`
-* `flash`
-* `horizon`
+picam2 = Picamera2()
 
-The default is `auto`. 
-    
-* Pick an auto white balance mode and try it out:
+picam2.preview_configuration.size = (2592, 1944)
+picam2.start(show_preview=True)
 
-    ```python
-    camera.start_preview()
-    camera.awb_mode = 'sunlight'
-    sleep(5)
-    camera.capture('/home/pi/Desktop/sunlight.jpg')
-    camera.stop_preview()
-    ```
+sleep(2)
 
-* You can loop over all the auto white balance modes with `camera.AWB_MODES`, like you did for the image effects.
+picam2.capture_file("toProcess.jpg")
+picam2.close()
+
+img = cv2.imread("toProcess.jpg")
+
+# Convert to negative
+greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imwrite("negativeImage.jpg", 255 - greyscale)
+
+--- /code ---
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Create a sketch effect
+---
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 19-23
+---
+
+from picamera2 import Picamera2
+from time import sleep
+import cv2
+
+picam2 = Picamera2()
+
+picam2.preview_configuration.size = (2592, 1944)
+picam2.start(show_preview=True)
+
+sleep(2)
+
+picam2.capture_file("toProcess.jpg")
+picam2.close()
+
+img = cv2.imread("toProcess.jpg")
+
+# Convert to sketch
+greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+inverted = 255 - greyscale
+blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
+inverted_blur = 255 - blur_inverted
+sketch = cv2.divide(greyscale, inverted_blur, scale=256)
+cv2.imwrite("sketchImage.jpg", sketch)
+
+--- /code ---
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Set the image exposure, gain and contrast levels
+---
+
+This code demonstrates how to set the camera controls (line 13).
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 13
+---
+
+from picamera2 import Picamera2
+from time import sleep
+
+picam2 = Picamera2()
+
+# Show unaltered image
+picam2.start(show_preview=True)
+sleep(2)
+picam2.stop_preview()
+picam2.stop()
+
+# Alter the image levels
+controls = {"ExposureTime": 10000, "AnalogueGain": 1.0, "Contrast": 2}
+preview_config = picam2.create_preview_configuration(controls=controls)
+picam2.configure(preview_config)
+
+# Show altered image
+picam2.start(show_preview=True)
+sleep(2)
+picam2.close()
+
+--- /code ---
+
+Experiment with different exposure times, gain levels and contrast values.
+
+--- /collapse ---
