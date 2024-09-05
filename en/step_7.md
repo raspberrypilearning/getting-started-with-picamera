@@ -9,14 +9,14 @@ Now record a video!
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 4
+line_highlights: 5
 ---
-from picamera2 import Picamera2
+from picamzero import Camera
 
-picam2 = Picamera2()
-picam2.start_and_record_video("Desktop/new_video.mp4", duration=5, show_preview=True)
-picam2.close()
-
+cam = Camera()
+cam.start_preview()
+cam.record_video("Desktop/new_video.mp4", duration=5)
+cam.stop_preview()
 --- /code ---
 
 - Run the code

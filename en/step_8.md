@@ -1,6 +1,6 @@
 ## How to change the image settings and add image effects
 
-The Python `picamera2` library provides a number of effects and configurations to change how your images look.
+The Python `picamzero` library provides a number of effects and configurations to change how your images look.
 
 **Note:** some settings only affect the preview and not the captured image, some affect only the captured image, and many others affect both.
 
@@ -14,7 +14,8 @@ You can change the resolution of the image that the Camera Module takes.
 
 Each Camera Module has different resolution capabilities.
 
-The V1 Module has a maximum resolution of `2592×1944` so we will try that!
+The V1 Module has a maximum still resolution of `2592×1944` so we will try that!
+(For other camera versions, check the specs on [this page](https://www.raspberrypi.com/documentation/accessories/camera.html#hardware-specification).
 
 - Use the following code to set the resolution to maximum and take a picture.
 
@@ -25,18 +26,18 @@ line_numbers: true
 line_number_start: 1
 line_highlights:
 ---
-from picamera2 import Picamera2
+from picamzero import Camera
 from time import sleep
 
-picam2 = Picamera2()
+cam = Camera
 
-picam2.preview_configuration.size = (2592, 1944)
-picam2.start(show_preview=True)
+cam.still_configuration.size = (2592, 1944)
+cam.start_preview()
 
 sleep(2)
 
-picam2.capture_file("max.jpg")
-picam2.close()
+cam.capture_file("max.jpg")
+cam.stop_preview()
 
 --- /code ---
 
@@ -59,22 +60,21 @@ title: Set different preview and capture resolutions
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 6-8
+line_highlights: 6-7
 ---
-from picamera2 import Picamera2
+from picamzero import Camera
 from time import sleep
 
-picam2 = Picamera2()
+cam = Camera()
 
-picam2.preview_configuration.sensor.output_size = (2592, 1944)
-picam2.preview_configuration.main.size = (800,600)
-picam2.configure("preview")
-picam2.start(show_preview=True)
+cam.preview_configuration.size = (1920, 1080)
+cam.still_configuration.size = (2592, 1944)
+cam.start_preview()
 
 sleep(2)
 
-picam2.capture_file("max.jpg")
-picam2.close()
+cam.capture_file("max.jpg")
+cam.stop_preview()
 
 --- /code ---
 
@@ -86,64 +86,25 @@ picam2.close()
 title: Add text to your image
 ---
 
-The text on line 13 is added to the photo at the origin location set on line 9.
+The text on line 4, "Hello, world!" is added to the photo taken on line 6.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 13, 36
+line_highlights: 4
 ---
+from picamzero import Camera
 
-from picamera2 import Picamera2, MappedArray
-import cv2, time
-
-resolution = (2592, 1944)
-
-def apply_text(request):
-    # Text options
-    colour = (255, 255, 255)
-    origin = (0, 60)
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    scale = 2
-    thickness = 2
-    text = "Looking good!"
-    with MappedArray(request, "main") as m:
-        cv2.putText(m.array, text, origin, font, scale, colour, thickness)
-
-# Create camera object
-picam2 = Picamera2()
-
-# Create two separate configs - one for preview and one for capture.
-# Make sure the preview is the same resolution as the capture, to make
-# sure the overlay stays the same size 
-capture_config = picam2.create_still_configuration({"size": resolution})
-preview_config = picam2.create_preview_configuration({"size": resolution})
-
-# Set the current config as the preview config
-picam2.configure(preview_config)
-
-# Add the timestamp
-picam2.pre_callback = apply_text
-# Start the camera
-picam2.start(show_preview=True)
-time.sleep(2)
-
-# Switch to the capture config and then take a picture 
-image = picam2.switch_mode_and_capture_file(capture_config, "textOnPhoto.jpg")
-
-# Close the camera
-picam2.close()
-
+cam = Camera()
+cam.annotate("Hello, world!", position=)
+cam.start_preview()
+cam.take_photo("textOnPhoto.jpg")
+cam.stop_preview()
 --- /code ---
 
-Try changing the text and origin location.
-
-You can also experiment with: 
-
-- photo resolution (line 4)
-- text options (lines 8-12)
+The `annotate` methods allow you to change where the text is positioned using the `position` argument. You can also change the text colour, font, and background colour: see the [documentation for the annotate method](https://raspberrypifoundation.github.io/picamera-zero/photo_methods/annotate). 
 
 ### I want to add a timestamp
 
@@ -154,50 +115,17 @@ Look at the highlighted lines to see the changes.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 13, 37
+line_highlights: 2, 7
 ---
+from picamzero import Camera
+from datetime import datetime
 
-from picamera2 import Picamera2, MappedArray
-import cv2, time
+cam = Camera()
 
-resolution = (2592, 1944)
-
-def apply_text(request):
-    # Text options
-    colour = (255, 255, 255)
-    origin = (0, 60)
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    scale = 2
-    thickness = 2
-    text = time.strftime("%Y-%m-%d %X")
-    with MappedArray(request, "main") as m:
-        cv2.putText(m.array, text, origin, font, scale, colour, thickness)
-
-# Create camera object
-picam2 = Picamera2()
-
-# Create two separate configs - one for preview and one for capture.
-# Make sure the preview is the same resolution as the capture, to make
-# sure the overlay stays the same size 
-capture_config = picam2.create_still_configuration({"size": resolution})
-preview_config = picam2.create_preview_configuration({"size": resolution})
-
-# Set the current config as the preview config
-picam2.configure(preview_config)
-
-# Add the timestamp
-picam2.pre_callback = apply_text
-
-# Start the camera
-picam2.start(show_preview=True)
-time.sleep(2)
-
-# Switch to the capture config and then take a picture 
-image = picam2.switch_mode_and_capture_file(capture_config, "timestampedPhoto.jpg")
-
-# Close the camera
-picam2.close()
-
+cam.start_preview()
+cam.annotate(str(datetime.now()))
+cam.take_photo("textOnPhoto.jpg")
+cam.stop_preview()
 --- /code ---
 
 --- /collapse ---
@@ -215,28 +143,16 @@ title: Make the image greyscale
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 12, 13, 18, 19
+line_highlights: 4
 ---
+from picamzero import Camera
 
-from picamera2 import Picamera2
-from time import sleep
-import cv2
-
-picam2 = Picamera2()
-
-picam2.preview_configuration.size = (2592, 1944)
-picam2.start(show_preview=True)
-
+cam = Camera()
+cam.greyscale = True
+cam.start_preview()
 sleep(2)
-
-picam2.capture_file("toProcess.jpg")
-picam2.close()
-
-img = cv2.imread("toProcess.jpg")
-
-# Convert to greyscale
-greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-cv2.imwrite("greyscaleImage.jpg", greyscale)
+cam.take_photo("bnw.jpg")
+cam.stop_preview()
 
 --- /code ---
 
@@ -253,29 +169,22 @@ title: Create a negative effect
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 19
+line_highlights: 9, 12, 13, 14
 ---
-
-from picamera2 import Picamera2
+from picamzero import Camera
 from time import sleep
 import cv2
 
-picam2 = Picamera2()
+cam = Camera()
 
-picam2.preview_configuration.size = (2592, 1944)
-picam2.start(show_preview=True)
-
+cam.start_preview()
 sleep(2)
+rgb_array = cam.capture_array()
+cam.stop_preview()
 
-picam2.capture_file("toProcess.jpg")
-picam2.close()
-
-img = cv2.imread("toProcess.jpg")
-
-# Convert to negative
-greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+bgr_array = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
+negative_bgr_array = 255 - bgr_array
 cv2.imwrite("negativeImage.jpg", 255 - greyscale)
-
 --- /code ---
 
 --- /collapse ---
@@ -291,24 +200,18 @@ title: Create a sketch effect
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 19-23
+line_highlights: 13-19
 ---
-
-from picamera2 import Picamera2
+from picamzero import Camera
 from time import sleep
 import cv2
 
-picam2 = Picamera2()
-
-picam2.preview_configuration.size = (2592, 1944)
-picam2.start(show_preview=True)
-
+cam = Camera()
+cam.start_preview()
 sleep(2)
 
-picam2.capture_file("toProcess.jpg")
-picam2.close()
-
-img = cv2.imread("toProcess.jpg")
+rgb_array = cam.capture_array()
+img = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
 
 # Convert to sketch
 greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -317,7 +220,6 @@ blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
 inverted_blur = 255 - blur_inverted
 sketch = cv2.divide(greyscale, inverted_blur, scale=256)
 cv2.imwrite("sketchImage.jpg", sketch)
-
 --- /code ---
 
 --- /collapse ---
@@ -338,26 +240,28 @@ line_number_start: 1
 line_highlights: 13
 ---
 
-from picamera2 import Picamera2
+from picamzero import Camera
 from time import sleep
 
-picam2 = Picamera2()
+cam = Camera()
 
 # Show unaltered image
-picam2.start(show_preview=True)
+cam.start_preview()
 sleep(2)
-picam2.stop_preview()
-picam2.stop()
+cam.stop_preview()
 
 # Alter the image levels
-controls = {"ExposureTime": 10000, "AnalogueGain": 1.0, "Contrast": 2}
-preview_config = picam2.create_preview_configuration(controls=controls)
-picam2.configure(preview_config)
+cam.gain(1.0)
+cam.contrast(2)
+cam.exposure(10000)
+  
+# Wait a second for changes to take effect
+sleep(1)
 
 # Show altered image
-picam2.start(show_preview=True)
+cam.start_preview()
 sleep(2)
-picam2.close()
+cam.stop_preview()
 
 --- /code ---
 
