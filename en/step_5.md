@@ -3,14 +3,19 @@
 The Python `picamzero` library allows you to control your Camera Module and create amazing projects. Follow the instructions [here](https://raspberrypifoundation.github.io/picamera-zero/install
 ) to install it.
 
+--- task ---
 - Open a Python 3 editor, such as **Thonny Python IDE**:
 
-    ![Open Thonny](images/thonny-app-menu.png)
+    ![Open Thonny](images/thonny-app-menu.png){:height="100px"}
+--- /task ---
 
+--- task ---
 - Open a new file and save it to your Desktop as `camera.py`. 
 
     **Note:** it's important that you **never save the file as `picamzero.py`**.
+--- /task ---
 
+--- task ---
 - Enter the following code:
 
 --- code ---
@@ -28,11 +33,15 @@ cam.start_preview()
 # Keep the preview window open for 5 seconds
 sleep(5)
 --- /code ---
+--- /task ---
 
+--- task ---
 - Save and run your program. The camera preview should be shown for five seconds and then close again. 
-    
-    **Note:** the camera preview only works when a monitor is connected to your Raspberry Pi or if you are using remote access (with VNC or Raspberry Pi Connect).
+--- /task ---
 
+**Note:** the camera preview only works when a monitor is connected to your Raspberry Pi or if you are using remote access (with VNC or Raspberry Pi Connect).
+
+--- task ---
 - If you need to rotate your preview and photos, you can use `flip_camera` with the `vflip=True` or horizontal flip: `hflip=True` arguments:
 
 --- code ---
@@ -51,6 +60,8 @@ cam.start_preview()
 sleep(5)
 
 --- /code ---
+--- /task ---
+
 
 **Tip:** You can combine `hflip` and `vflip` to achieve a 180 degree rotation.
 
