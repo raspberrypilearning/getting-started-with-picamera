@@ -28,7 +28,7 @@ A preview window will open.
 Your file will appear on your Desktop 
 The preview will close.
 
-You can also use `take_sequence` to capture multiple images.
+You can also use `capture_sequence` to capture multiple images.
 
 This code captures three images and uses a 2 second delay between each image. 
 
@@ -46,7 +46,7 @@ from picamzero import Camera
 
 cam = Camera()
 cam.start_preview()
-cam.take_sequence("Desktop/sequence.jpg", num_files=3, delay=2)
+cam.capture_sequence("Desktop/sequence.jpg", num_images=3, interval=2)
 cam.stop_preview()
 --- /code ---
 --- /task ---
@@ -58,5 +58,5 @@ cam.stop_preview()
 The camera should take one picture every two seconds. Once the third picture is taken, the preview closes.
 
 --- task ---
-- Look at your Desktop to find the three new pictures.
+- Look at your desktop to find the three new pictures.
 --- /task ---

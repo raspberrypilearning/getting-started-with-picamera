@@ -29,28 +29,26 @@ line_highlights:
 from picamzero import Camera
 from time import sleep
 
-cam = Camera
+cam = Camera()
 
-cam.still_configuration.size = (2592, 1944)
+cam.still_size = (2592, 1944)
 cam.start_preview()
 
 sleep(2)
 
-cam.capture_file("max.jpg")
+cam.take_photo("max.jpg")
 cam.stop_preview()
 
 --- /code ---
 
-The minimum resolution is `64×64`.
-
-- Try taking a picture with the minimum resolution.
+The minimum resolution is `15x15`.
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: Set different preview and capture resolutions
+title: Set different preview and image resolutions
 ---
 
 - Use the following code to set the preview resolution at a lower resolution to the capture image.
@@ -67,13 +65,13 @@ from time import sleep
 
 cam = Camera()
 
-cam.preview_configuration.size = (1920, 1080)
-cam.still_configuration.size = (2592, 1944)
+cam.preview_size = (1920, 1080)
+cam.still_size = (2592, 1944)
 cam.start_preview()
 
 sleep(2)
 
-cam.capture_file("max.jpg")
+cam.take_photo("max.jpg")
 cam.stop_preview()
 
 --- /code ---
@@ -98,15 +96,15 @@ line_highlights: 4
 from picamzero import Camera
 
 cam = Camera()
-cam.annotate("Hello, world!", position=)
+cam.annotate("Hello, world!")
 cam.start_preview()
 cam.take_photo("textOnPhoto.jpg")
 cam.stop_preview()
 --- /code ---
 
-The `annotate` methods allow you to change where the text is positioned using the `position` argument. You can also change the text colour, font, and background colour: see the [documentation for the annotate method](https://raspberrypifoundation.github.io/picamera-zero/photo_methods/annotate). 
+The `annotate` method allows you to change where the text is positioned using the `position` argument. You can also [change the text colour, font, and background colour](https://raspberrypifoundation.github.io/picamera-zero/photo_methods/annotate). 
 
-### I want to add a timestamp
+### Add a timestamp
 
 Look at the highlighted lines to see the changes.
 
@@ -130,7 +128,7 @@ cam.stop_preview()
 
 --- /collapse ---
 
-### Add cool image effects
+### Add image effects
 
 --- collapse ---
 
@@ -146,6 +144,7 @@ line_number_start: 1
 line_highlights: 4
 ---
 from picamzero import Camera
+from time import sleep
 
 cam = Camera()
 cam.greyscale = True
@@ -163,6 +162,7 @@ cam.stop_preview()
 ---
 title: Create a negative effect
 ---
+The negative effect is applied to an image after it is captured, so it cannot be shown on the preview.
 
 --- code ---
 ---
@@ -177,14 +177,11 @@ import cv2
 
 cam = Camera()
 
-cam.start_preview()
-sleep(2)
 rgb_array = cam.capture_array()
-cam.stop_preview()
 
 bgr_array = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
 negative_bgr_array = 255 - bgr_array
-cv2.imwrite("negativeImage.jpg", 255 - greyscale)
+cv2.imwrite("negativeImage.jpg", negative_bgr_array)
 --- /code ---
 
 --- /collapse ---
@@ -194,6 +191,7 @@ cv2.imwrite("negativeImage.jpg", 255 - greyscale)
 ---
 title: Create a sketch effect
 ---
+The sketch effect is applied to an image after it is captured, so it cannot be shown on the preview.
 
 --- code ---
 ---
@@ -207,7 +205,6 @@ from time import sleep
 import cv2
 
 cam = Camera()
-cam.start_preview()
 sleep(2)
 
 rgb_array = cam.capture_array()
@@ -237,7 +234,7 @@ This code demonstrates how to set the camera controls (line 13).
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 13
+line_highlights: 12-14
 ---
 
 from picamzero import Camera
@@ -251,9 +248,9 @@ sleep(2)
 cam.stop_preview()
 
 # Alter the image levels
-cam.gain(1.0)
-cam.contrast(2)
-cam.exposure(10000)
+cam.gain = 1.0
+cam.contrast = 2
+cam.exposure = 10000
   
 # Wait a second for changes to take effect
 sleep(1)

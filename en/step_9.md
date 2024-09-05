@@ -1,15 +1,15 @@
 ## What next?
 
-Now you know how to use your Camera Module, you could for example:
+Now you know how to use your Camera Module, you could:
+
 * Add buttons to control the camera with the help of [GPIO Zero](https://gpiozero.readthedocs.org/) Python code
-* Integrate the camera with Minecraft Pi
+
 
 Try these Camera Module projects to learn more:
 
 - Create a [push button stop-motion](https://projects.raspberrypi.org/en/projects/push-button-stop-motion/) film
-- Make a [Minecraft photobooth](https://projects.raspberrypi.org/en/projects/minecraft-photobooth/)
 - Build a [parent detector](https://projects.raspberrypi.org/en/projects/parent-detector/)
 - Use the NoIR Camera Module to create an [infrared bird box](https://projects.raspberrypi.org/en/projects/infrared-bird-box/)
 
-For more information on how to use the `picamzero` library, check out `picamzero`'s official documentation: `https://raspberrypifoundation.github.io/picamera-zero`. For more advanced uses, you may also want to look at the `picamera2` library and its extensive [documentation](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf).
+For more information on how to use the `picamzero` library, check out `picamzero`'s [official documentation](https://raspberrypifoundation.github.io/picamera-zero). 
 

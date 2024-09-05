@@ -2,7 +2,8 @@
 
 Now record a video!
 
-- Amend line four in your code
+--- task ---
+- Change line four in your code
 
 --- code ---
 ---
@@ -18,7 +19,10 @@ cam.start_preview()
 cam.record_video("Desktop/new_video.mp4", duration=5)
 cam.stop_preview()
 --- /code ---
+--- /task ---
 
+--- task ---
 - Run the code
+--- /task ---
 
-Your Raspberry Pi should open a preview, record 5 seconds of video, and then close the preview.
+You should see a preview while the camera records 5 seconds of video and then closes the preview.

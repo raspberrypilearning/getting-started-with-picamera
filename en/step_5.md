@@ -4,7 +4,7 @@ The Python `picamzero` library allows you to control your Camera Module and crea
 ) to install it.
 
 --- task ---
-- Open a Python 3 editor, such as **Thonny Python IDE**:
+- Open a Python 3 editor, such as **Thonny**:
 
     ![Open Thonny](images/thonny-app-menu.png){:height="100px"}
 --- /task ---
