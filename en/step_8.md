@@ -133,15 +133,17 @@ cam.stop_preview()
 --- collapse ---
 
 ---
-title: Make the image greyscale
+title: Take a black and white photograph
 ---
+
+You can take pictures in black and white using the greyscale setting.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 4
+line_highlights: 5
 ---
 from picamzero import Camera
 from time import sleep
@@ -157,69 +159,6 @@ cam.stop_preview()
 
 --- /collapse ---
 
---- collapse ---
-
----
-title: Create a negative effect
----
-The negative effect is applied to an image after it is captured, so it cannot be shown on the preview.
-
---- code ---
----
-language: python
-line_numbers: true
-line_number_start: 1
-line_highlights: 9, 12, 13, 14
----
-from picamzero import Camera
-from time import sleep
-import cv2
-
-cam = Camera()
-
-rgb_array = cam.capture_array()
-
-bgr_array = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
-negative_bgr_array = 255 - bgr_array
-cv2.imwrite("negativeImage.jpg", negative_bgr_array)
---- /code ---
-
---- /collapse ---
-
---- collapse ---
-
----
-title: Create a sketch effect
----
-The sketch effect is applied to an image after it is captured, so it cannot be shown on the preview.
-
---- code ---
----
-language: python
-line_numbers: true
-line_number_start: 1
-line_highlights: 13-19
----
-from picamzero import Camera
-from time import sleep
-import cv2
-
-cam = Camera()
-sleep(2)
-
-rgb_array = cam.capture_array()
-img = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
-
-# Convert to sketch
-greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-inverted = 255 - greyscale
-blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
-inverted_blur = 255 - blur_inverted
-sketch = cv2.divide(greyscale, inverted_blur, scale=256)
-cv2.imwrite("sketchImage.jpg", sketch)
---- /code ---
-
---- /collapse ---
 
 --- collapse ---
 
@@ -227,14 +166,14 @@ cv2.imwrite("sketchImage.jpg", sketch)
 title: Set the image exposure, gain and contrast levels
 ---
 
-This code demonstrates how to set the camera controls (line 13).
+This code demonstrates how to set the camera controls for exposure, gain and contrast.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 12-14
+line_highlights: 7-9
 ---
 
 from picamzero import Camera
@@ -268,14 +207,14 @@ Experiment with different exposure times, gain levels and contrast values.
 title: Set the brightness
 ---
 
-This code demonstrates how to set the brightness
+This code demonstrates how to set the brightness control.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 12-14
+line_highlights: 7
 ---
 
 from picamzero import Camera
@@ -297,6 +236,104 @@ cam.stop_preview()
 
 --- /code ---
 
-Experiment with different exposure times, gain levels and contrast values.
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Set the white balance
+---
+
+You can set the white balance mode. Available modes are `auto`, `tungsten`, `fluorescent`, `indoor`, `daylight`, `cloudy`.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 7
+---
+
+from picamzero import Camera
+from time import sleep
+
+cam = Camera()
+
+# Alter the image levels
+cam.white_balance = 'cloudy'
+
+# Wait a second for changes to take effect
+sleep(1)
+
+# Show altered image
+cam.start_preview()
+sleep(2)
+cam.stop_preview()
+
+
+--- /code ---
+
+--- /collapse ---
+
+
+--- collapse ---
+
+---
+title: Create a negative effect
+---
+The negative effect is applied using the cv2 library to an image after it is captured, so it cannot be shown on the preview.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+---
+from picamzero import Camera
+from time import sleep
+import cv2
+
+cam = Camera()
+
+rgb_array = cam.capture_array()
+
+bgr_array = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
+negative_bgr_array = 255 - bgr_array
+cv2.imwrite("negativeImage.jpg", negative_bgr_array)
+--- /code ---
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Create a sketch effect
+---
+The sketch effect is applied to an image after it is captured, so it cannot be shown on the preview.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+---
+from picamzero import Camera
+from time import sleep
+import cv2
+
+cam = Camera()
+sleep(2)
+
+rgb_array = cam.capture_array()
+img = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
+
+# Convert to sketch
+greyscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+inverted = 255 - greyscale
+blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
+inverted_blur = 255 - blur_inverted
+sketch = cv2.divide(greyscale, inverted_blur, scale=256)
+cv2.imwrite("sketchImage.jpg", sketch)
+--- /code ---
 
 --- /collapse ---
