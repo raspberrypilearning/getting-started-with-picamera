@@ -242,16 +242,11 @@ from time import sleep
 
 cam = Camera()
 
-# Show unaltered image
-cam.start_preview()
-sleep(2)
-cam.stop_preview()
-
 # Alter the image levels
 cam.gain = 1.0
 cam.contrast = 2
-cam.exposure = 10000
-  
+cam.exposure = 1000000
+
 # Wait a second for changes to take effect
 sleep(1)
 
@@ -259,6 +254,46 @@ sleep(1)
 cam.start_preview()
 sleep(2)
 cam.stop_preview()
+
+
+--- /code ---
+
+Experiment with different exposure times, gain levels and contrast values.
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: Set the brightness
+---
+
+This code demonstrates how to set the brightness
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 12-14
+---
+
+from picamzero import Camera
+from time import sleep
+
+cam = Camera()
+
+# Alter the image levels
+cam.brightness = 0.2
+
+# Wait a second for changes to take effect
+sleep(1)
+
+# Show altered image
+cam.start_preview()
+sleep(2)
+cam.stop_preview()
+
 
 --- /code ---
 
