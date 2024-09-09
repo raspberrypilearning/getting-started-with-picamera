@@ -1,7 +1,19 @@
 ## How to control the Camera Module with Python code
 
-The Python `picamzero` library allows you to control your Camera Module and create amazing projects. Follow the instructions [here](https://raspberrypifoundation.github.io/picamera-zero/install
-) to install it.
+The Python `picamzero` library allows you to control your Camera Module. 
+
+--- task ---
+- Open a terminal and type the following commands one at a time to install picamzero:
+
+--- code ---
+---
+language: linux
+line_numbers: false
+---
+sudo apt update
+sudo apt install python3-picamzero
+--- /code ---
+--- /task ---
 
 --- task ---
 - Open a Python 3 editor, such as **Thonny**:
