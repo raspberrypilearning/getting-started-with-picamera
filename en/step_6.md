@@ -19,7 +19,7 @@ from picamzero import Camera
 
 cam = Camera()
 cam.start_preview()
-cam.take_photo("Desktop/new_image.jpg")
+cam.take_photo("~/Desktop/new_image.jpg")
 cam.stop_preview()
 --- /code ---
 --- /task ---
@@ -46,7 +46,7 @@ from picamzero import Camera
 
 cam = Camera()
 cam.start_preview()
-cam.capture_sequence("Desktop/sequence.jpg", num_images=3, interval=2)
+cam.capture_sequence("~/Desktop/sequence.jpg", num_images=3, interval=2)
 cam.stop_preview()
 --- /code ---
 --- /task ---
