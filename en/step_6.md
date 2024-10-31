@@ -14,12 +14,14 @@ line_numbers: true
 line_number_start: 1
 line_highlights: 
 ---
-
 from picamzero import Camera
+import os
 
+home_dir = os.environ['HOME'] #set the location of your home directory
 cam = Camera()
+
 cam.start_preview()
-cam.take_photo("~/Desktop/new_image.jpg")
+cam.take_photo(f"{home_dir}/Desktop/new_image.jpg") #save the image to your desktop
 cam.stop_preview()
 --- /code ---
 --- /task ---
@@ -33,20 +35,23 @@ You can also use `capture_sequence` to capture multiple images.
 This code captures three images and uses a 2 second delay between each image. 
 
 --- task ---
-- Amend line 4 in your code:
+- Amend line 6 in your code:
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 5
+line_highlights: 6
 ---
 from picamzero import Camera
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
+
 cam.start_preview()
-cam.capture_sequence("~/Desktop/sequence.jpg", num_images=3, interval=2)
+cam.capture_sequence(f"{home_dir}/Desktop/sequence.jpg", num_images=3, interval=2)
 cam.stop_preview()
 --- /code ---
 --- /task ---

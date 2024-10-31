@@ -3,20 +3,23 @@
 Now record a video!
 
 --- task ---
-- Change line four in your code
+- Change line 8 in your code
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 5
+line_highlights: 8
 ---
 from picamzero import Camera
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
+
 cam.start_preview()
-cam.record_video("~/Desktop/new_video.mp4", duration=5)
+cam.record_video(f"{home_dir}/Desktop/new_video.mp4", duration=5)
 cam.stop_preview()
 --- /code ---
 --- /task ---
