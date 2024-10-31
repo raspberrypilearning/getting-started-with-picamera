@@ -59,7 +59,7 @@ title: Set different preview and image resolutions
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 6-7
+line_highlights: 7-8
 ---
 from picamzero import Camera
 from time import sleep
@@ -87,14 +87,14 @@ cam.stop_preview()
 title: Add text to your image
 ---
 
-The text on line 5, "Hello, world!" is added to the photo taken on line 6.
+The text on line 6, "Hello, world!" is added to the photo taken on line 6.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 5
+line_highlights: 6
 ---
 from picamzero import Camera
 import os
@@ -119,7 +119,7 @@ Look at the highlighted lines to see the changes.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 2, 8
+line_highlights: 2, 9
 ---
 from picamzero import Camera
 from datetime import datetime
@@ -151,11 +151,13 @@ You can take pictures in black and white using the greyscale setting.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 5
+line_highlights: 7
 ---
 from picamzero import Camera
 from time import sleep
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
 cam.greyscale = True
 cam.start_preview()

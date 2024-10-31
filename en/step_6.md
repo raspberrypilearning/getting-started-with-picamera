@@ -35,14 +35,14 @@ You can also use `capture_sequence` to capture multiple images.
 This code captures three images and uses a 2 second delay between each image. 
 
 --- task ---
-- Amend line 6 in your code:
+- Amend line 8 in your code:
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 6
+line_highlights: 8
 ---
 from picamzero import Camera
 import os
