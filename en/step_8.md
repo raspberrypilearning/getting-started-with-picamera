@@ -28,15 +28,16 @@ line_highlights:
 ---
 from picamzero import Camera
 from time import sleep
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
-
 cam.still_size = (2592, 1944)
 cam.start_preview()
 
 sleep(2)
 
-cam.take_photo("max.jpg")
+cam.take_photo(f"{home_dir}/Desktop/max.jpg")
 cam.stop_preview()
 
 --- /code ---
@@ -58,20 +59,22 @@ title: Set different preview and image resolutions
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 6-7
+line_highlights: 7-8
 ---
 from picamzero import Camera
 from time import sleep
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
-
 cam.preview_size = (1920, 1080)
 cam.still_size = (2592, 1944)
+
 cam.start_preview()
 
 sleep(2)
 
-cam.take_photo("max.jpg")
+cam.take_photo(f"{home_dir}/Desktop/max.jpg")
 cam.stop_preview()
 
 --- /code ---
@@ -84,21 +87,24 @@ cam.stop_preview()
 title: Add text to your image
 ---
 
-The text on line 4, "Hello, world!" is added to the photo taken on line 6.
+The text on line 6, "Hello, world!" is added to the photo taken on line 6.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 4
+line_highlights: 6
 ---
 from picamzero import Camera
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
 cam.annotate("Hello, world!")
+
 cam.start_preview()
-cam.take_photo("textOnPhoto.jpg")
+cam.take_photo(f"{home_dir}/Desktop/textOnPhoto.jpg")
 cam.stop_preview()
 --- /code ---
 
@@ -113,16 +119,18 @@ Look at the highlighted lines to see the changes.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 2, 7
+line_highlights: 2, 9
 ---
 from picamzero import Camera
 from datetime import datetime
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
 
 cam.start_preview()
 cam.annotate(str(datetime.now()))
-cam.take_photo("textOnPhoto.jpg")
+cam.take_photo(f"{home_dir}/Desktop/textOnPhoto.jpg")
 cam.stop_preview()
 --- /code ---
 
@@ -143,16 +151,20 @@ You can take pictures in black and white using the greyscale setting.
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 5
+line_highlights: 7
 ---
 from picamzero import Camera
 from time import sleep
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
 cam.greyscale = True
 cam.start_preview()
+
 sleep(2)
-cam.take_photo("bnw.jpg")
+
+cam.take_photo(f"{home_dir}/Desktop/bnw.jpg")
 cam.stop_preview()
 
 --- /code ---
@@ -175,7 +187,6 @@ line_numbers: true
 line_number_start: 1
 line_highlights: 7-9
 ---
-
 from picamzero import Camera
 from time import sleep
 
@@ -216,7 +227,6 @@ line_numbers: true
 line_number_start: 1
 line_highlights: 7
 ---
-
 from picamzero import Camera
 from time import sleep
 
@@ -253,7 +263,6 @@ line_numbers: true
 line_number_start: 1
 line_highlights: 7
 ---
-
 from picamzero import Camera
 from time import sleep
 
@@ -292,14 +301,15 @@ line_number_start: 1
 from picamzero import Camera
 from time import sleep
 import cv2
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
-
 rgb_array = cam.capture_array()
 
 bgr_array = cv2.cvtColor(rgb_array, cv2.COLOR_RGB2BGR)
 negative_bgr_array = 255 - bgr_array
-cv2.imwrite("negativeImage.jpg", negative_bgr_array)
+cv2.imwrite(f"{home_dir}/Desktop/negativeImage.jpg", negative_bgr_array)
 --- /code ---
 
 --- /collapse ---
@@ -320,8 +330,11 @@ line_number_start: 1
 from picamzero import Camera
 from time import sleep
 import cv2
+import os
 
+home_dir = os.environ['HOME']
 cam = Camera()
+
 sleep(2)
 
 rgb_array = cam.capture_array()
@@ -333,7 +346,7 @@ inverted = 255 - greyscale
 blur_inverted = cv2.GaussianBlur(inverted, (125, 125), 0)
 inverted_blur = 255 - blur_inverted
 sketch = cv2.divide(greyscale, inverted_blur, scale=256)
-cv2.imwrite("sketchImage.jpg", sketch)
+cv2.imwrite(f"{home_dir}/Desktop/sketchImage.jpg", sketch)
 --- /code ---
 
 --- /collapse ---
