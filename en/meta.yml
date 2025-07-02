@@ -19,6 +19,5 @@ steps:
 - title: How to change the image settings and add image effects
   completion:
   - internal
-- title: What can you do now?
   completion:
   - external
