@@ -20,4 +20,3 @@ steps:
 - title: Comment modifier les paramètres d'image et ajouter des effets d'image
   completion:
   - internal
-- title: Et ensuite ?
