@@ -108,7 +108,7 @@ cam.take_photo(f"{home_dir}/Desktop/textOnPhoto.jpg")
 cam.stop_preview()
 --- /code ---
 
-The `annotate` method allows you to change where the text is positioned using the `position` argument. You can also [change the text colour, font, and background colour](https://raspberrypifoundation.github.io/picamera-zero/photo_methods/annotate). 
+The `annotate` method allows you to change where the text is positioned using the `position` argument. You can also [change the text colour, font, and background colour](https://raspberrypifoundation.github.io/picamzero/photo_methods/annotate).
 
 ### Add a timestamp
 
